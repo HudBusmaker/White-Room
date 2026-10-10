@@ -1,0 +1,36 @@
+{
+  "id": "simultaneous-equations",
+  "title": "Solve and verify simultaneous equations",
+  "level": "Form 5",
+  "subject": "Pure Mathematics",
+  "question": "Solve the simultaneous equations <span class=\"eq\"><i>x</i> + <i>y</i> = 7</span> and <span class=\"eq\"><i>x</i> - <i>y</i> = 1</span>. Show your working and verify your values by substituting them into both original equations.",
+  "total": 5,
+  "guide": [
+    {
+      "id": "M1",
+      "marks": 1,
+      "text": "Adds the two equations correctly to eliminate y: 2x = 8 (or an equivalent valid elimination step)."
+    },
+    {
+      "id": "A1",
+      "marks": 1,
+      "text": "Obtains x = 4 correctly."
+    },
+    {
+      "id": "A2",
+      "marks": 1,
+      "text": "Substitutes x = 4 and obtains y = 3 correctly."
+    },
+    {
+      "id": "B1",
+      "marks": 1,
+      "text": "Verifies x = 4 and y = 3 in x + y = 7 and obtains 7."
+    },
+    {
+      "id": "B2",
+      "marks": 1,
+      "text": "Verifies x = 4 and y = 3 in x - y = 1 and obtains 1."
+    }
+  ],
+  "rules": "Award M1 only when an actual elimination step is written. If a valid alternative method obtains both values, award A1 and A2 but not M1 unless elimination is shown. Do not award verification marks unless the substitutions and resulting equalities are written. A final pair with no working can earn A1 and A2 only if both values are correct."
+}

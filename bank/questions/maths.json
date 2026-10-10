@@ -1,0 +1,271 @@
+{
+ "subject": "maths",
+ "questions": [
+  {
+   "id": "pure-algebra-001",
+   "subject": "maths",
+   "topic": "pure-algebra",
+   "skill": "m-quadratics",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 3,
+   "stem": "Solve $2x^2 - 7x + 3 = 0$.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Calculate the discriminant $b^2-4ac$.",
+     "expected": 25,
+     "marks": 1,
+     "mistake": "b^2 = 49 and 4ac = 24."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "State the larger root.",
+     "expected": 3,
+     "marks": 1,
+     "hint": "x = (7 ± 5) / 4."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "State the smaller root.",
+     "expected": 0.5,
+     "marks": 1,
+     "hint": "You may give a fraction such as 1/2 or a decimal."
+    }
+   ]
+  },
+  {
+   "id": "pure-calculus-001",
+   "subject": "maths",
+   "topic": "pure-calculus",
+   "skill": "m-differentiate",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 4,
+   "stem": "A curve has equation $y = x^3 - 6x^2 + 9x + 2$.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Calculate $\\dfrac{dy}{dx}$ when $x=2$.",
+     "expected": -3,
+     "marks": 1,
+     "hint": "dy/dx = 3x^2 - 12x + 9."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "State the larger x-coordinate of the two stationary points.",
+     "expected": 3,
+     "marks": 1,
+     "hint": "Solve 3x^2 - 12x + 9 = 0, i.e. x^2 - 4x + 3 = 0."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "Find the y-coordinate at that point.",
+     "expected": 2,
+     "marks": 1,
+     "mistake": "Substitute x = 3: 27 - 54 + 27 + 2."
+    },
+    {
+     "id": "d",
+     "kind": "text",
+     "prompt": "State whether that point is a maximum or a minimum.",
+     "expected": "minimum",
+     "marks": 1,
+     "variants": [
+      "min",
+      "a minimum",
+      "minimum point"
+     ],
+     "hint": "Second derivative 6x - 12 at x = 3."
+    }
+   ]
+  },
+  {
+   "id": "pure-trig-001",
+   "subject": "maths",
+   "topic": "pure-trig",
+   "skill": "m-trig-eq",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 4,
+   "stem": "Solve for $0^\\circ \\le x \\le 360^\\circ$.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "$\\sin x = 0.5$: give the smaller solution in degrees.",
+     "expected": 30,
+     "marks": 1,
+     "unit": "°"
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "$\\sin x = 0.5$: give the larger solution in degrees.",
+     "expected": 150,
+     "marks": 1,
+     "unit": "°",
+     "hint": "The second solution is 180 - 30."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "$\\cos x = -0.5$: give the smaller solution in degrees.",
+     "expected": 120,
+     "marks": 1,
+     "unit": "°"
+    },
+    {
+     "id": "d",
+     "kind": "number",
+     "prompt": "$\\cos x = -0.5$: give the larger solution in degrees.",
+     "expected": 240,
+     "marks": 1,
+     "unit": "°",
+     "hint": "The second solution is 360 - 120."
+    }
+   ]
+  },
+  {
+   "id": "pure-explog-001",
+   "subject": "maths",
+   "topic": "pure-explog",
+   "skill": "m-log-laws",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 5,
+   "stem": "Use the laws of logarithms and logs to solve these.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Write $\\log_2 12 + \\log_2 6 - \\log_2 9$ as a single $\\log_2$ and give the number inside the log.",
+     "expected": 8,
+     "marks": 2,
+     "hint": "Add logs by multiplying and subtract by dividing: (12 x 6) / 9."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Give the value of that expression.",
+     "expected": 3,
+     "marks": 1,
+     "hint": "What power of 2 is 8?"
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "Solve $3^x = 20$. Give $x$ to 3 significant figures.",
+     "expected": 2.73,
+     "marks": 2,
+     "tolerance": {
+      "abs": 0.005
+     },
+     "hint": "x = ln 20 / ln 3."
+    }
+   ]
+  },
+  {
+   "id": "stat-distributions-001",
+   "subject": "maths",
+   "topic": "stat-distributions",
+   "skill": "m-binomial",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 4,
+   "stem": "$X \\sim B(5,\\ 0.4)$.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Calculate $P(X=2)$.",
+     "expected": 0.3456,
+     "marks": 2,
+     "tolerance": {
+      "abs": 0.0005
+     },
+     "hint": "P = C(5,2) x 0.4^2 x 0.6^3.",
+     "partial": [
+      {
+       "value": 0.03456,
+       "marks": 1,
+       "note": "You forgot the 10 ways (the binomial coefficient C(5,2) = 10)."
+      }
+     ]
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "State $E(X)$.",
+     "expected": 2,
+     "marks": 1,
+     "hint": "np."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "Calculate $\\mathrm{Var}(X)$.",
+     "expected": 1.2,
+     "marks": 1,
+     "tolerance": {
+      "abs": 0.001
+     },
+     "hint": "np(1 - p)."
+    }
+   ]
+  },
+  {
+   "id": "stat-probability-001",
+   "subject": "maths",
+   "topic": "stat-probability",
+   "skill": "m-probability",
+   "type": "mcq",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 1,
+   "stem": "$A$ and $B$ are **independent** events with $P(A)=0.3$ and $P(B)=0.4$. Find $P(A \\cup B)$.",
+   "image": null,
+   "options": [
+    {
+     "id": "A",
+     "text": "0.70",
+     "correct": false,
+     "trap": "Adds the probabilities but forgets to subtract the overlap $P(A\\cap B)$."
+    },
+    {
+     "id": "B",
+     "text": "0.12",
+     "correct": false,
+     "trap": "This is $P(A\\cap B)$, the overlap, not the union."
+    },
+    {
+     "id": "C",
+     "text": "0.58",
+     "correct": true
+    },
+    {
+     "id": "D",
+     "text": "0.42",
+     "correct": false,
+     "trap": "This is $1-0.58$: the probability of neither event."
+    }
+   ]
+  }
+ ]
+}

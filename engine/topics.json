@@ -1,0 +1,572 @@
+{
+ "note": "Syllabus topics from the White Room pack (gce.json). Topics only: strength and due dates live per student in data/practice.json.",
+ "subjects": [
+  {
+   "id": "computer-science",
+   "label": "Computer Science"
+  },
+  {
+   "id": "maths",
+   "label": "Mathematics"
+  },
+  {
+   "id": "further-maths",
+   "label": "Further Maths"
+  },
+  {
+   "id": "physics",
+   "label": "Physics"
+  },
+  {
+   "id": "chemistry",
+   "label": "Chemistry"
+  },
+  {
+   "id": "ict",
+   "label": "ICT"
+  },
+  {
+   "id": "additional-maths",
+   "label": "Additional Mathematics"
+  },
+  {
+   "id": "french",
+   "label": "French"
+  },
+  {
+   "id": "english",
+   "label": "English Language"
+  },
+  {
+   "id": "economics",
+   "label": "Economics"
+  }
+ ],
+ "topics": [
+  {
+   "id": "cs-numbersys",
+   "subject": "computer-science",
+   "name": "Number systems + two's/one's complement"
+  },
+  {
+   "id": "cs-boolean",
+   "subject": "computer-science",
+   "name": "Boolean algebra, SOP, draw logic circuit, NAND/NOR"
+  },
+  {
+   "id": "cs-arch",
+   "subject": "computer-science",
+   "name": "Architecture: addressing modes, buses, fetch-execute, op-code/operand"
+  },
+  {
+   "id": "cs-memory",
+   "subject": "computer-science",
+   "name": "Memory addressing, virtual vs cache, paging/segmentation"
+  },
+  {
+   "id": "cs-os",
+   "subject": "computer-science",
+   "name": "OS: process states, scheduling (FCFS/SJF/RR), interrupts"
+  },
+  {
+   "id": "cs-db",
+   "subject": "computer-science",
+   "name": "Databases: 3NF, E-R diagrams, entity modelling, SQL reasoning"
+  },
+  {
+   "id": "cs-ds",
+   "subject": "computer-science",
+   "name": "Data structures: trace insertion sort, stacks, tree traversals, hashing+linear probing"
+  },
+  {
+   "id": "cs-swe",
+   "subject": "computer-science",
+   "name": "SDLC stages, waterfall limits, test-data design (normal/boundary/erroneous)"
+  },
+  {
+   "id": "cs-prog",
+   "subject": "computer-science",
+   "name": "Programming: loops, parameter passing, recursion, paradigms"
+  },
+  {
+   "id": "cs-net",
+   "subject": "computer-science",
+   "name": "Networks: topologies, devices, OSI, IP/MAC, transmission modes"
+  },
+  {
+   "id": "phy-mechanics",
+   "subject": "physics",
+   "name": "Mechanics"
+  },
+  {
+   "id": "phy-waves",
+   "subject": "physics",
+   "name": "Waves"
+  },
+  {
+   "id": "phy-fields",
+   "subject": "physics",
+   "name": "Electricity & magnetism / fields"
+  },
+  {
+   "id": "phy-thermal",
+   "subject": "physics",
+   "name": "Matter & thermal physics"
+  },
+  {
+   "id": "phy-modern",
+   "subject": "physics",
+   "name": "Modern & nuclear physics"
+  },
+  {
+   "id": "chem-physical",
+   "subject": "chemistry",
+   "name": "Physical chemistry"
+  },
+  {
+   "id": "chem-inorganic",
+   "subject": "chemistry",
+   "name": "Inorganic chemistry"
+  },
+  {
+   "id": "chem-organic",
+   "subject": "chemistry",
+   "name": "Organic chemistry"
+  },
+  {
+   "id": "pure-algebra",
+   "subject": "maths",
+   "name": "Algebra & functions (Pure)",
+   "shared_pure": true
+  },
+  {
+   "id": "pure-calculus",
+   "subject": "maths",
+   "name": "Differentiation & integration (Pure)",
+   "shared_pure": true
+  },
+  {
+   "id": "pure-trig",
+   "subject": "maths",
+   "name": "Trigonometry (Pure)",
+   "shared_pure": true
+  },
+  {
+   "id": "pure-explog",
+   "subject": "maths",
+   "name": "Exponentials & logarithms (Pure)",
+   "shared_pure": true
+  },
+  {
+   "id": "stat-distributions",
+   "subject": "maths",
+   "name": "Binomial & normal distributions (Stats)"
+  },
+  {
+   "id": "stat-probability",
+   "subject": "maths",
+   "name": "Probability & data measures (Stats)"
+  },
+  {
+   "id": "fp-complex",
+   "subject": "further-maths",
+   "name": "Complex numbers (Further Pure)"
+  },
+  {
+   "id": "fp-matrices",
+   "subject": "further-maths",
+   "name": "Matrices & transformations (Further Pure)"
+  },
+  {
+   "id": "fp-induction",
+   "subject": "further-maths",
+   "name": "Proof by induction (Further Pure)"
+  },
+  {
+   "id": "fp-diffeq",
+   "subject": "further-maths",
+   "name": "Differential equations (Further Pure)"
+  },
+  {
+   "id": "fs-tests",
+   "subject": "further-maths",
+   "name": "Hypothesis & chi-squared tests (Further Stats)"
+  },
+  {
+   "id": "ict-systems",
+   "subject": "ict",
+   "name": "Information systems and data processing",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "ict-databases",
+   "subject": "ict",
+   "name": "Databases and SQL",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "ict-spreadsheets",
+   "subject": "ict",
+   "name": "Spreadsheets and modelling",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "ict-networks",
+   "subject": "ict",
+   "name": "Networks and the internet",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "ict-web",
+   "subject": "ict",
+   "name": "Web design and multimedia",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "ict-society",
+   "subject": "ict",
+   "name": "ICT in society: security, ethics and law",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "f5-m-number",
+   "subject": "maths",
+   "name": "Number, ratio and percentages",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-m-algebra",
+   "subject": "maths",
+   "name": "Algebra, equations and inequalities",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-m-geometry",
+   "subject": "maths",
+   "name": "Geometry and mensuration",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-m-trig",
+   "subject": "maths",
+   "name": "Trigonometry",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-m-stats",
+   "subject": "maths",
+   "name": "Statistics and probability",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-m-vectors",
+   "subject": "maths",
+   "name": "Vectors and matrices",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "am-algebra",
+   "subject": "additional-maths",
+   "name": "Algebra, quadratics and inequalities",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "am-functions",
+   "subject": "additional-maths",
+   "name": "Functions and graphs",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "am-trig",
+   "subject": "additional-maths",
+   "name": "Trigonometry",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "am-calculus",
+   "subject": "additional-maths",
+   "name": "Differentiation and integration",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "am-coordinate",
+   "subject": "additional-maths",
+   "name": "Coordinate geometry",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "am-series",
+   "subject": "additional-maths",
+   "name": "Sequences, series and binomial expansion",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-c-atomic",
+   "subject": "chemistry",
+   "name": "Atomic structure and the periodic table",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-c-bonding",
+   "subject": "chemistry",
+   "name": "Chemical bonding",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-c-mole",
+   "subject": "chemistry",
+   "name": "Moles and stoichiometry",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-c-acids",
+   "subject": "chemistry",
+   "name": "Acids, bases and salts",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-c-organic",
+   "subject": "chemistry",
+   "name": "Organic chemistry basics",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-c-electro",
+   "subject": "chemistry",
+   "name": "Electrolysis and redox",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-p-mechanics",
+   "subject": "physics",
+   "name": "Mechanics: motion, forces, work and energy",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-p-heat",
+   "subject": "physics",
+   "name": "Heat and thermal physics",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-p-waves",
+   "subject": "physics",
+   "name": "Waves, light and sound",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-p-electricity",
+   "subject": "physics",
+   "name": "Electricity and magnetism",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-p-atomic",
+   "subject": "physics",
+   "name": "Atomic and nuclear physics",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-cs-hardware",
+   "subject": "computer-science",
+   "name": "Computer hardware and number systems",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-cs-software",
+   "subject": "computer-science",
+   "name": "Software and operating systems",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-cs-programming",
+   "subject": "computer-science",
+   "name": "Algorithms and programming",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "f5-cs-networks",
+   "subject": "computer-science",
+   "name": "Networks, internet and safety",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "eng-grammar",
+   "subject": "english",
+   "name": "Grammar and sentence structure",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "eng-vocab",
+   "subject": "english",
+   "name": "Vocabulary and idiom",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "eng-comprehension",
+   "subject": "english",
+   "name": "Comprehension and summary",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "eng-composition",
+   "subject": "english",
+   "name": "Composition and letter writing",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "fr-grammar",
+   "subject": "french",
+   "name": "Grammaire et conjugaison",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "fr-vocab",
+   "subject": "french",
+   "name": "Vocabulaire",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "fr-comprehension",
+   "subject": "french",
+   "name": "Compréhension écrite",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "fr-translation",
+   "subject": "french",
+   "name": "Traduction (English-French)",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "eco-basic",
+   "subject": "economics",
+   "name": "Basic concepts: scarcity, choice and opportunity cost",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "eco-demand-supply",
+   "subject": "economics",
+   "name": "Demand, supply and price",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "eco-production",
+   "subject": "economics",
+   "name": "Production, firms and costs",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "eco-money-banking",
+   "subject": "economics",
+   "name": "Money and banking",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "eco-trade",
+   "subject": "economics",
+   "name": "International trade",
+   "levels": [
+    "form-5"
+   ]
+  },
+  {
+   "id": "eco-public",
+   "subject": "economics",
+   "name": "Public finance and national income",
+   "levels": [
+    "form-5"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "note": "Which subjects each level offers. Edit here to add or remove a subject; ids must exist in engine/topics.json.",
+ "levels": [
+  {
+   "id": "a-level",
+   "label": "A Level",
+   "aliases": ["a level", "a-level", "alevel", "advanced level", "lower sixth", "upper sixth", "lowersixth", "uppersixth", "ls", "us"],
+   "subjects": ["chemistry", "maths", "further-maths", "computer-science", "ict", "physics"]
+  },
+  {
+   "id": "form-5",
+   "label": "Form 5",
+   "aliases": ["form 5", "form5", "form five", "o level", "o-level", "olevel", "ordinary level", "f5"],
+   "subjects": ["chemistry", "maths", "additional-maths", "french", "physics", "computer-science", "english", "economics"]
+  }
+ ]
+}

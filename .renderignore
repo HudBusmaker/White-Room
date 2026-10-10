@@ -1,0 +1,13 @@
+.git
+.env
+.env.*
+node_modules
+data
+backups
+tests
+bank/source-import
+*.zip
+*.rar
+service-account*.json
+*-service-account*.json
+*firebase-adminsdk*.json

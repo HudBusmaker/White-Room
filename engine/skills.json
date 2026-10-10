@@ -1,0 +1,558 @@
+{
+ "note": "Recurring skills (from objectives/*.md). Mastery is tracked per skill as well as per topic: skills matter more than one-off questions.",
+ "skills": [
+  {
+   "id": "c-moles",
+   "subject": "chemistry",
+   "topic": "chem-physical",
+   "name": "Moles and concentration",
+   "description": "Moles, concentration and ion counts."
+  },
+  {
+   "id": "c-ionic-tests",
+   "subject": "chemistry",
+   "topic": "chem-inorganic",
+   "name": "Qualitative analysis",
+   "description": "Interpret test observations."
+  },
+  {
+   "id": "c-organic-naming",
+   "subject": "chemistry",
+   "topic": "chem-organic",
+   "name": "Naming organic compounds",
+   "description": "Name branched alkanes."
+  },
+  {
+   "id": "cs-twos-complement",
+   "subject": "computer-science",
+   "topic": "cs-numbersys",
+   "name": "Two's complement",
+   "description": "Write a negative number in n-bit two's complement: magnitude, invert, add 1."
+  },
+  {
+   "id": "cs-base-convert",
+   "subject": "computer-science",
+   "topic": "cs-numbersys",
+   "name": "Base conversion",
+   "description": "Convert between denary, binary and hexadecimal."
+  },
+  {
+   "id": "cs-demorgan",
+   "subject": "computer-science",
+   "topic": "cs-boolean",
+   "name": "De Morgan's laws",
+   "description": "Rewrite NAND/NOR expressions."
+  },
+  {
+   "id": "cs-sop-circuit",
+   "subject": "computer-science",
+   "topic": "cs-boolean",
+   "name": "Truth table to circuit",
+   "description": "Derive an expression from a truth table and build it from gates."
+  },
+  {
+   "id": "cs-opcode-split",
+   "subject": "computer-science",
+   "topic": "cs-arch",
+   "name": "Opcode / operand split",
+   "description": "Work out instruction field widths and address ranges."
+  },
+  {
+   "id": "cs-address-bits",
+   "subject": "computer-science",
+   "topic": "cs-memory",
+   "name": "Address bits",
+   "description": "Bits needed to address N memory locations."
+  },
+  {
+   "id": "cs-scheduling",
+   "subject": "computer-science",
+   "topic": "cs-os",
+   "name": "CPU scheduling",
+   "description": "Waiting times under FCFS and SJF."
+  },
+  {
+   "id": "cs-insertion-trace",
+   "subject": "computer-science",
+   "topic": "cs-ds",
+   "name": "Trace insertion sort",
+   "description": "State the array after each pass."
+  },
+  {
+   "id": "cs-hash-probing",
+   "subject": "computer-science",
+   "topic": "cs-ds",
+   "name": "Hashing with linear probing",
+   "description": "Insert keys with h(k) = k mod m and resolve collisions."
+  },
+  {
+   "id": "cs-test-data",
+   "subject": "computer-science",
+   "topic": "cs-swe",
+   "name": "Test data design",
+   "description": "Normal, boundary and erroneous test data."
+  },
+  {
+   "id": "cs-ip-mac",
+   "subject": "computer-science",
+   "topic": "cs-net",
+   "name": "Network devices and addresses",
+   "description": "IP vs MAC, hub vs switch vs router."
+  },
+  {
+   "id": "fm-complex-arith",
+   "subject": "further-maths",
+   "topic": "fp-complex",
+   "name": "Complex arithmetic",
+   "description": "Multiply, modulus and argument."
+  },
+  {
+   "id": "fm-matrix-ops",
+   "subject": "further-maths",
+   "topic": "fp-matrices",
+   "name": "Matrix operations",
+   "description": "Determinant and inverse of a 2x2 matrix."
+  },
+  {
+   "id": "fm-induction",
+   "subject": "further-maths",
+   "topic": "fp-induction",
+   "name": "Proof by induction",
+   "description": "Structure of an induction proof."
+  },
+  {
+   "id": "fm-ode",
+   "subject": "further-maths",
+   "topic": "fp-diffeq",
+   "name": "Differential equations",
+   "description": "Solve dy/dx = ky with an initial condition."
+  },
+  {
+   "id": "fm-chisq",
+   "subject": "further-maths",
+   "topic": "fs-tests",
+   "name": "Chi-squared test",
+   "description": "Run a goodness-of-fit test and state the conclusion."
+  },
+  {
+   "id": "m-quadratics",
+   "subject": "maths",
+   "topic": "pure-algebra",
+   "name": "Quadratics",
+   "description": "Solve quadratics using the discriminant and formula."
+  },
+  {
+   "id": "m-differentiate",
+   "subject": "maths",
+   "topic": "pure-calculus",
+   "name": "Differentiate and apply",
+   "description": "Stationary points and their nature."
+  },
+  {
+   "id": "m-trig-eq",
+   "subject": "maths",
+   "topic": "pure-trig",
+   "name": "Trig equations",
+   "description": "Find all solutions in a given interval."
+  },
+  {
+   "id": "m-log-laws",
+   "subject": "maths",
+   "topic": "pure-explog",
+   "name": "Log laws",
+   "description": "Combine logs and solve exponential equations."
+  },
+  {
+   "id": "m-binomial",
+   "subject": "maths",
+   "topic": "stat-distributions",
+   "name": "Binomial distribution",
+   "description": "Probabilities, mean and variance."
+  },
+  {
+   "id": "m-probability",
+   "subject": "maths",
+   "topic": "stat-probability",
+   "name": "Probability rules",
+   "description": "Addition rule, independence, complements."
+  },
+  {
+   "id": "p-suvat",
+   "subject": "physics",
+   "topic": "phy-mechanics",
+   "name": "Uniform acceleration",
+   "description": "Use the suvat equations with units."
+  },
+  {
+   "id": "p-wave-eq",
+   "subject": "physics",
+   "topic": "phy-waves",
+   "name": "Wave equation",
+   "description": "v = f x wavelength and the period."
+  },
+  {
+   "id": "p-circuits",
+   "subject": "physics",
+   "topic": "phy-fields",
+   "name": "Series and parallel circuits",
+   "description": "Combined resistance, current and voltage."
+  },
+  {
+   "id": "p-gas-law",
+   "subject": "physics",
+   "topic": "phy-thermal",
+   "name": "Gas laws",
+   "description": "Proportionality with absolute temperature."
+  },
+  {
+   "id": "p-decay",
+   "subject": "physics",
+   "topic": "phy-modern",
+   "name": "Radioactive decay",
+   "description": "Half-life calculations."
+  },
+  {
+   "id": "cs-db-core",
+   "subject": "computer-science",
+   "topic": "cs-db",
+   "name": "Databases: 3NF, E-R diagrams, entity modelling, SQL reasoning",
+   "description": "General practice on Databases: 3NF, E-R diagrams, entity modelling, SQL reasoning."
+  },
+  {
+   "id": "cs-prog-core",
+   "subject": "computer-science",
+   "topic": "cs-prog",
+   "name": "Programming: loops, parameter passing, recursion, paradigms",
+   "description": "General practice on Programming: loops, parameter passing, recursion, paradigms."
+  },
+  {
+   "id": "ict-systems-core",
+   "subject": "ict",
+   "topic": "ict-systems",
+   "name": "Information systems and data processing",
+   "description": "General practice on Information systems and data processing."
+  },
+  {
+   "id": "ict-databases-core",
+   "subject": "ict",
+   "topic": "ict-databases",
+   "name": "Databases and SQL",
+   "description": "General practice on Databases and SQL."
+  },
+  {
+   "id": "ict-spreadsheets-core",
+   "subject": "ict",
+   "topic": "ict-spreadsheets",
+   "name": "Spreadsheets and modelling",
+   "description": "General practice on Spreadsheets and modelling."
+  },
+  {
+   "id": "ict-networks-core",
+   "subject": "ict",
+   "topic": "ict-networks",
+   "name": "Networks and the internet",
+   "description": "General practice on Networks and the internet."
+  },
+  {
+   "id": "ict-web-core",
+   "subject": "ict",
+   "topic": "ict-web",
+   "name": "Web design and multimedia",
+   "description": "General practice on Web design and multimedia."
+  },
+  {
+   "id": "ict-society-core",
+   "subject": "ict",
+   "topic": "ict-society",
+   "name": "ICT in society: security, ethics and law",
+   "description": "General practice on ICT in society: security, ethics and law."
+  },
+  {
+   "id": "f5-m-number-core",
+   "subject": "maths",
+   "topic": "f5-m-number",
+   "name": "Number, ratio and percentages",
+   "description": "General practice on Number, ratio and percentages."
+  },
+  {
+   "id": "f5-m-algebra-core",
+   "subject": "maths",
+   "topic": "f5-m-algebra",
+   "name": "Algebra, equations and inequalities",
+   "description": "General practice on Algebra, equations and inequalities."
+  },
+  {
+   "id": "f5-m-geometry-core",
+   "subject": "maths",
+   "topic": "f5-m-geometry",
+   "name": "Geometry and mensuration",
+   "description": "General practice on Geometry and mensuration."
+  },
+  {
+   "id": "f5-m-trig-core",
+   "subject": "maths",
+   "topic": "f5-m-trig",
+   "name": "Trigonometry",
+   "description": "General practice on Trigonometry."
+  },
+  {
+   "id": "f5-m-stats-core",
+   "subject": "maths",
+   "topic": "f5-m-stats",
+   "name": "Statistics and probability",
+   "description": "General practice on Statistics and probability."
+  },
+  {
+   "id": "f5-m-vectors-core",
+   "subject": "maths",
+   "topic": "f5-m-vectors",
+   "name": "Vectors and matrices",
+   "description": "General practice on Vectors and matrices."
+  },
+  {
+   "id": "am-algebra-core",
+   "subject": "additional-maths",
+   "topic": "am-algebra",
+   "name": "Algebra, quadratics and inequalities",
+   "description": "General practice on Algebra, quadratics and inequalities."
+  },
+  {
+   "id": "am-functions-core",
+   "subject": "additional-maths",
+   "topic": "am-functions",
+   "name": "Functions and graphs",
+   "description": "General practice on Functions and graphs."
+  },
+  {
+   "id": "am-trig-core",
+   "subject": "additional-maths",
+   "topic": "am-trig",
+   "name": "Trigonometry",
+   "description": "General practice on Trigonometry."
+  },
+  {
+   "id": "am-calculus-core",
+   "subject": "additional-maths",
+   "topic": "am-calculus",
+   "name": "Differentiation and integration",
+   "description": "General practice on Differentiation and integration."
+  },
+  {
+   "id": "am-coordinate-core",
+   "subject": "additional-maths",
+   "topic": "am-coordinate",
+   "name": "Coordinate geometry",
+   "description": "General practice on Coordinate geometry."
+  },
+  {
+   "id": "am-series-core",
+   "subject": "additional-maths",
+   "topic": "am-series",
+   "name": "Sequences, series and binomial expansion",
+   "description": "General practice on Sequences, series and binomial expansion."
+  },
+  {
+   "id": "f5-c-atomic-core",
+   "subject": "chemistry",
+   "topic": "f5-c-atomic",
+   "name": "Atomic structure and the periodic table",
+   "description": "General practice on Atomic structure and the periodic table."
+  },
+  {
+   "id": "f5-c-bonding-core",
+   "subject": "chemistry",
+   "topic": "f5-c-bonding",
+   "name": "Chemical bonding",
+   "description": "General practice on Chemical bonding."
+  },
+  {
+   "id": "f5-c-mole-core",
+   "subject": "chemistry",
+   "topic": "f5-c-mole",
+   "name": "Moles and stoichiometry",
+   "description": "General practice on Moles and stoichiometry."
+  },
+  {
+   "id": "f5-c-acids-core",
+   "subject": "chemistry",
+   "topic": "f5-c-acids",
+   "name": "Acids, bases and salts",
+   "description": "General practice on Acids, bases and salts."
+  },
+  {
+   "id": "f5-c-organic-core",
+   "subject": "chemistry",
+   "topic": "f5-c-organic",
+   "name": "Organic chemistry basics",
+   "description": "General practice on Organic chemistry basics."
+  },
+  {
+   "id": "f5-c-electro-core",
+   "subject": "chemistry",
+   "topic": "f5-c-electro",
+   "name": "Electrolysis and redox",
+   "description": "General practice on Electrolysis and redox."
+  },
+  {
+   "id": "f5-p-mechanics-core",
+   "subject": "physics",
+   "topic": "f5-p-mechanics",
+   "name": "Mechanics: motion, forces, work and energy",
+   "description": "General practice on Mechanics: motion, forces, work and energy."
+  },
+  {
+   "id": "f5-p-heat-core",
+   "subject": "physics",
+   "topic": "f5-p-heat",
+   "name": "Heat and thermal physics",
+   "description": "General practice on Heat and thermal physics."
+  },
+  {
+   "id": "f5-p-waves-core",
+   "subject": "physics",
+   "topic": "f5-p-waves",
+   "name": "Waves, light and sound",
+   "description": "General practice on Waves, light and sound."
+  },
+  {
+   "id": "f5-p-electricity-core",
+   "subject": "physics",
+   "topic": "f5-p-electricity",
+   "name": "Electricity and magnetism",
+   "description": "General practice on Electricity and magnetism."
+  },
+  {
+   "id": "f5-p-atomic-core",
+   "subject": "physics",
+   "topic": "f5-p-atomic",
+   "name": "Atomic and nuclear physics",
+   "description": "General practice on Atomic and nuclear physics."
+  },
+  {
+   "id": "f5-cs-hardware-core",
+   "subject": "computer-science",
+   "topic": "f5-cs-hardware",
+   "name": "Computer hardware and number systems",
+   "description": "General practice on Computer hardware and number systems."
+  },
+  {
+   "id": "f5-cs-software-core",
+   "subject": "computer-science",
+   "topic": "f5-cs-software",
+   "name": "Software and operating systems",
+   "description": "General practice on Software and operating systems."
+  },
+  {
+   "id": "f5-cs-programming-core",
+   "subject": "computer-science",
+   "topic": "f5-cs-programming",
+   "name": "Algorithms and programming",
+   "description": "General practice on Algorithms and programming."
+  },
+  {
+   "id": "f5-cs-networks-core",
+   "subject": "computer-science",
+   "topic": "f5-cs-networks",
+   "name": "Networks, internet and safety",
+   "description": "General practice on Networks, internet and safety."
+  },
+  {
+   "id": "eng-grammar-core",
+   "subject": "english",
+   "topic": "eng-grammar",
+   "name": "Grammar and sentence structure",
+   "description": "General practice on Grammar and sentence structure."
+  },
+  {
+   "id": "eng-vocab-core",
+   "subject": "english",
+   "topic": "eng-vocab",
+   "name": "Vocabulary and idiom",
+   "description": "General practice on Vocabulary and idiom."
+  },
+  {
+   "id": "eng-comprehension-core",
+   "subject": "english",
+   "topic": "eng-comprehension",
+   "name": "Comprehension and summary",
+   "description": "General practice on Comprehension and summary."
+  },
+  {
+   "id": "eng-composition-core",
+   "subject": "english",
+   "topic": "eng-composition",
+   "name": "Composition and letter writing",
+   "description": "General practice on Composition and letter writing."
+  },
+  {
+   "id": "fr-grammar-core",
+   "subject": "french",
+   "topic": "fr-grammar",
+   "name": "Grammaire et conjugaison",
+   "description": "General practice on Grammaire et conjugaison."
+  },
+  {
+   "id": "fr-vocab-core",
+   "subject": "french",
+   "topic": "fr-vocab",
+   "name": "Vocabulaire",
+   "description": "General practice on Vocabulaire."
+  },
+  {
+   "id": "fr-comprehension-core",
+   "subject": "french",
+   "topic": "fr-comprehension",
+   "name": "Compréhension écrite",
+   "description": "General practice on Compréhension écrite."
+  },
+  {
+   "id": "fr-translation-core",
+   "subject": "french",
+   "topic": "fr-translation",
+   "name": "Traduction (English-French)",
+   "description": "General practice on Traduction (English-French)."
+  },
+  {
+   "id": "eco-basic-core",
+   "subject": "economics",
+   "topic": "eco-basic",
+   "name": "Basic concepts: scarcity, choice and opportunity cost",
+   "description": "General practice on Basic concepts: scarcity, choice and opportunity cost."
+  },
+  {
+   "id": "eco-demand-supply-core",
+   "subject": "economics",
+   "topic": "eco-demand-supply",
+   "name": "Demand, supply and price",
+   "description": "General practice on Demand, supply and price."
+  },
+  {
+   "id": "eco-production-core",
+   "subject": "economics",
+   "topic": "eco-production",
+   "name": "Production, firms and costs",
+   "description": "General practice on Production, firms and costs."
+  },
+  {
+   "id": "eco-money-banking-core",
+   "subject": "economics",
+   "topic": "eco-money-banking",
+   "name": "Money and banking",
+   "description": "General practice on Money and banking."
+  },
+  {
+   "id": "eco-trade-core",
+   "subject": "economics",
+   "topic": "eco-trade",
+   "name": "International trade",
+   "description": "General practice on International trade."
+  },
+  {
+   "id": "eco-public-core",
+   "subject": "economics",
+   "topic": "eco-public",
+   "name": "Public finance and national income",
+   "description": "General practice on Public finance and national income."
+  }
+ ]
+}

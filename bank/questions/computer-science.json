@@ -1,0 +1,478 @@
+{
+ "subject": "computer-science",
+ "questions": [
+  {
+   "id": "cs-numbersys-001",
+   "subject": "computer-science",
+   "topic": "cs-numbersys",
+   "skill": "cs-twos-complement",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 3,
+   "stem": "Represent $-45$ in **8-bit two\\'s complement**. Show each stage.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "text",
+     "prompt": "Write $45$ in 8-bit binary.",
+     "expected": "00101101",
+     "marks": 1,
+     "hint": "Use 128, 64, 32, 16, 8, 4, 2, 1.",
+     "mistake": "Check each place value: 45 = 32 + 8 + 4 + 1."
+    },
+    {
+     "id": "b",
+     "kind": "text",
+     "prompt": "Invert every bit of your answer to (a).",
+     "expected": "11010010",
+     "marks": 1,
+     "hint": "Every 0 becomes 1 and every 1 becomes 0, including the leading bit.",
+     "mistake": "Invert ALL eight bits, including the leading zero."
+    },
+    {
+     "id": "c",
+     "kind": "text",
+     "prompt": "Add 1 to get the final answer.",
+     "expected": "11010011",
+     "marks": 1,
+     "hint": "Binary addition: the last bit 0 + 1 = 1.",
+     "mistake": "If you wrote the inverted pattern again, you forgot to add 1."
+    }
+   ]
+  },
+  {
+   "id": "cs-numbersys-002",
+   "subject": "computer-science",
+   "topic": "cs-numbersys",
+   "skill": "cs-base-convert",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 3,
+   "stem": "Convert the denary number $203$ into other bases.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "text",
+     "prompt": "Write 203 in 8-bit binary.",
+     "expected": "11001011",
+     "marks": 2,
+     "hint": "203 = 128 + 64 + 8 + 2 + 1.",
+     "mistake": "Subtract the largest power of 2 each time: 203 - 128 = 75, 75 - 64 = 11, ..."
+    },
+    {
+     "id": "b",
+     "kind": "text",
+     "prompt": "Write 203 in hexadecimal.",
+     "expected": "CB",
+     "marks": 1,
+     "variants": [
+      "cb",
+      "0xCB"
+     ],
+     "hint": "Split the binary into groups of four bits: 1100 and 1011.",
+     "mistake": "1100 = 12 = C and 1011 = 11 = B."
+    }
+   ]
+  },
+  {
+   "id": "cs-boolean-001",
+   "subject": "computer-science",
+   "topic": "cs-boolean",
+   "skill": "cs-demorgan",
+   "type": "mcq",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 1,
+   "stem": "Which expression is equivalent to $\\overline{A \\cdot B}$ (NOT (A AND B))?",
+   "image": null,
+   "options": [
+    {
+     "id": "A",
+     "text": "$\\overline{A}\\cdot\\overline{B}$",
+     "correct": false,
+     "trap": "Applies NOT to each input but keeps AND. De Morgan swaps AND to OR as well."
+    },
+    {
+     "id": "B",
+     "text": "$\\overline{A}+\\overline{B}$",
+     "correct": true
+    },
+    {
+     "id": "C",
+     "text": "$A+B$",
+     "correct": false,
+     "trap": "Drops the NOT entirely."
+    },
+    {
+     "id": "D",
+     "text": "$\\overline{A+B}$",
+     "correct": false,
+     "trap": "That is NOR, not NAND."
+    }
+   ]
+  },
+  {
+   "id": "cs-boolean-002",
+   "subject": "computer-science",
+   "topic": "cs-boolean",
+   "skill": "cs-sop-circuit",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 4,
+   "stem": "A logic circuit with inputs $A$ and $B$ gives output $Q=1$ only when $A=0,B=1$ **or** $A=1,B=0$.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "State how many rows of the truth table have Q = 1.",
+     "expected": 2,
+     "marks": 1,
+     "mistake": "Count the rows listed in the question: two input combinations give 1."
+    },
+    {
+     "id": "b",
+     "kind": "text",
+     "prompt": "Name the single logic gate that behaves like this.",
+     "expected": "XOR",
+     "marks": 1,
+     "variants": [
+      "exclusive or",
+      "exclusive-or",
+      "eor",
+      "xor gate"
+     ],
+     "hint": "Its output is 1 when the inputs are different."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "State how many NAND gates are needed to build this gate.",
+     "expected": 4,
+     "marks": 2,
+     "hint": "Think of the standard way to build XOR using only NAND gates.",
+     "mistake": "The standard NAND-only XOR uses 4 NAND gates."
+    }
+   ]
+  },
+  {
+   "id": "cs-arch-001",
+   "subject": "computer-science",
+   "topic": "cs-arch",
+   "skill": "cs-opcode-split",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 3,
+   "stem": "A computer uses **16-bit** instructions. The first $4$ bits are the opcode and the rest is the operand.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "State the number of bits in the operand.",
+     "expected": 12,
+     "marks": 1,
+     "mistake": "16 - 4 = 12."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "State how many different instructions (opcodes) are possible.",
+     "expected": 16,
+     "marks": 1,
+     "hint": "4 bits give 2 to the power 4 patterns.",
+     "mistake": "2^4 = 16."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "State how many memory locations the operand can address.",
+     "expected": 4096,
+     "marks": 1,
+     "hint": "12 bits give 2 to the power 12 patterns.",
+     "mistake": "2^12 = 4096."
+    }
+   ]
+  },
+  {
+   "id": "cs-memory-001",
+   "subject": "computer-science",
+   "topic": "cs-memory",
+   "skill": "cs-address-bits",
+   "type": "mcq",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 1,
+   "stem": "A byte-addressable memory has $4\\,096$ locations. How many address bits are needed?",
+   "image": null,
+   "options": [
+    {
+     "id": "A",
+     "text": "4096",
+     "correct": false,
+     "trap": "Confuses the number of locations with the number of bits."
+    },
+    {
+     "id": "B",
+     "text": "8",
+     "correct": false,
+     "trap": "Uses the size of one byte, not the number of address lines."
+    },
+    {
+     "id": "C",
+     "text": "11",
+     "correct": false,
+     "trap": "Off by one: $2^{11}=2048$ is too small."
+    },
+    {
+     "id": "D",
+     "text": "12",
+     "correct": true
+    }
+   ]
+  },
+  {
+   "id": "cs-os-001",
+   "subject": "computer-science",
+   "topic": "cs-os",
+   "skill": "cs-scheduling",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 6,
+   "stem": "Three processes all arrive at time $0$ in the order P1, P2, P3 with CPU burst times $5$, $3$ and $8$ ms. Scheduling is non-preemptive.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Under FCFS, state the waiting time of P2 in ms.",
+     "expected": 5,
+     "marks": 1,
+     "unit": "ms",
+     "mistake": "P2 waits while P1 runs for 5 ms."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Under FCFS, state the waiting time of P3 in ms.",
+     "expected": 8,
+     "marks": 1,
+     "unit": "ms",
+     "mistake": "P3 waits for P1 and P2: 5 + 3."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "Under FCFS, calculate the average waiting time in ms (2 d.p.).",
+     "expected": 4.33,
+     "marks": 2,
+     "tolerance": {
+      "abs": 0.01
+     },
+     "unit": "ms",
+     "hint": "Add the three waiting times, then divide by 3.",
+     "partial": [
+      {
+       "value": 13,
+       "marks": 1,
+       "note": "That is the total waiting time. Divide by 3 for the average."
+      }
+     ]
+    },
+    {
+     "id": "d",
+     "kind": "number",
+     "prompt": "Under SJF, calculate the average waiting time in ms (2 d.p.).",
+     "expected": 3.67,
+     "marks": 2,
+     "tolerance": {
+      "abs": 0.01
+     },
+     "unit": "ms",
+     "hint": "SJF order is P2, P1, P3. Waiting times are 0, 3 and 8.",
+     "partial": [
+      {
+       "value": 11,
+       "marks": 1,
+       "note": "That is the total waiting time. Divide by 3 for the average."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-ds-001",
+   "subject": "computer-science",
+   "topic": "cs-ds",
+   "skill": "cs-insertion-trace",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 3,
+   "stem": "The array $[5,\\ 2,\\ 4,\\ 1]$ is sorted into ascending order using **insertion sort**. Pass 1 inserts the 2nd item, pass 2 the 3rd item and pass 3 the 4th item.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "sequence",
+     "prompt": "Write the array after pass 1.",
+     "expected": "2 5 4 1",
+     "marks": 1,
+     "hint": "Insert 2 into the sorted part [5].",
+     "mistake": "After pass 1 only the first two items are in order."
+    },
+    {
+     "id": "b",
+     "kind": "sequence",
+     "prompt": "Write the array after pass 2.",
+     "expected": "2 4 5 1",
+     "marks": 1,
+     "hint": "Insert 4 into [2, 5]."
+    },
+    {
+     "id": "c",
+     "kind": "sequence",
+     "prompt": "Write the array after pass 3.",
+     "expected": "1 2 4 5",
+     "marks": 1,
+     "hint": "Insert 1 into [2, 4, 5]; it moves to the front."
+    }
+   ]
+  },
+  {
+   "id": "cs-ds-002",
+   "subject": "computer-science",
+   "topic": "cs-ds",
+   "skill": "cs-hash-probing",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 3,
+   "total": 4,
+   "stem": "A hash table has $7$ slots numbered $0$ to $6$. The hash function is $h(k)=k \\bmod 7$. Collisions use **linear probing** (try the next slot, wrapping round). The keys $15, 22, 9, 29$ are inserted in that order.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "State the slot where 22 is stored.",
+     "expected": 2,
+     "marks": 1,
+     "hint": "22 mod 7 = 1, but slot 1 is already taken by 15.",
+     "mistake": "22 hashes to slot 1, which holds 15, so probe to slot 2."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "State the slot where 9 is stored.",
+     "expected": 3,
+     "marks": 1,
+     "hint": "9 mod 7 = 2, and slot 2 now holds 22.",
+     "mistake": "9 hashes to 2, which is occupied, so probe to 3."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "State the slot where 29 is stored.",
+     "expected": 4,
+     "marks": 2,
+     "hint": "29 mod 7 = 1. Probe slots 1, 2, 3 until you find an empty one.",
+     "mistake": "Slots 1, 2 and 3 are all taken, so 29 goes in slot 4."
+    }
+   ]
+  },
+  {
+   "id": "cs-swe-001",
+   "subject": "computer-science",
+   "topic": "cs-swe",
+   "skill": "cs-test-data",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 4,
+   "stem": "A program accepts an age from $18$ to $60$ **inclusive**.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Give the highest valid boundary value.",
+     "expected": 60,
+     "marks": 1
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Give the lowest integer that is just outside the range at the top end.",
+     "expected": 61,
+     "marks": 1,
+     "mistake": "The first invalid integer above 60 is 61."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "Give the lowest valid boundary value.",
+     "expected": 18,
+     "marks": 1
+    },
+    {
+     "id": "d",
+     "kind": "text",
+     "prompt": "State the type of test data that the text \"abc\" is.",
+     "expected": "erroneous",
+     "marks": 1,
+     "variants": [
+      "erroneous data",
+      "error",
+      "invalid",
+      "erroneous test data"
+     ],
+     "hint": "Wrong data type: not even a number."
+    }
+   ]
+  },
+  {
+   "id": "cs-net-001",
+   "subject": "computer-science",
+   "topic": "cs-net",
+   "skill": "cs-ip-mac",
+   "type": "mcq",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 1,
+   "stem": "Which device forwards data between **different networks** using IP addresses?",
+   "image": null,
+   "options": [
+    {
+     "id": "A",
+     "text": "Hub",
+     "correct": false,
+     "trap": "A hub just repeats data to every port; it does not read addresses."
+    },
+    {
+     "id": "B",
+     "text": "Switch",
+     "correct": false,
+     "trap": "A switch forwards frames inside one network using MAC addresses."
+    },
+    {
+     "id": "C",
+     "text": "Router",
+     "correct": true
+    },
+    {
+     "id": "D",
+     "text": "Repeater",
+     "correct": false,
+     "trap": "A repeater only regenerates a weak signal."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "subject": "chemistry",
+  "topic": "bonding-and-structure",
+  "status": "staging_not_live_practice_bank",
+  "record_count": 1,
+  "questions": [
+    {
+      "id": "page-gce-photos-set-02-39ff7245cd-q01",
+      "subject": "chemistry",
+      "topic": "bonding-and-structure",
+      "topic_classification": "provisional_keyword_classification",
+      "type": "source_ocr_candidate",
+      "source": {
+        "set": "gce-photos-set-02",
+        "filename": "PXL_20260906_120118977.jpg",
+        "image": "bank/source-import/gce-photos-set-02/images/PXL_20260906_120118977.jpg",
+        "page_id": "page-gce-photos-set-02-39ff7245cd",
+        "question_number_ocr": "2",
+        "exam_board": null,
+        "qualification_level": null,
+        "year": null,
+        "paper": null
+      },
+      "stem": "2. @)_ The following reaction isin a state of dynamic chemicay equilisriuny \"7S (2044 i) See parated into its components\nPCI, (9) —> PC1,(9) + C1,(9); AH = 4Ve J i cei” eee Fe ,\ni) Explain the term dynamic chemical equitiorium “Gxample of a solution which deviates positively from Raoult's Law\nGive an\neee wee 4) Pyample s ;\nAcne Mo Conelions needed fora system to attain cette Of chemica| Explain why this solution exhibits a positive deviation from Raoults Law\n& E Squilibyig” ii) Exp\nii) What will be the effect on sen é\nA: uD Postion Of the above equilibrium if the total pressure On the Total = 20 marks (2011)\ncreased at constant temperature. the system, Wa tion is on reaction kinetics and bonding,\nuestior\n8: Th 4 y) What ene rea of a reaction?\n8 The numerical value of the equi h < j ) Activated cor eee\nOf the reaction is increases) Mum Constant, Ke, of the rescise, ifthe temp.\nerature ‘ oe\ni) Molecularity of a reaction?\n') Write the equilibriuy, » i d\nSaullbrium constant expression (Ke) Giving units, for the reac\n, Ction aboy.\ndove 1) iat woud be the effect on =",
+      "options": null,
+      "answer_key": null,
+      "mark_scheme": null,
+      "publishable": false,
+      "extraction_confidence": "low_to_medium; OCR and page-column order not verified",
+      "review_flags": [
+        "check against original image",
+        "verify wording, numbering and chemical/mathematical notation",
+        "verify topic assignment",
+        "verify exam source metadata",
+        "add/verify mark scheme before automatic marking"
+      ]
+    }
+  ]
+}

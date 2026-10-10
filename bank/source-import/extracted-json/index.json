@@ -1,0 +1,554 @@
+{
+  "schema_version": 1,
+  "title": "White Room photographed past-paper OCR extraction",
+  "source_page_count": 66,
+  "candidate_question_count": 129,
+  "topic_file_count": 13,
+  "status": "staging_not_live_practice_bank",
+  "policy": "OCR candidate fragments are not verified questions. Pages can contain two columns, diagrams and OCR errors. Verify every record against the source image before importing into bank/questions/*.json.",
+  "topic_counts": {
+    "acids-bases-and-titration": 20,
+    "atomic-structure-and-periodicity": 21,
+    "bonding-and-structure": 1,
+    "chemical-industry-and-metals": 12,
+    "energetics": 5,
+    "gases-and-gas-laws": 4,
+    "moles-and-stoichiometry": 19,
+    "organic-chemistry": 2,
+    "qualitative-analysis-and-salts": 5,
+    "rates-and-equilibrium": 7,
+    "redox-and-electrochemistry": 4,
+    "solutions-and-concentration": 7,
+    "unclassified": 22
+  },
+  "source_pages": [
+    {
+      "page_id": "page-gce-photos-set-02-cd48d7c70d",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120012722.jpg",
+      "ocr_characters": 2236,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-05db3ef6f2",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120044890.jpg",
+      "ocr_characters": 4556,
+      "candidate_count": 2,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-dbc8196f87",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120047602.jpg",
+      "ocr_characters": 5253,
+      "candidate_count": 7,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-649e403ad9",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120050736.jpg",
+      "ocr_characters": 3212,
+      "candidate_count": 2,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-c5790e8323",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120055048.jpg",
+      "ocr_characters": 2197,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-39ff7245cd",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120118977.jpg",
+      "ocr_characters": 2913,
+      "candidate_count": 3,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-32ebd19cf9",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120132924.jpg",
+      "ocr_characters": 3029,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-0534891f9d",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120137100.jpg",
+      "ocr_characters": 2663,
+      "candidate_count": 2,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-7e69db0a02",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120200942.jpg",
+      "ocr_characters": 2305,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-8b435f96ae",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120209417.jpg",
+      "ocr_characters": 2614,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-c474ca01e5",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120220493.jpg",
+      "ocr_characters": 2877,
+      "candidate_count": 2,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-3b4bb0557f",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120234219.jpg",
+      "ocr_characters": 2033,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-5a1c55ff9f",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120239384.jpg",
+      "ocr_characters": 3161,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-eef50bb6d8",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120243295.jpg",
+      "ocr_characters": 3159,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-4c5abf6e32",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120253393.jpg",
+      "ocr_characters": 3498,
+      "candidate_count": 2,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-6e07e3bbf4",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120318852.jpg",
+      "ocr_characters": 3997,
+      "candidate_count": 4,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-bc367e70af",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120338859.jpg",
+      "ocr_characters": 2478,
+      "candidate_count": 2,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-0ca619071f",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120344286.jpg",
+      "ocr_characters": 3152,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-fd90882c97",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120352420.jpg",
+      "ocr_characters": 2591,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-7f4c27f90f",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120359855.jpg",
+      "ocr_characters": 1968,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-a8fc8472ac",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120401735.jpg",
+      "ocr_characters": 2860,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-f91a64da78",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120447065.jpg",
+      "ocr_characters": 3532,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-90a002d1ec",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120452029.jpg",
+      "ocr_characters": 2316,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-26ba7bff53",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120455009.jpg",
+      "ocr_characters": 2579,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-7b18e0ba1c",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120508432.jpg",
+      "ocr_characters": 2785,
+      "candidate_count": 2,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-f18b3c89cd",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120511563.jpg",
+      "ocr_characters": 2718,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-56d0086df8",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120545127.jpg",
+      "ocr_characters": 2268,
+      "candidate_count": 2,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-65bd6ad00e",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120557667.jpg",
+      "ocr_characters": 2517,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-733a29b737",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120601955.jpg",
+      "ocr_characters": 2379,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-02a1b074e6",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_120606882.jpg",
+      "ocr_characters": 2179,
+      "candidate_count": 2,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-8b779fc83c",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_121013100.MP.jpg",
+      "ocr_characters": 2190,
+      "candidate_count": 2,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-4fb3fad271",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_121017210.MP.jpg",
+      "ocr_characters": 2529,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-set-02-5582c8c567",
+      "set": "gce-photos-set-02",
+      "filename": "PXL_20260906_121019814.MP.jpg",
+      "ocr_characters": 2105,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-55f93f6b91",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115014761.jpg",
+      "ocr_characters": 3267,
+      "candidate_count": 7,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-ce2225cda1",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115021969.jpg",
+      "ocr_characters": 3457,
+      "candidate_count": 7,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-49ab11b915",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115025900.jpg",
+      "ocr_characters": 2622,
+      "candidate_count": 6,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-320453072a",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115029068.jpg",
+      "ocr_characters": 2096,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-40f071e88f",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115037258.jpg",
+      "ocr_characters": 3049,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-8c432e0fb0",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115051455.jpg",
+      "ocr_characters": 2069,
+      "candidate_count": 5,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-0cb494ac26",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115115101.jpg",
+      "ocr_characters": 2478,
+      "candidate_count": 3,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-62a7b198ca",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115122140.jpg",
+      "ocr_characters": 4471,
+      "candidate_count": 4,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-39f7b88c87",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115145421.jpg",
+      "ocr_characters": 4344,
+      "candidate_count": 13,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-e00012d9bd",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115158042.jpg",
+      "ocr_characters": 1545,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-4984bb959c",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115231290.MP.jpg",
+      "ocr_characters": 2457,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-7441d793ee",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115257504.MP.jpg",
+      "ocr_characters": 4449,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-204c57aa60",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115400998.NIGHT.jpg",
+      "ocr_characters": 998,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-dc4b2718f4",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115408739.jpg",
+      "ocr_characters": 2541,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-ee6d5c5240",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115412260.MP.jpg",
+      "ocr_characters": 2057,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-10a3605bb7",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115425099.jpg",
+      "ocr_characters": 2866,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-ba29f418b1",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115434814.jpg",
+      "ocr_characters": 4155,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-05d1cb7e90",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115446766.jpg",
+      "ocr_characters": 2420,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-81cc736e97",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115459539.jpg",
+      "ocr_characters": 1119,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-991dd8be3f",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115601247.jpg",
+      "ocr_characters": 2037,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-cdd61045bb",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115634361.jpg",
+      "ocr_characters": 4349,
+      "candidate_count": 3,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-07d885c37b",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115704954.jpg",
+      "ocr_characters": 2116,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-69ed2e646d",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115723351.jpg",
+      "ocr_characters": 6163,
+      "candidate_count": 3,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-186f64fe61",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115730399.jpg",
+      "ocr_characters": 1583,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-1bc2f9eab1",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115735373.jpg",
+      "ocr_characters": 2882,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-abfb97ca8d",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115802165.jpg",
+      "ocr_characters": 2502,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-2694ec4707",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115823509.jpg",
+      "ocr_characters": 275,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-1accfc6349",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115835288.jpg",
+      "ocr_characters": 771,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-c9df92c2c9",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115922496.jpg",
+      "ocr_characters": 91,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-78bb461b11",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115939819.jpg",
+      "ocr_characters": 244,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-70ed21be64",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115945627.jpg",
+      "ocr_characters": 483,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-2ed9df4a9e",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_115959580.jpg",
+      "ocr_characters": 103,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    },
+    {
+      "page_id": "page-gce-photos-e8d28ec8c4",
+      "set": "gce-photos",
+      "filename": "PXL_20260906_120003015.jpg",
+      "ocr_characters": 1925,
+      "candidate_count": 1,
+      "ocr_status": "machine_ocr_needs_human_verification"
+    }
+  ]
+}

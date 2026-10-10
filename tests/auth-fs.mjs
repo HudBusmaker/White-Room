@@ -1,0 +1,20 @@
+// The accounts code on the (fake) Firestore backend: races for one key, unique ids, awards that do not lose updates.
+import { useDb, createAdmissionKeys, registerStudent, loginStudent, awardStudent, getUser, listStudents } from '../auth.js';
+import { createFirestoreDb } from '../engine/db.js';
+import { FakeFirestore } from './fake-firestore.mjs';
+let pass = 0, fail = 0;
+const ok = (n, c, x = '') => { console.log((c ? 'PASS ' : 'FAIL ') + n + (x ? '  [' + x + ']' : '')); c ? pass++ : fail++; };
+useDb(createFirestoreDb(new FakeFirestore()));
+const keys = await createAdmissionKeys(6, 'HEAD');
+const reg = (k, name) => registerStudent({ admissionKey: k, name, password: 'secret1', gender: 'Female', levelKey: 'a-level', subjects: ['maths'] });
+const race = await Promise.all([reg(keys[0].key, 'Race One'), reg(keys[0].key, 'Race Two'), reg(keys[0].key, 'Race Three')]);
+ok('three people racing for one key: exactly one gets in', race.filter((r) => r.user).length === 1);
+const many = await Promise.all(keys.slice(1).map((k, i) => reg(k.key, 'Student ' + (i + 2))));
+const ids = [race.find((r) => r.user).user.id, ...many.map((r) => r.user?.id)];
+ok('five more students register at once and every id is different', ids.every(Boolean) && new Set(ids).size === 6, ids.join(' '));
+ok('login works with the right password only', !(await loginStudent(ids[0], 'secret1')).problem && Boolean((await loginStudent(ids[0], 'wrong!!')).problem));
+await Promise.all(Array.from({ length: 10 }, () => awardStudent(ids[0], { xp: 5, marks: 1, maxMarks: 2 })));
+const u = await getUser(ids[0]);
+ok('ten awards at once lose nothing', u.xp === 50 && u.stats.marks === 10, `xp ${u.xp}`);
+ok('the student list has six students and no internal fields', (await listStudents()).length === 6 && (await listStudents()).every((s) => !('_id' in s)));
+console.log(`\n${pass} passed, ${fail} failed`); process.exit(fail ? 1 : 0);

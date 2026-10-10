@@ -1,0 +1,30 @@
+{
+ "setSize": 4,
+ "compoundSlots": 1,
+ "strength": {
+  "max": 5,
+  "riseAt": 0.8,
+  "fallBelow": 0.5
+ },
+ "spacingDays": [
+  1,
+  3,
+  7,
+  16,
+  35,
+  90
+ ],
+ "riseOnlyWhenDue": true,
+ "xpPerMark": 1,
+ "dailyXpCap": 60,
+ "maxOpenSets": 6,
+ "setLifeHours": 12,
+ "photoMaxImages": 3,
+ "_notes": {
+  "strength": "Set score >= riseAt: strength +1. Score below fallBelow: strength -1. In between: unchanged.",
+  "spacingDays": "Days until a topic is due again, indexed by the NEW strength (0..5).",
+  "riseOnlyWhenDue": "If true, practising a topic before it is due cannot raise its strength (stops farming).",
+  "xpPerMark": "XP per mark, paid once per question per student. Set 0 to switch practice XP off.",
+  "dailyXpCap": "Most XP a student can earn from practice sets in one day."
+ }
+}

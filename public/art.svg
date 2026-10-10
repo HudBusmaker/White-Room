@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+<defs>
+<pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="9" stroke="#10162f" stroke-opacity=".2" stroke-width="3"/></pattern>
+</defs>
+<symbol id="blob" viewBox="0 0 400 360"><g stroke="#10162f" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"><path d="M58 122C38 60 120 18 200 34S362 22 374 120S392 252 330 302S190 352 120 318S70 204 58 122Z" fill="#ff5a4f"/><path d="M58 122C38 60 120 18 200 34S362 22 374 120S392 252 330 302S190 352 120 318S70 204 58 122Z" fill="url(#hatch)" stroke="none"/></g></symbol>
+<symbol id="corner" viewBox="0 0 220 200"><g stroke="#10162f" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"><path d="M224 -4V192C184 178 164 132 124 112S52 62 22 -4Z" fill="#ff5a4f"/><path d="M224 -4V192C184 178 164 132 124 112S52 62 22 -4Z" fill="url(#hatch)" stroke="none"/></g></symbol>
+<symbol id="ill-hero" viewBox="0 0 460 420">
+  <g font-family="Gaegu, 'Patrick Hand', 'Comic Sans MS', cursive" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="rotate(-4 150 90)">
+      <rect x="20" y="16" width="262" height="150" rx="10" fill="#17224a" stroke="#10162f" stroke-width="5"/>
+      <text x="40" y="62" font-size="27" font-weight="700" fill="#fff">What I cannot</text>
+      <text x="40" y="95" font-size="27" font-weight="700" fill="#fff">create, I do not</text>
+      <text x="40" y="128" font-size="27" font-weight="700" fill="#fff">understand.</text>
+      <text x="168" y="152" font-size="16" fill="#f7c437">R. Feynman</text>
+      <path d="M40 136 C80 146 130 140 170 136" fill="none" stroke="#4f86ff" stroke-width="4"/>
+    </g>
+    <g transform="rotate(5 370 120)">
+      <rect x="305" y="46" width="132" height="132" rx="6" fill="#fff" stroke="#10162f" stroke-width="4"/>
+      <g font-size="23" font-weight="700" fill="#10162f">
+        <rect x="320" y="62" width="16" height="16" fill="#fff" stroke="#10162f" stroke-width="3"/><text x="346" y="77">Think</text>
+        <rect x="320" y="90" width="16" height="16" fill="#fff" stroke="#10162f" stroke-width="3"/><text x="346" y="105">Solve</text>
+        <rect x="320" y="118" width="16" height="16" fill="#fff" stroke="#10162f" stroke-width="3"/><text x="346" y="133">Check</text>
+        <rect x="320" y="146" width="16" height="16" fill="#fff" stroke="#10162f" stroke-width="3"/><path d="M322 154 l5 6 l9 -12" fill="none" stroke="#1f5fff" stroke-width="4"/><text x="346" y="161">Win</text>
+      </g>
+    </g>
+    <g stroke="#10162f" stroke-width="4">
+      <rect x="40" y="352" width="250" height="46" rx="7" fill="#17224a"/>
+      <rect x="264" y="358" width="26" height="34" fill="#fff"/>
+      <rect x="62" y="306" width="250" height="46" rx="7" fill="#19c9a8"/>
+      <rect x="286" y="312" width="26" height="34" fill="#fff"/>
+      <rect x="34" y="260" width="250" height="46" rx="7" fill="#8b6fe0"/>
+      <rect x="258" y="266" width="26" height="34" fill="#fff"/>
+      <rect x="56" y="214" width="250" height="46" rx="7" fill="#1f5fff"/>
+      <rect x="280" y="220" width="26" height="34" fill="#fff"/>
+    </g>
+    <g font-size="21" font-weight="700" fill="#fff" stroke="none">
+      <text x="76" y="246">MATHS</text>
+      <text x="54" y="292">SCIENCE</text>
+      <text x="82" y="338">FRENCH</text>
+      <text x="62" y="384">BIG DREAMS</text>
+    </g>
+    <g transform="rotate(-6 380 350)">
+      <rect x="322" y="318" width="118" height="78" rx="6" fill="#fff" stroke="#10162f" stroke-width="4"/>
+      <g stroke="#10162f" stroke-width="3"><path d="M336 318v-8M352 318v-8M368 318v-8M384 318v-8M400 318v-8M416 318v-8"/></g>
+      <path d="M336 344h88M336 362h70" stroke="#c6d6ff" stroke-width="4" fill="none"/>
+      <g stroke="#10162f" stroke-width="4"><polygon points="330,382 436,330 442,342 336,394" fill="#f7c437"/><polygon points="330,382 336,394 322,396" fill="#f4d9b0"/></g>
+    </g>
+    <g>
+      <ellipse cx="372" cy="238" rx="56" ry="38" fill="#fff" stroke="#10162f" stroke-width="4"/>
+      <path d="M340 266 L326 290 L358 274" fill="#fff" stroke="#10162f" stroke-width="4"/>
+      <path d="M342 262 L336 270 L356 266" fill="#fff" stroke="none"/>
+      <text x="372" y="258" font-size="56" font-weight="700" fill="#1f5fff" text-anchor="middle" font-family="Georgia, serif">π</text>
+    </g>
+  </g>
+</symbol>
+<symbol id="ill-live" viewBox="0 0 120 120"><g stroke="#10162f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><rect x="12" y="24" width="96" height="62" rx="9" fill="#1f5fff"/><rect x="22" y="33" width="76" height="44" rx="4" fill="#dfeaff"/><polygon points="54,43 54,69 77,56" fill="#ff5a4f"/><path d="M44 102h32M60 86v16" fill="none"/><rect x="6" y="6" width="46" height="22" rx="11" fill="#ff5a4f"/><text x="29" y="23" font-size="16" font-weight="700" fill="#fff" stroke="none" text-anchor="middle" font-family="Gaegu,'Comic Sans MS',cursive">LIVE</text></g></symbol>
+<symbol id="ill-task" viewBox="0 0 120 120"><g stroke="#10162f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><rect x="22" y="16" width="72" height="92" rx="9" fill="#fff"/><rect x="42" y="8" width="32" height="18" rx="6" fill="#f7c437"/><path d="M36 46l5 5 9-10M36 68l5 5 9-10" fill="none" stroke="#1f5fff"/><path d="M60 46h20M60 68h20M36 90h44" fill="none" stroke="#9db6f0"/><polygon points="84,106 104,66 112,70 92,110" fill="#f7c437"/></g></symbol>
+<symbol id="ill-cal" viewBox="0 0 120 120"><g stroke="#10162f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><rect x="12" y="20" width="96" height="88" rx="9" fill="#fff"/><path d="M12 29a9 9 0 019-9h78a9 9 0 019 9v18H12z" fill="#ff5a4f"/><path d="M36 10v18M84 10v18" stroke-width="7"/><g fill="#10162f" stroke="none"><circle cx="32" cy="64" r="4"/><circle cx="52" cy="64" r="4"/><circle cx="72" cy="64" r="4"/><circle cx="32" cy="86" r="4"/><circle cx="52" cy="86" r="4"/></g><circle cx="88" cy="75" r="11" fill="#f7c437"/></g></symbol>
+<symbol id="ill-missed" viewBox="0 0 120 120"><g stroke="#10162f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><circle cx="28" cy="26" r="14" fill="#ff5a4f"/><circle cx="92" cy="26" r="14" fill="#ff5a4f"/><circle cx="60" cy="68" r="40" fill="#f7c437"/><circle cx="60" cy="68" r="29" fill="#fff"/><path d="M60 68V48M60 68l14 8" fill="none"/><path d="M36 102l-9 12M84 102l9 12" fill="none"/></g></symbol>
+<symbol id="ill-past" viewBox="0 0 120 120"><g stroke="#10162f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><rect x="16" y="78" width="88" height="26" rx="6" fill="#8b6fe0"/><rect x="24" y="50" width="88" height="26" rx="6" fill="#19c9a8"/><rect x="12" y="22" width="88" height="26" rx="6" fill="#1f5fff"/><path d="M26 35h12M38 63h12M30 91h12" stroke="#fff" fill="none"/></g></symbol>
+<symbol id="ill-done" viewBox="0 0 120 120"><g stroke="#10162f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M34 12h52v32a26 26 0 01-52 0z" fill="#f7c437"/><path d="M34 22H18v8a15 15 0 0015 15M86 22h16v8a15 15 0 01-15 15" fill="none"/><rect x="52" y="70" width="16" height="16" fill="#f7c437"/><rect x="34" y="86" width="52" height="18" rx="5" fill="#1f5fff"/><polygon points="60,22 65,34 77,35 68,43 71,55 60,49 49,55 52,43 43,35 55,34" fill="#fff" stroke-width="3"/></g></symbol>
+<symbol id="ill-vs" viewBox="0 0 120 120"><g stroke="#10162f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><polygon points="60,6 70,32 98,20 86,46 114,60 86,74 98,100 70,88 60,114 50,88 22,100 34,74 6,60 34,46 22,20 50,32" fill="#ff5a4f"/><text x="60" y="73" font-size="38" font-weight="700" fill="#fff" stroke="none" text-anchor="middle" font-family="Gaegu,'Comic Sans MS',cursive">VS</text></g></symbol>
+<symbol id="ill-clock" viewBox="0 0 120 120"><g stroke="#10162f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><rect x="50" y="6" width="20" height="12" rx="4" fill="#1f5fff"/><circle cx="60" cy="66" r="46" fill="#6f93ff"/><circle cx="60" cy="66" r="35" fill="#fff"/><path d="M60 38v8M60 86v8M32 66h8M80 66h8M60 66V46M60 66l16 10" fill="none"/></g></symbol>
+</svg>

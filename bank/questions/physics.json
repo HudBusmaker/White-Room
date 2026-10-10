@@ -1,0 +1,216 @@
+{
+ "subject": "physics",
+ "questions": [
+  {
+   "id": "phy-mechanics-001",
+   "subject": "physics",
+   "topic": "phy-mechanics",
+   "skill": "p-suvat",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 4,
+   "stem": "A car accelerates uniformly from rest at $2.5\\ \\mathrm{m\\,s^{-2}}$ for $8.0\\ \\mathrm{s}$.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Calculate the final speed in m/s.",
+     "expected": 20,
+     "marks": 1,
+     "unit": "m/s",
+     "hint": "v = u + at with u = 0."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Calculate the distance travelled in metres.",
+     "expected": 80,
+     "marks": 2,
+     "unit": "m",
+     "hint": "s = ut + (1/2)at^2.",
+     "partial": [
+      {
+       "value": 160,
+       "marks": 1,
+       "note": "You used final speed x time. The car was speeding up, so use the average speed (or s = 1/2 a t^2)."
+      }
+     ]
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "Calculate the average speed in m/s.",
+     "expected": 10,
+     "marks": 1,
+     "unit": "m/s"
+    }
+   ]
+  },
+  {
+   "id": "phy-waves-001",
+   "subject": "physics",
+   "topic": "phy-waves",
+   "skill": "p-wave-eq",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 4,
+   "stem": "A sound wave of frequency $170\\ \\mathrm{Hz}$ travels at $340\\ \\mathrm{m\\,s^{-1}}$ in air.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Calculate the wavelength in metres.",
+     "expected": 2,
+     "marks": 1,
+     "unit": "m",
+     "hint": "v = f x wavelength."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Calculate the period in seconds (3 s.f.). You may write it like 5.88e-3.",
+     "expected": 0.00588,
+     "marks": 2,
+     "tolerance": {
+      "rel": 0.01
+     },
+     "unit": "s",
+     "hint": "T = 1 / f."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "The frequency is changed to 680 Hz in the same air. State the new wavelength in metres.",
+     "expected": 0.5,
+     "marks": 1,
+     "unit": "m",
+     "hint": "The speed stays at 340 m/s."
+    }
+   ]
+  },
+  {
+   "id": "phy-fields-001",
+   "subject": "physics",
+   "topic": "phy-fields",
+   "skill": "p-circuits",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 3,
+   "stem": "A $6\\ \\Omega$ and a $3\\ \\Omega$ resistor are connected **in parallel** across a $12\\ \\mathrm{V}$ supply.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Calculate the combined resistance in ohms.",
+     "expected": 2,
+     "marks": 1,
+     "unit": "Ω",
+     "hint": "1/R = 1/6 + 1/3."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Calculate the total current in amperes.",
+     "expected": 6,
+     "marks": 1,
+     "unit": "A",
+     "hint": "I = V / R."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "Calculate the current through the 6 ohm resistor in amperes.",
+     "expected": 2,
+     "marks": 1,
+     "unit": "A",
+     "hint": "Each branch has the full 12 V across it."
+    }
+   ]
+  },
+  {
+   "id": "phy-thermal-001",
+   "subject": "physics",
+   "topic": "phy-thermal",
+   "skill": "p-gas-law",
+   "type": "mcq",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 1,
+   "stem": "A fixed mass of gas at constant volume is heated from $300\\ \\mathrm{K}$ to $600\\ \\mathrm{K}$. What happens to its pressure?",
+   "image": null,
+   "options": [
+    {
+     "id": "A",
+     "text": "It stays the same.",
+     "correct": false,
+     "trap": "Pressure rises with temperature at constant volume."
+    },
+    {
+     "id": "B",
+     "text": "It halves.",
+     "correct": false,
+     "trap": "Inverts the relationship: pressure is proportional to T, not 1/T."
+    },
+    {
+     "id": "C",
+     "text": "It doubles.",
+     "correct": true
+    },
+    {
+     "id": "D",
+     "text": "It quadruples.",
+     "correct": false,
+     "trap": "Squares the ratio; the relationship is linear, $p\\propto T$."
+    }
+   ]
+  },
+  {
+   "id": "phy-modern-001",
+   "subject": "physics",
+   "topic": "phy-modern",
+   "skill": "p-decay",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 4,
+   "stem": "A $80\\ \\mathrm{mg}$ sample of an isotope has a half-life of $6.0$ hours.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "State the mass remaining after 12 hours in mg.",
+     "expected": 20,
+     "marks": 1,
+     "unit": "mg",
+     "hint": "12 hours is two half-lives."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "State the mass remaining after 18 hours in mg.",
+     "expected": 10,
+     "marks": 1,
+     "unit": "mg"
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "State the fraction of the sample remaining after 24 hours as a decimal.",
+     "expected": 0.0625,
+     "marks": 2,
+     "tolerance": {
+      "abs": 0.0001
+     },
+     "hint": "4 half-lives: (1/2)^4. You may type 1/16."
+    }
+   ]
+  }
+ ]
+}

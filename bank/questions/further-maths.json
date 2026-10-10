@@ -1,0 +1,224 @@
+{
+ "subject": "further-maths",
+ "questions": [
+  {
+   "id": "fp-complex-001",
+   "subject": "further-maths",
+   "topic": "fp-complex",
+   "skill": "fm-complex-arith",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 4,
+   "stem": "$z = 3 + 4i$ and $w = 1 - 2i$.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "State the real part of $zw$.",
+     "expected": 11,
+     "marks": 1,
+     "hint": "(3 + 4i)(1 - 2i) = 3 - 6i + 4i - 8i^2."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "State the imaginary part of $zw$.",
+     "expected": -2,
+     "marks": 1
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "Calculate $|z|$.",
+     "expected": 5,
+     "marks": 1
+    },
+    {
+     "id": "d",
+     "kind": "number",
+     "prompt": "Calculate $\\arg z$ in degrees to 1 decimal place.",
+     "expected": 53.1,
+     "marks": 1,
+     "tolerance": {
+      "abs": 0.1
+     },
+     "unit": "°",
+     "hint": "arg z = tan^-1(4/3)."
+    }
+   ]
+  },
+  {
+   "id": "fp-matrices-001",
+   "subject": "further-maths",
+   "topic": "fp-matrices",
+   "skill": "fm-matrix-ops",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 3,
+   "stem": "$\\mathbf{A} = \\begin{pmatrix} 2 & 1 \\\\ 5 & 3 \\end{pmatrix}$.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Calculate $\\det \\mathbf{A}$.",
+     "expected": 1,
+     "marks": 1,
+     "mistake": "det = ad - bc = 2 x 3 - 1 x 5."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "State the top-right element of $\\mathbf{A}^{-1}$.",
+     "expected": -1,
+     "marks": 1,
+     "hint": "Swap a and d, change the signs of b and c, divide by the determinant."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "State the bottom-left element of $\\mathbf{A}^{-1}$.",
+     "expected": -5,
+     "marks": 1
+    }
+   ]
+  },
+  {
+   "id": "fp-induction-001",
+   "subject": "further-maths",
+   "topic": "fp-induction",
+   "skill": "fm-induction",
+   "type": "mcq",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 1,
+   "stem": "In a proof by induction that $\\sum_{r=1}^{n} r = \\tfrac{n(n+1)}{2}$, the basis case $n=1$ has been checked. What is the **inductive step**?",
+   "image": null,
+   "options": [
+    {
+     "id": "A",
+     "text": "Assume true for $n=k+1$, then show it is true for $n=k$.",
+     "correct": false,
+     "trap": "This goes backwards. You assume $n=k$ and prove $n=k+1$."
+    },
+    {
+     "id": "B",
+     "text": "Assume true for $n=k$, then show it is true for $n=k+1$.",
+     "correct": true
+    },
+    {
+     "id": "C",
+     "text": "Check $n=1$ and $n=2$ only.",
+     "correct": false,
+     "trap": "Checking two cases is not a proof for every $n$."
+    },
+    {
+     "id": "D",
+     "text": "Assume the formula is true for every $n$.",
+     "correct": false,
+     "trap": "That assumes what you are trying to prove (circular)."
+    }
+   ]
+  },
+  {
+   "id": "fp-diffeq-001",
+   "subject": "further-maths",
+   "topic": "fp-diffeq",
+   "skill": "fm-ode",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 4,
+   "stem": "$\\dfrac{dy}{dx} = 2y$ and $y = 3$ when $x = 0$.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "The general solution is $y = Ae^{2x}$. State the value of $A$.",
+     "expected": 3,
+     "marks": 1
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Calculate $y$ when $x=1$ to 2 decimal places.",
+     "expected": 22.17,
+     "marks": 2,
+     "tolerance": {
+      "abs": 0.01
+     },
+     "hint": "y = 3e^2."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "Calculate $\\dfrac{dy}{dx}$ when $x=0$.",
+     "expected": 6,
+     "marks": 1,
+     "hint": "dy/dx = 2y and y = 3."
+    }
+   ]
+  },
+  {
+   "id": "fs-tests-001",
+   "subject": "further-maths",
+   "topic": "fs-tests",
+   "skill": "fm-chisq",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 3,
+   "total": 5,
+   "stem": "A four-sided spinner is spun $100$ times. Observed frequencies are $18, 22, 30, 30$. Test at the 5% level whether it is fair. $H_0$: the spinner is fair. The critical value for $\\nu=3$ is $7.815$.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "State the expected frequency of each side.",
+     "expected": 25,
+     "marks": 1
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Calculate $\\chi^2$ to 2 decimal places.",
+     "expected": 4.32,
+     "marks": 2,
+     "tolerance": {
+      "abs": 0.01
+     },
+     "hint": "Sum (O - E)^2 / E over the four sides."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "State the degrees of freedom.",
+     "expected": 3,
+     "marks": 1
+    },
+    {
+     "id": "d",
+     "kind": "choice",
+     "prompt": "State the conclusion.",
+     "options": [
+      {
+       "id": "R",
+       "text": "Reject H0: the spinner is not fair"
+      },
+      {
+       "id": "N",
+       "text": "Do not reject H0: no evidence the spinner is unfair"
+      }
+     ],
+     "expected": "N",
+     "marks": 1,
+     "hint": "Compare 4.32 with 7.815."
+    }
+   ]
+  }
+ ]
+}

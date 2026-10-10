@@ -1,0 +1,304 @@
+{
+ "id": "locus-circle",
+ "title": "The locus circle",
+ "level": "Upper Sixth",
+ "subject": "Pure Mathematics",
+ "topic": "Complex numbers",
+ "source": "Practice notes",
+ "summary": "In the complex plane, |z − w| is a <span class=\"note-topic\">distance</span>. A <span class=\"note-definition\">locus</span> is every point that obeys a rule, so rules about distances draw <span class=\"note-topic\">circles</span>. These notes cover reading a centre, avoiding sign traps, and completing the square.",
+ "notes": [
+  {
+   "title": "<span class=\"note-topic\">Distance and the circle</span>",
+   "text": "<span class=\"eq\">|z − w|</span> is the distance from the point <i>z</i> to the point <i>w</i>. So <span class=\"eq note-formula\">|z − w| = r</span> describes every point at distance <i>r</i> from <i>w</i>: a <span class=\"note-topic\">circle</span> with centre <i>w</i> and radius <i>r</i>. Example: |z − ({a} {b|s}i)| = {r} has centre ({a}, {b}) and radius {r}.",
+   "gen": {
+    "a": [
+     -5,
+     5
+    ],
+    "b": [
+     -5,
+     5
+    ],
+    "r": [
+     2,
+     6
+    ],
+    "c": [
+     -5,
+     5
+    ],
+    "d": [
+     -5,
+     5
+    ]
+   },
+   "where": "(a!=0)*(b!=0)*(c!=0)*(d!=0)*(c!=d)*(c+d!=0)*(a!=c)",
+   "hint": "Read w straight from the bracket: z − w, so w is whatever is being subtracted.",
+   "tasks": [
+    {
+     "t": "mc",
+     "m": 1,
+     "q": "|<i>z</i> − ({c} {d|s}i)| = 3. What is the centre?",
+     "o": [
+      "({c}, {d})",
+      "({-c}, {-d})",
+      "({d}, {c})",
+      "({c}, {-d})"
+     ],
+     "a": 0,
+     "why": [
+      "The centre is the number being subtracted, {c} {d|s}i, so the point ({c}, {d}).",
+      "The signs are flipped. The centre is what is subtracted, unchanged.",
+      "x and y are swapped: the real part gives x.",
+      "Only the imaginary part has the wrong sign."
+     ]
+    }
+   ],
+   "working": [
+    "|z − ({a} {b|s}i)| = {r}:  centre ({a}, {b}), radius {r}",
+    "|z − ({c} {d|s}i)| = 3:  centre ({c}, {d}), radius 3"
+   ]
+  },
+  {
+   "title": "<span class=\"note-topic\">Watch the signs</span>",
+   "text": "Inside the modulus the signs flip: <span class=\"eq\">z + p − qi = z − (−p + qi)</span>, so the centre is (<i>−p</i>, <i>q</i>). Example: |z + {p1} − {q1}i| = {r1} has centre ({-p1}, {q1}).",
+   "gen": {
+    "p1": [
+     1,
+     6
+    ],
+    "q1": [
+     1,
+     6
+    ],
+    "r1": [
+     2,
+     7
+    ],
+    "p": [
+     1,
+     6
+    ],
+    "q": [
+     1,
+     6
+    ],
+    "r": [
+     2,
+     7
+    ]
+   },
+   "where": "(p!=p1)*(q!=q1)",
+   "hint": "Rewrite as z − (something) first. Then read the centre.",
+   "tasks": [
+    {
+     "t": "num",
+     "m": 1,
+     "q": "|<i>z</i> + {p} − {q}i| = {r}. Enter the centre as <i>x</i> and <i>y</i>.",
+     "f": [
+      {
+       "l": "x",
+       "v": "-p"
+      },
+      {
+       "l": "y",
+       "v": "q"
+      }
+     ],
+     "fb": {
+      "{p},{-q}": "The signs are the wrong way round: z + {p} − {q}i = z − (−{p} + {q}i).",
+      "{p},{q}": "z + {p} means the centre’s real part is −{p}, not {p}."
+     },
+     "ex": "z + {p} − {q}i = z − (−{p} + {q}i), so the centre is (−{p}, {q})."
+    }
+   ],
+   "working": [
+    "|z + {p1} − {q1}i| = {r1}:  centre ({-p1}, {q1}), radius {r1}",
+    "|z + {p} − {q}i| = {r}:  centre ({-p}, {q}), radius {r}"
+   ]
+  },
+  {
+   "title": "<span class=\"note-topic\">Complete the square</span>",
+   "text": "Write <i>z = x + yi</i>. A circle <span class=\"eq note-formula\">x² + y² + 2px + 2qy + c = 0</span> has centre (<i>−p</i>, <i>−q</i>) and <span class=\"eq note-formula\">r² = p² + q² − c</span>. Example: x² + y² {2*P1|s}x {2*Q1|s}y {C1|s} = 0 becomes (x {P1|s})² + (y {Q1|s})² = {P1*P1+Q1*Q1-C1}.",
+   "gen": {
+    "P1": [
+     -4,
+     4
+    ],
+    "Q1": [
+     -4,
+     4
+    ],
+    "C1": [
+     -8,
+     8
+    ],
+    "P": [
+     -5,
+     5
+    ],
+    "Q": [
+     -5,
+     5
+    ],
+    "C": [
+     -10,
+     10
+    ]
+   },
+   "calc": {
+    "R1": "P1*P1+Q1*Q1-C1",
+    "R": "P*P+Q*Q-C"
+   },
+   "where": "(P1!=0)*(Q1!=0)*(P!=0)*(Q!=0)*(C!=0)*(R1>0)*(R>0)*(P!=P1)",
+   "hint": "Halve the coefficients of x and y to get p and q. The centre is (−p, −q).",
+   "tasks": [
+    {
+     "t": "num",
+     "m": 1,
+     "q": "<i>x</i>² + <i>y</i>² {2*P|s}<i>x</i> {2*Q|s}<i>y</i> {C|s} = 0. Enter the centre (<i>a</i>, <i>b</i>) and <i>r</i>².",
+     "f": [
+      {
+       "l": "a",
+       "v": "-P"
+      },
+      {
+       "l": "b",
+       "v": "-Q"
+      },
+      {
+       "l": "r²",
+       "v": "R"
+      }
+     ],
+     "fb": {
+      "{P},{Q},{R}": "The centre is (−p, −q): change both signs."
+     },
+     "ex": "p = {P}, q = {Q}, so the centre is ({-P}, {-Q}) and r² = {P*P} + {Q*Q} − ({C}) = {R}."
+    }
+   ],
+   "working": [
+    "(x {P1|s})² + (y {Q1|s})² = {R1}   (worked example)",
+    "(x {P|s})² + (y {Q|s})² = {R}",
+    "Centre ({-P}, {-Q}), radius √{R}"
+   ]
+  },
+  {
+   "title": "<span class=\"note-topic\">Spot the circle</span>",
+   "text": "A rule like <span class=\"eq note-formula\">|z − p| = k|z − q|</span> with k ≠ 1: square both sides and expand. The x² and y² terms then have the <span class=\"note-topic\">same coefficient</span>, the sign of a circle. If k = 1 the squares cancel and you get a straight line instead.",
+   "gen": {
+    "k": [
+     2,
+     5
+    ]
+   },
+   "hint": "A circle needs equal coefficients on x² and y², and no xy term.",
+   "tasks": [
+    {
+     "t": "mc",
+     "m": 1,
+     "q": "Which of these equations describes a circle?",
+     "o": [
+      "{k}<i>x</i>² + {k}<i>y</i>² + 4<i>x</i> − 6<i>y</i> = 5",
+      "<i>x</i>² + {k}<i>y</i>² + 4<i>x</i> − 6<i>y</i> = 5",
+      "<i>x</i>² − {k}<i>y</i>² + 4<i>x</i> − 6<i>y</i> = 5",
+      "{k}<i>x</i>² + <i>y</i> + 4<i>x</i> = 5"
+     ],
+     "a": 0,
+     "why": [
+      "Equal coefficients ({k}) on x² and y², and no xy term: a circle.",
+      "Different coefficients on x² and y² give an ellipse.",
+      "Opposite signs on x² and y² give a hyperbola.",
+      "Only x is squared: that is a parabola."
+     ]
+    }
+   ],
+   "working": [
+    "|z − p| = k|z − q| → square → x² and y² have equal coefficients → circle (k ≠ 1)",
+    "k = 1 → the squares cancel → a straight line"
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "gen": {
+    "a": [
+     -5,
+     5
+    ],
+    "b": [
+     -5,
+     5
+    ],
+    "r": [
+     2,
+     8
+    ]
+   },
+   "where": "(a!=0)*(b!=0)*(a*a+b*b-r*r!=0)",
+   "t": "num",
+   "m": 1,
+   "q": "Find the radius of the circle <i>x</i>² + <i>y</i>² {-2*a|s}<i>x</i> {-2*b|s}<i>y</i> {a*a+b*b-r*r|s} = 0.",
+   "f": [
+    {
+     "l": "r",
+     "v": "r"
+    }
+   ],
+   "ex": "Centre ({a}, {b}); r² = {a*a} + {b*b} − ({a*a+b*b-r*r}) = {r*r}, so r = {r}."
+  },
+  {
+   "gen": {
+    "u": [
+     1,
+     4
+    ],
+    "k": [
+     2,
+     3
+    ]
+   },
+   "calc": {
+    "p": "(k*k-1)*u"
+   },
+   "t": "num",
+   "m": 1,
+   "q": "|<i>z</i> − {p}| = {k}|<i>z</i>| describes a circle. Find its centre as <i>p</i> + <i>q</i>i. Enter <i>p</i> and <i>q</i>.",
+   "f": [
+    {
+     "l": "p",
+     "v": "-u"
+    },
+    {
+     "l": "q",
+     "v": "0"
+    }
+   ],
+   "ex": "Square both sides: (x − {p})² + y² = {k*k}(x² + y²), which gives centre ({-u}, 0)."
+  },
+  {
+   "gen": {
+    "a": [
+     1,
+     6
+    ]
+   },
+   "t": "mc",
+   "m": 1,
+   "q": "|<i>z</i> − {a}| = |<i>z</i> + {a}| describes",
+   "o": [
+    "the imaginary axis, a straight line",
+    "a circle centred at the origin",
+    "a circle through the origin",
+    "the real axis"
+   ],
+   "a": 0,
+   "why": [
+    "Points equally far from {a} and −{a} lie on the perpendicular bisector: the imaginary axis.",
+    "With k = 1 the squares cancel, so there is no circle.",
+    "With k = 1 the squares cancel, so there is no circle.",
+    "The real axis contains {a} and −{a}; it is not equidistant from them."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,381 @@
+{
+ "id": "congruence-quick-notes",
+ "title": "Congruences & the Euclidean algorithm",
+ "level": "Form 5",
+ "subject": "Pure Mathematics",
+ "topic": "Number theory",
+ "source": "Congruences quick notes",
+ "summary": "Everything here grows from one idea, <span class=\"note-topic\">division with a remainder</span>. It defines <span class=\"note-definition\">congruence</span>, it drives <span class=\"note-definition\">Euclid’s algorithm</span> for the greatest common divisor, and it lets you solve equations in whole numbers.",
+ "notes": [
+  {
+   "title": "<span class=\"note-topic\">Division with a remainder</span>",
+   "text": "A whole number splits into copies of a divisor plus a leftover: <span class=\"eq note-formula\">a = bq + r</span> with <span class=\"eq note-formula\">0 ≤ r &lt; b</span>. The quotient <i>q</i> counts the copies and the remainder <i>r</i> is what is left. Example: {a} ÷ {b} gives {q} copies with {r} left over.",
+   "points": [
+    "The remainder is always smaller than the divisor.",
+    "If <i>r</i> = 0 then <i>b</i> divides <i>a</i> exactly."
+   ],
+   "gen": {
+    "a": [
+     40,
+     99
+    ],
+    "b": [
+     4,
+     9
+    ],
+    "c": [
+     40,
+     99
+    ],
+    "d": [
+     4,
+     9
+    ]
+   },
+   "calc": {
+    "q": "floor(a/b)",
+    "r": "mod(a,b)",
+    "s": "floor(c/d)",
+    "t": "mod(c,d)"
+   },
+   "where": "(r!=0)*(t!=0)*(c!=a)",
+   "hint": "Find how many whole copies of the divisor fit, multiply back, then see what is left.",
+   "tasks": [
+    {
+     "t": "num",
+     "m": 1,
+     "q": "Your turn: {c} = {d} × {s} + <i>r</i>. What is <i>r</i>?",
+     "f": [
+      {
+       "l": "r",
+       "v": "t"
+      }
+     ],
+     "fb": {
+      "{s}": "That is the quotient. The remainder is what is left after {d} × {s}."
+     },
+     "ex": "{d} × {s} = {d*s}, and {c} − {d*s} = {t}."
+    }
+   ],
+   "working": [
+    "{a} = {b} × {q} + {r}",
+    "{c} = {d} × {s} + {t}",
+    "The remainder is {t}, and it is smaller than {d}."
+   ]
+  },
+  {
+   "title": "<span class=\"note-topic\">Congruence (mod n)</span>",
+   "text": "Two numbers are <span class=\"note-definition\">congruent modulo n</span> when they leave the same remainder on division by <i>n</i>. Write <span class=\"eq note-formula\">a ≡ b (mod n)</span>. Another way to say it: <i>n</i> divides <span class=\"eq\">a − b</span>. Example: {a1} and {a2} both leave remainder {r} on division by {n}, so {a1} ≡ {a2} (mod {n}).",
+   "gen": {
+    "n": [
+     5,
+     9
+    ],
+    "r": [
+     1,
+     4
+    ],
+    "k1": [
+     2,
+     6
+    ],
+    "k2": [
+     7,
+     12
+    ],
+    "s": [
+     1,
+     4
+    ],
+    "u": [
+     2,
+     6
+    ],
+    "w": [
+     7,
+     12
+    ]
+   },
+   "calc": {
+    "a1": "n*k1+r",
+    "a2": "n*k2+r",
+    "c1": "n*u+s",
+    "b1": "n*w+s"
+   },
+   "where": "r!=s",
+   "hint": "Work out the remainder of the given number first, then look for the option with the same remainder.",
+   "tasks": [
+    {
+     "t": "mc",
+     "m": 1,
+     "q": "Which number is congruent to {c1} (mod {n})?",
+     "o": [
+      "{b1}",
+      "{b1+1}",
+      "{b1+2}",
+      "{b1-1}"
+     ],
+     "a": 0,
+     "why": [
+      "{b1} = {n} × {w} + {s}, the same remainder {s} as {c1}.",
+      "{b1+1} leaves remainder {mod(b1+1,n)}, not {s}.",
+      "{b1+2} leaves remainder {mod(b1+2,n)}, not {s}.",
+      "{b1-1} leaves remainder {mod(b1-1,n)}, not {s}."
+     ],
+     "explain": "Check: {n} divides {b1} − {c1} = {b1-c1}."
+    }
+   ],
+   "working": [
+    "{a1} = {n} × {k1} + {r}   and   {a2} = {n} × {k2} + {r}",
+    "{c1} = {n} × {u} + {s}   and   {b1} = {n} × {w} + {s}",
+    "Same remainder {s}, so {c1} ≡ {b1} (mod {n})."
+   ]
+  },
+  {
+   "title": "<span class=\"note-topic\">Euclid’s algorithm</span>",
+   "text": "The <span class=\"note-definition\">greatest common divisor</span> gcd(a, b) is the largest whole number that divides both. Divide, then replace (a, b) by (b, r) and repeat until the remainder is 0; the last non-zero remainder is the gcd. Example first step: {E} = {e1} × {F} + {e2}, so gcd({E}, {F}) = gcd({F}, {e2}).",
+   "points": [
+    "Each step shrinks the numbers, so it always finishes."
+   ],
+   "gen": {
+    "E": [
+     50,
+     99
+    ],
+    "F": [
+     10,
+     49
+    ],
+    "C": [
+     30,
+     120
+    ],
+    "D": [
+     10,
+     29
+    ]
+   },
+   "calc": {
+    "e1": "floor(E/F)",
+    "e2": "mod(E,F)",
+    "gg": "gcd(C,D)",
+    "q2": "floor(C/D)",
+    "r2": "mod(C,D)"
+   },
+   "where": "(e2!=0)*(gg>=2)*(r2!=0)*(C>D)",
+   "hint": "Do one division: how many times does the smaller number fit into the larger, and what is left?",
+   "tasks": [
+    {
+     "t": "num",
+     "m": 1,
+     "q": "Step one of gcd({C}, {D}): write {C} = {D} × <i>q</i> + <i>r</i>. Enter <i>q</i> and <i>r</i>.",
+     "f": [
+      {
+       "l": "q",
+       "v": "q2"
+      },
+      {
+       "l": "r",
+       "v": "r2"
+      }
+     ],
+     "ex": "{D} × {q2} = {D*q2} and {C} − {D*q2} = {r2}."
+    },
+    {
+     "t": "mc",
+     "m": 1,
+     "q": "What is gcd({C}, {D})?",
+     "o": [
+      "{gg}",
+      "{2*gg}",
+      "{gg+1}",
+      "{r2}"
+     ],
+     "a": 0,
+     "why": [
+      "Continuing Euclid’s steps, the last non-zero remainder is {gg}.",
+      "{2*gg} is too big: it does not divide both numbers.",
+      "{gg+1} does not divide both numbers.",
+      "{r2} is only the first remainder. Keep going until the remainder is 0."
+     ],
+     "explain": "{gg} divides {C} ({C/gg} times) and {D} ({D/gg} times), and nothing larger does."
+    }
+   ],
+   "working": [
+    "{E} = {e1} × {F} + {e2}   (worked example)",
+    "{C} = {q2} × {D} + {r2}   (your first step)",
+    "The last non-zero remainder gives gcd({C}, {D}) = {gg}."
+   ]
+  },
+  {
+   "title": "<span class=\"note-topic\">Linear congruences</span>",
+   "text": "To solve <span class=\"eq note-formula\">ax ≡ c (mod n)</span> when gcd(a, n) = 1, first find the <span class=\"note-definition\">inverse</span> <i>a</i>⁻¹: the number with <span class=\"eq\">a × a⁻¹ ≡ 1 (mod n)</span>. Bézout guarantees it exists, because whole numbers <i>x₀</i>, <i>y</i> satisfy <span class=\"eq\">a·x₀ + n·y = 1</span>. Then <i>x</i> ≡ <i>a</i>⁻¹ × <i>c</i>. Example: {a} × {i0} − {n} × {y0} = 1, so the inverse of {a} (mod {n}) is {i0}.",
+   "gen": {
+    "a": [
+     2,
+     12
+    ],
+    "n": [
+     7,
+     15
+    ],
+    "b": [
+     2,
+     13
+    ],
+    "m": [
+     8,
+     15
+    ],
+    "d": [
+     2,
+     7
+    ]
+   },
+   "calc": {
+    "i0": "inv(a,n)",
+    "y0": "floor(a*i0/n)",
+    "ib": "inv(b,m)",
+    "ans": "mod(ib*d,m)"
+   },
+   "where": "(gcd(a,n)==1)*(a<n)*(gcd(b,m)==1)*(b<m)*(b!=a)",
+   "hint": "Find the number that multiplies {b} to leave remainder 1 (mod {m}), then multiply it by {d}.",
+   "tasks": [
+    {
+     "t": "num",
+     "m": 1,
+     "q": "Solve {b}<i>x</i> ≡ {d} (mod {m}). Enter the smallest positive <i>x</i>.",
+     "f": [
+      {
+       "l": "x",
+       "v": "ans"
+      }
+     ],
+     "fb": {
+      "{ib}": "{ib} is the inverse of {b}. Now multiply by {d} and reduce mod {m}."
+     },
+     "ex": "The inverse of {b} is {ib}, and {ib} × {d} = {ib*d} ≡ {ans} (mod {m})."
+    }
+   ],
+   "working": [
+    "{a} × {i0} − {n} × {y0} = 1, so {a}⁻¹ ≡ {i0} (mod {n})   (worked example)",
+    "The inverse of {b} (mod {m}) is {ib}.",
+    "x ≡ {ib} × {d} = {ib*d} ≡ {ans} (mod {m})",
+    "Check: {b} × {ans} = {b*ans} = {floor(b*ans/m)} × {m} + {d} ✓"
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "gen": {
+    "P": [
+     30,
+     120
+    ],
+    "Q": [
+     10,
+     29
+    ]
+   },
+   "calc": {
+    "g": "gcd(P,Q)"
+   },
+   "where": "(g>=2)*(P>Q)",
+   "t": "mc",
+   "m": 1,
+   "q": "Find gcd({P}, {Q}).",
+   "o": [
+    "{g}",
+    "{2*g}",
+    "{g+1}",
+    "1"
+   ],
+   "a": 0,
+   "why": [
+    "Correct: {g} divides both and nothing larger does.",
+    "{2*g} does not divide both.",
+    "{g+1} does not divide both.",
+    "Both numbers share the factor {g}, so the gcd is not 1."
+   ]
+  },
+  {
+   "gen": {
+    "x0": [
+     1,
+     14
+    ]
+   },
+   "calc": {
+    "r1": "mod(x0,3)",
+    "r2": "mod(x0,5)"
+   },
+   "t": "num",
+   "m": 1,
+   "q": "Find the smallest positive <i>x</i> with <i>x</i> ≡ {r1} (mod 3) and <i>x</i> ≡ {r2} (mod 5).",
+   "f": [
+    {
+     "l": "x",
+     "v": "x0"
+    }
+   ],
+   "ex": "{x0} leaves remainder {r1} on division by 3 and {r2} on division by 5."
+  },
+  {
+   "gen": {
+    "b": [
+     2,
+     13
+    ],
+    "m": [
+     8,
+     15
+    ],
+    "d": [
+     2,
+     7
+    ]
+   },
+   "calc": {
+    "ans": "mod(inv(b,m)*d,m)"
+   },
+   "where": "(gcd(b,m)==1)*(b<m)",
+   "t": "num",
+   "m": 1,
+   "q": "Solve {b}<i>x</i> ≡ {d} (mod {m}). Enter the smallest positive <i>x</i>.",
+   "f": [
+    {
+     "l": "x",
+     "v": "ans"
+    }
+   ],
+   "ex": "{b} × {ans} = {b*ans} = {floor(b*ans/m)} × {m} + {d}."
+  },
+  {
+   "gen": {
+    "a": [
+     40,
+     99
+    ],
+    "b": [
+     4,
+     9
+    ]
+   },
+   "calc": {
+    "q": "floor(a/b)",
+    "r": "mod(a,b)"
+   },
+   "where": "r!=0",
+   "t": "num",
+   "m": 1,
+   "q": "Write {a} = {b} × {q} + <i>r</i>. What is <i>r</i>?",
+   "f": [
+    {
+     "l": "r",
+     "v": "r"
+    }
+   ],
+   "ex": "{b} × {q} = {b*q}, and {a} − {b*q} = {r}."
+  }
+ ]
+}

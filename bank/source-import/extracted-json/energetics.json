@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "subject": "chemistry",
+  "topic": "energetics",
+  "status": "staging_not_live_practice_bank",
+  "record_count": 5,
+  "questions": [
+    {
+      "id": "page-gce-photos-set-02-c474ca01e5-q02",
+      "subject": "chemistry",
+      "topic": "energetics",
+      "topic_classification": "provisional_keyword_classification",
+      "type": "source_ocr_candidate",
+      "source": {
+        "set": "gce-photos-set-02",
+        "filename": "PXL_20260906_120220493.jpg",
+        "image": "bank/source-import/gce-photos-set-02/images/PXL_20260906_120220493.jpg",
+        "page_id": "page-gce-photos-set-02-c474ca01e5",
+        "question_number_ocr": "22",
+        "exam_board": null,
+        "qualification_level": null,
+        "year": null,
+        "paper": null
+      },
+      "stem": "22. (a) Hess's law can be useful in calculating enthalpy changes of reactions that cannot c\nbe measured directly. a aan ; re\n() State Hess's law (@) Given the folowing sigatrode systems and their Siectrode potentials\nRODE erases alee att (aa) *2&° _——> Cals) ae\ni : fi H FeX(aa) +20 ——? Fes)\n(ii) Given the following data in KJmol\" is(aa) +28\" —? or(aq) c0 = +0.54V\nOHI) + 309(a) —> 2CO2(9) * = 4370 Bey eRe rN 4S\nCoHg0H() + 302(9) —> 2002%9) 3H20(!) AH =-1370 sorte + 14H \"(00 20:3*(2a)+7H20 c= +1.38V\nCpHa(9) +30(g) -— 2C09{g) + 2H20(!) AH =- 1415.6\n207\n206 a\ni j Ua 4\n= x Berta\ny - , AB a\né- : ; Nee\ny : i (He Lida\nA a ath\nCe\nate of\ni ae\n= PhS Te",
+      "options": null,
+      "answer_key": null,
+      "mark_scheme": null,
+      "publishable": false,
+      "extraction_confidence": "low_to_medium; OCR and page-column order not verified",
+      "review_flags": [
+        "check against original image",
+        "verify wording, numbering and chemical/mathematical notation",
+        "verify topic assignment",
+        "verify exam source metadata",
+        "add/verify mark scheme before automatic marking"
+      ]
+    },
+    {
+      "id": "page-gce-photos-set-02-3b4bb0557f-q01",
+      "subject": "chemistry",
+      "topic": "energetics",
+      "topic_classification": "provisional_keyword_classification",
+      "type": "source_ocr_candidate",
+      "source": {
+        "set": "gce-photos-set-02",
+        "filename": "PXL_20260906_120234219.jpg",
+        "image": "bank/source-import/gce-photos-set-02/images/PXL_20260906_120234219.jpg",
+        "page_id": "page-gce-photos-set-02-3b4bb0557f",
+        "question_number_ocr": null,
+        "exam_board": null,
+        "qualification_level": null,
+        "year": null,
+        "paper": null
+      },
+      "stem": "NN ; . ww ee\n“fi c Kp\nTY. We , wt ¢\nVe . J ,\nie sy 7”\na) be “wih a ve\nN d ee Nal ‘ F\nil) yy Se re\n™) Caleutate TSS forthe react PE he RTA\n2 ee ce I alae reer\nA ValU@ of the ra ) eee “gad one diference between chemical Bond and an\nSolution, a1€ const soto Oe aie OY,\nCt et ae i aM OO force: Spach iapa OTTO nced\nSodium ey ~ MO! dm-3 oF oy eco. j eM tener y\n) Give the oe ethanoate) of CHACOOH (ethancie acld) and 0.20 ig | ae se ema :\nnaval name k ’ gO a ne Oa POR \\\nasec ‘Or a Solution such as A if ogc “atthe types of bon \\\n\"SE Of the solution A ORE rivets are : eer os : \\\nS 4 re y t composition for mixtur -\n\"Calculate the py Pk. cubes i ag EN roe Gen \\\nValue of solution A (Ka for CH3COOH 1.8 x 10° mot dm-3, ie Boge mettbeNz— bg \\\ncee if) Foner jj aay \\\n26.2) The energ 202A) Total ='36 pee gid \\\nSodium chionees 1 oe below represents the enthalpy changes involved in the formatinn'*® gee pressure Bees?\noride ON Of oe 1\nik\nNa'g te + Chy Mf ae\n: D -364 kImol! ee ot,\nC| +121 kImol q ;\nNa’, + € +4Che Na’g, + Clg, Vers s\n: ab Methylbenzer\na} +500 kImol 100%\nProp*\nNay * 7Ch ge nvonrerresen?\n% se A E -776 kimol ego OY\n~, | -108.3 kimol vir ‘ere\nA aes\ns ae jos of 2 mixture ‘which deviates nega\nona pert\nAH? Cee\nNa’ Cl Bc eetale ge\n‘he following Feco Eo + 054V\ni) Identify the enthalpy changes involved in steps A, 8, C and D ) even 2 as area) : see\n2 eo) * _ > 25,079) =\nB A og2ta0) * 2° =a\n4 Ay strongest\nc ig the strong\nD g which is th oe\nDien — are i rect the specie oe et\nii) Calculate the enthalpy change of formation of NaCi(s) y Saad agent cats are coupled and cl\nA ising agent ~nen the two half cel\nBt one it the cell diagram WHET\njf plied to solid state chemist Wy Waite ea\nb) i) Define the following terms as applied fo solid state chemistry 9) he coll wy eratal= 20 0a\nne A. Crystal lattice call diag : (2024)\n2 eae E Cellet. ---\nwae B. Unit cell : Be\neK\neas g 212\nom 8\new Wek = i\n, © Le —\nMoO eS — iy yo\ne: & is wR Ss ily { he\nPe OY A St iy = : i\ne oars QR S'S oie iy\n> TN SS ~ Beet MAb) hla |\n. . ti ‘\n% \\eo aera\naes",
+      "options": null,
+      "answer_key": null,
+      "mark_scheme": null,
+      "publishable": false,
+      "extraction_confidence": "low_to_medium; OCR and page-column order not verified",
+      "review_flags": [
+        "check against original image",
+        "verify wording, numbering and chemical/mathematical notation",
+        "verify topic assignment",
+        "verify exam source metadata",
+        "add/verify mark scheme before automatic marking"
+      ]
+    },
+    {
+      "id": "page-gce-photos-set-02-4c5abf6e32-q01",
+      "subject": "chemistry",
+      "topic": "energetics",
+      "topic_classification": "provisional_keyword_classification",
+      "type": "source_ocr_candidate",
+      "source": {
+        "set": "gce-photos-set-02",
+        "filename": "PXL_20260906_120253393.jpg",
+        "image": "bank/source-import/gce-photos-set-02/images/PXL_20260906_120253393.jpg",
+        "page_id": "page-gce-photos-set-02-4c5abf6e32",
+        "question_number_ocr": "33",
+        "exam_board": null,
+        "qualification_level": null,
+        "year": null,
+        "paper": null
+      },
+      "stem": "33. (@) Wh a) Gee te rode Potential ___—_ EN ae\nlat is a redox reaction? a. \"(nt ate ety he ied baci as {#0 Pi a}",
+      "options": null,
+      "answer_key": null,
+      "mark_scheme": null,
+      "publishable": false,
+      "extraction_confidence": "low_to_medium; OCR and page-column order not verified",
+      "review_flags": [
+        "check against original image",
+        "verify wording, numbering and chemical/mathematical notation",
+        "verify topic assignment",
+        "verify exam source metadata",
+        "add/verify mark scheme before automatic marking"
+      ]
+    },
+    {
+      "id": "page-gce-photos-set-02-4c5abf6e32-q02",
+      "subject": "chemistry",
+      "topic": "energetics",
+      "topic_classification": "provisional_keyword_classification",
+      "type": "source_ocr_candidate",
+      "source": {
+        "set": "gce-photos-set-02",
+        "filename": "PXL_20260906_120253393.jpg",
+        "image": "bank/source-import/gce-photos-set-02/images/PXL_20260906_120253393.jpg",
+        "page_id": "page-gce-photos-set-02-4c5abf6e32",
+        "question_number_ocr": "5",
+        "exam_board": null,
+        "qualification_level": null,
+        "year": null,
+        "paper": null
+      },
+      "stem": "5) 31.0cm® of an aeidified Kt v cd to completel FS HNOaytHg | |\n(0) 31.0om? of an acidified KMnO. solution Wo required to c Y oxid i ba [fe eg t28 —> HNOaan #20 |\n‘ balanced ioni i28 SQ\" pe aay tH od) = — ——- sf\n0.25M solution of oxalic acid (H:020») pee gin ae iG Equation jg. “Oom 5p (6 Ne ao ee | #136\n‘ ; — > 2Ch ey —____________ |_|\nC2074 (ea + MnO'wed ——” ep ooo 2 [C_ | Chae ttt ay tO\" —> 201 as + THHOs | #133\n()_ Write down the half equation for Seoreer bo Crore on fh ee\nA: Oxidation : e tree. be | S200\" (ea tiie i |\na Ernie down the overall balance qquation cape Suan 4 ae From the table above, select the species which is the mast powerful reducing agent.\niii), Calculate the concentration of the KMnOz solution. ’ os ate the Saidation state of Chromuim in Crs0?\npeo . Got fam for the reaction when A and D are coupled and calculate the emf\nGy “Bond energy can provide information about the energy changes that arog aay wwe 2 call diag\nchemical reaction - Pany a of the cell: er\n(i) What do you understand by the term bond energy’ etree “WGNE 2028, @1 (Total = 20marks)\n(i) The tabie below shows some average bond enthalpies —_ Ee PU ie i aeececerand\n} Bond | Average bond enthalpy/kJmot\" | the ‘scattering of alpha particles experiment Ge results obtained by Geig!\nC-C 13 Re (@) in be summarized by the diagram below\na e | 350 Ge ee ane | 34. Marsden oa” ;\nC=C T aa] == motaia - Nucleus\n[H-H = (610 1Gt a oe | gS\naS [ase ava REC | ’ SORE Foe\nA: Use this poration to calculate the enthalpy change for the process a ee Se are ae\nCe ie aaa :\noe + H-H ——>H-C-C-H Se ey. ee :\nif Hey -alpha particies Nes geld. foil\nTh Hyrapesy ais : () Give the mass number of alpha particle\nB: The enthalpy change of this reaction was found by experiment to be -136kJmot\". Exgiy Imm 5 Bas oo is were deflected at large angles\nwhy this value is different from that calculated above. a \"Gi Explain why a few of the alpha particles were deftected\ny (iii) Explain why most of the alpha particies Mv e\nRa 1\na SSR art\nPW Dies\nSSE a i\nSe So\nSUR Ses\nIt Wag Bae Ke SSS\nENR SE Ye ]\noS ee. |\n< == RS ee . 4h,\nSk ZEE t Se / # ae\n‘2, : a as LS : = y he ae\naeons SS aa SR = ~ i SOP\nAN f DPN PETS IN]",
+      "options": null,
+      "answer_key": null,
+      "mark_scheme": null,
+      "publishable": false,
+      "extraction_confidence": "low_to_medium; OCR and page-column order not verified",
+      "review_flags": [
+        "check against original image",
+        "verify wording, numbering and chemical/mathematical notation",
+        "verify topic assignment",
+        "verify exam source metadata",
+        "add/verify mark scheme before automatic marking"
+      ]
+    },
+    {
+      "id": "page-gce-photos-set-02-7b18e0ba1c-q02",
+      "subject": "chemistry",
+      "topic": "energetics",
+      "topic_classification": "provisional_keyword_classification",
+      "type": "source_ocr_candidate",
+      "source": {
+        "set": "gce-photos-set-02",
+        "filename": "PXL_20260906_120508432.jpg",
+        "image": "bank/source-import/gce-photos-set-02/images/PXL_20260906_120508432.jpg",
+        "page_id": "page-gce-photos-set-02-7b18e0ba1c",
+        "question_number_ocr": "4",
+        "exam_board": null,
+        "qualification_level": null,
+        "year": null,
+        "paper": null
+      },
+      "stem": "4) Which of the acids HCIO and HCIOs s the strongest. Briefly explain\n{)_ Use the following data to determine the enthalpy change for the reaction\n#1) —> Feo\nAllsteps in the calculation must be clearly shown\n4h —> 2RO> AH = +30KJmol\nyr) <a Sy p aee\nlq ———>- Fi ; AH = -297KJmol*\neee Tea. AL = S00KIet Sinks)\na CGCE JUN. 78 Q.4 (Total 13mks)\n288\n289\nvo\n= ee A eS ies\nid jd age ce\ngr EARN ade\nE SS",
+      "options": null,
+      "answer_key": null,
+      "mark_scheme": null,
+      "publishable": false,
+      "extraction_confidence": "low_to_medium; OCR and page-column order not verified",
+      "review_flags": [
+        "check against original image",
+        "verify wording, numbering and chemical/mathematical notation",
+        "verify topic assignment",
+        "verify exam source metadata",
+        "add/verify mark scheme before automatic marking"
+      ]
+    }
+  ]
+}

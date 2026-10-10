@@ -1,0 +1,145 @@
+{"subject":"physical","title":"Physical Chemistry: High-Yield Exam Notes","version":1,"status":"COMPLETE","sections":[
+{"id":"top-questions","number":0,"title":"Top questions examiners ask","tags":["top-questions"],"blocks":[
+{"type":"paragraph","text":"Energetics · Born-Haber · Mixtures and azeotropes · Solvent extraction · Phase diagram · Equilibrium. Question types, method templates, numbers from your notes."},
+{"type":"numbered","items":["Calculate ΔH from bond enthalpies (count bonds broken and formed).","Find mean C–C and C–H from two alkanes (simultaneous equations).","Benzene: calculated vs experimental hydrogenation → delocalisation energy.","Calculate ΔH of reaction from ΔH<sub>f</sub>; use Hess's law (e.g. ΔH<sub>f</sub> of CH<sub>4</sub> = −75).","Born-Haber: draw the cycle and calculate lattice enthalpy (NaCl = −776).","Use ΔH<sub>f</sub> of MgCl, MgCl<sub>2</sub>, MgCl<sub>3</sub> (or Ca) to decide the formula.","Ideal mixture b.pt; what separates by fractional distillation.","Azeotropes: min vs max boiling; what distils first and what is left.","Solvent extraction with K (several small portions).","Label the water phase diagram; triple and critical points; define equilibrium."]}
+]},
+{"id":"key-definitions","number":0,"title":"Key definitions (learn word for word)","tags":["definitions"],"blocks":[
+{"type":"definition","term":"Bond enthalpy (bond energy)","text":"The energy needed to break one mole of a particular covalent bond in the gaseous state (always positive, endothermic). Bond making is the same size but negative."},
+{"type":"definition","term":"Average (mean) bond enthalpy","text":"The average bond enthalpy of 1 mole of a particular covalent bond over a range of compounds, e.g. C–H = ¼ of ΔH<sub>at</sub>(CH<sub>4</sub>)."},
+{"type":"definition","term":"Standard enthalpy of formation (ΔH<sub>f</sub>)","text":"The enthalpy change when 1 mole of a compound is formed from its elements in their standard states. ΔH<sub>f</sub> of an element in its standard state = 0."},
+{"type":"definition","term":"Enthalpy of atomisation (ΔH<sub>at</sub>)","text":"The enthalpy change when 1 mole of gaseous atoms is formed from the element in its standard state (e.g. Na(s) → Na(g)). Always endothermic."},
+{"type":"definition","term":"First ionisation energy","text":"The energy needed to remove one electron from each atom in 1 mole of gaseous atoms: M(g) → M<sup>+</sup>(g) + e<sup>-</sup>. Endothermic."},
+{"type":"definition","term":"Electron affinity (E.A.)","text":"The enthalpy change when 1 mole of gaseous atoms gains one electron each: X(g) + e<sup>-</sup> → X<sup>-</sup>(g). Usually exothermic (2nd E.A. of oxygen is endothermic)."},
+{"type":"definition","term":"Lattice enthalpy","text":"The enthalpy change when 1 mole of a crystal is formed from its constituent ions in the gaseous phase (exothermic)."},
+{"type":"definition","term":"Born-Haber cycle","text":"Application of Hess's law linking the standard enthalpy changes in the formation of an ionic compound, used to find the lattice enthalpy."},
+{"type":"definition","term":"Hess's law","text":"The enthalpy change of a reaction is independent of the route taken, provided initial and final conditions are the same."},
+{"type":"definition","term":"Delocalisation (resonance) energy","text":"How much more stable benzene is than the Kekulé structure: 176 kJ/mol (calculated −384 vs experimental −208)."},
+{"type":"definition","term":"Ideal solution","text":"A mixture with no volume change and no enthalpy change on mixing; its boiling point is the weighted average of the components'."},
+{"type":"definition","term":"Volatile component","text":"The component with the higher vapour pressure and lower boiling point (higher tendency to escape into the vapour)."},
+{"type":"definition","term":"Fractional distillation","text":"Separation of liquids by repeated vaporisation and condensation, giving the more volatile component first."},
+{"type":"definition","term":"Azeotropic mixture","text":"A mixture with a constant boiling point and the same composition in liquid and vapour; cannot be separated by fractional distillation. Minimum (positive deviation) or maximum (negative deviation) boiling."},
+{"type":"definition","term":"Distribution (partition) coefficient K","text":"The constant ratio of a solute's concentration in two immiscible solvents at equilibrium, e.g. [X]<sub>CCl<sub>4</sub></sub> / [X]<sub>H<sub>2</sub>O</sub>."},
+{"type":"definition","term":"Component","text":"A chemically distinct substance in the system (water is a one-component system; water + ethanol is two-component)."},
+{"type":"definition","term":"Degrees of freedom","text":"The factors that can change independently in a system: temperature and pressure for a one-component system."},
+{"type":"definition","term":"Phase diagram","text":"A graph summarising the temperature and pressure conditions under which each phase of a substance is stable."},
+{"type":"definition","term":"Triple point","text":"The temperature and pressure at which solid, liquid and vapour are all in equilibrium (water: 273.16 K, ~0.006 atm)."},
+{"type":"definition","term":"Critical point","text":"The end of the vapour pressure curve: above the critical temperature the vapour cannot be condensed whatever the pressure (water: 647 K, 218 atm)."},
+{"type":"definition","term":"Reversible reaction","text":"A reaction that can go forward and backward (⇌)."},
+{"type":"definition","term":"Chemical equilibrium","text":"The state in which the rate of the forward reaction equals the rate of the reverse reaction (dynamic, closed system, constant temperature, no observable change)."}
+]},
+{"id":"bond-enthalpy","number":1,"title":"Bond enthalpy: methods","tags":["bond-enthalpy","energetics"],"blocks":[
+{"type":"rule","title":"Formula and signs","lines":["ΔH = Σ(bonds broken) − Σ(bonds formed). Breaking is endothermic (+); making is exothermic (−). Bond enthalpies are always positive numbers."]},
+{"type":"paragraph","text":"Diatomic: bond enthalpy X–X = 2 × ΔH<sub>at</sub>(X) (Cl–Cl = 2 × 122 = 244)."},
+{"type":"paragraph","text":"Mean C–H in methane = ¼ ΔH<sub>at</sub>(CH<sub>4</sub>) = ¼ × 1662 = +415.5 kJ/mol."},
+{"type":"table","columns":["Bond","kJ/mol","Bond","kJ/mol","Bond","kJ/mol","Bond","kJ/mol"],"rows":[
+["H–H","436","C=C","611","C–O","358","O–H","463"],
+["C–H","414","C–C","347","C=O","743","N–H","391"],
+["C≡C","837","C–Cl","326 or 339","Cl–Cl","244","H–Cl","431"],
+["N≡N","945","O=O","493","C≡N","887","H–Br","366"]]},
+{"type":"paragraph","text":"Use the values GIVEN in the question (your notes use C–Cl = 326; the table shows 339)."},
+{"type":"paragraph","text":"Worked answers from your notes"},
+{"type":"table","columns":["Reaction","Broken","Formed","ΔH"],"rows":[
+["C<sub>2</sub>H<sub>6</sub> + Cl<sub>2</sub> → C<sub>2</sub>H<sub>5</sub>Cl + HCl","C–H 414 + Cl–Cl 244 = 658 (full count: 347 + 6×414 + 244 = 3075)","C–Cl 326 + H–Cl 431 = 757 (full: 3174)","−99 kJ/mol"],
+["C<sub>2</sub>H<sub>2</sub> + 2Cl<sub>2</sub> → CHCl<sub>2</sub>CHCl<sub>2</sub>","C≡C 837 + 2×414 + 2×244 = 2153","C–C 347 + 4×326 + 2×414 = 2479","−326 kJ/mol"],
+["N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub>","945 + 3×436 = 2253","6×391 = 2346","−93 kJ/mol"],
+["C<sub>2</sub>H<sub>4</sub> + H<sub>2</sub> → C<sub>2</sub>H<sub>6</sub>","611 + 436 = 1047","347 + 2×414 = 1175","−128 kJ/mol"],
+["C<sub>2</sub>H<sub>4</sub> + HCl → C<sub>2</sub>H<sub>5</sub>Cl (table values)","611 + 431 = 1042","347 + 414 + 339 = 1100","−58 kJ/mol"]]},
+{"type":"worked_example","id":"bond-we-mean-cc-ch","title":"Mean C–C and C–H from ethane and propane","lines":["C<sub>2</sub>H<sub>6</sub>: 1 C–C + 6 C–H = 2823 … (1). C<sub>3</sub>H<sub>8</sub>: 2 C–C + 8 C–H = 3996 … (2).","(2) ÷ 2: x + 4y = 1998; subtract (1): 2y = 825 → C–H = 412.5; x = 1998 − 1650 → C–C = 348 kJ/mol.","Butane / pentane: 3y + 10x = 5165 and 4y + 12x = 6337 → C–H = 412.25, C–C = 347.5."]},
+{"type":"tip","lines":["Count bonds: alkane C<sub>n</sub>H<sub>2n+2</sub> has n−1 C–C and 2n+2 C–H.","Never add bonds-formed as positive numbers.","Bond enthalpies are approximate: they fail when bonds are delocalised or not fully covalent."]},
+{"type":"hands_on","id":"bond-ho-hydrogen-chlorine","exam_likelihood":"very_likely","reveal_mode":"step_by_step","title":"Calculate ΔH from bond enthalpies","task":"Use the bond enthalpies in the notes to estimate ΔH for H<sub>2</sub> + Cl<sub>2</sub> → 2HCl.","steps":["Bonds broken: one H–H bond and one Cl–Cl bond. Add 436 + 244 = 680 kJ/mol.","Bonds formed: two H–Cl bonds. Add 2 × 431 = 862 kJ/mol.","Apply ΔH = bonds broken − bonds formed: 680 − 862."],"answer":"ΔH = −182 kJ/mol."}
+]},
+{"id":"benzene-delocalisation","number":2,"title":"Benzene delocalisation energy (very likely question)","tags":["benzene","energetics"],"blocks":[
+{"type":"table","columns":["Step","Working","Result"],"rows":[
+["Cyclohexene + H<sub>2</sub> (bond enthalpies)","broken 611 + 5(347) + 10(414) + 436 = 6922; formed 6(347) + 12(414) = 7050","−128 kJ/mol (expt −120)"],
+["Benzene Kekulé, 3 × C=C","3 × (−128)","−384 kJ/mol"],
+["Experimental benzene + 3H<sub>2</sub>","measured","−208 kJ/mol"],
+["Delocalisation (resonance) energy","(−384) − (−208)","176 kJ/mol more stable"],
+["Same idea using experimental cyclohexene","3 × (−120) = −360; −360 − (−208)","152 kJ/mol"]]},
+{"type":"figure","src":"benzene-hydrogenation-energy-levels.svg","caption":"Benzene hydrogenation energy levels.","alt":"Energy-level diagram of benzene hydrogenation showing 176 delocalisation energy, −208 experimental and −384 calculated"},
+{"type":"hands_on","id":"benzene-ho-energy-gap","exam_likelihood":"very_likely","reveal_mode":"step_by_step","title":"Calculate benzene’s delocalisation energy","task":"Using the bond-enthalpy values in the notes, calculate the energy difference between the predicted Kekulé hydrogenation (−384 kJ/mol) and experimental hydrogenation (−208 kJ/mol).","steps":["Write the predicted and experimental values with their signs: −384 and −208 kJ/mol.","Find the difference: (−384) − (−208) = −176 kJ/mol.","Interpret the magnitude: benzene is 176 kJ/mol more stable than the Kekulé prediction."],"answer":"176 kJ/mol more stable (the bond-enthalpy calculation in the notes)."}
+]},
+{"id":"enthalpy-formation","number":3,"title":"Enthalpy of formation: reactions and stability","tags":["energetics","enthalpy-of-formation"],"blocks":[
+{"type":"rule","title":"Formulae","lines":["ΔH<sub>R</sub> = ΣnΔH<sub>f</sub>(products) − ΣnΔH<sub>f</sub>(reactants). Elements in standard state: ΔH<sub>f</sub> = 0.","Hess: ΔH<sub>f</sub>(CH<sub>4</sub>) = ΔH<sub>c</sub>(C) + 2ΔH<sub>c</sub>(H<sub>2</sub>) − ΔH<sub>c</sub>(CH<sub>4</sub>) = −393 + 2(−286) + 890 = −75 kJ/mol."]},
+{"type":"table","columns":["Question","Working","Answer"],"rows":[
+["B<sub>2</sub>H<sub>6</sub> + 3O<sub>2</sub> → B<sub>2</sub>O<sub>3</sub> + 3H<sub>2</sub>O(l); ΔH<sub>f</sub>: +32, −1225, −286","[−1225 + 3(−286)] − [32]","−2115 kJ/mol"],
+["½N<sub>2</sub> + 3/2 H<sub>2</sub>O(g) → NH<sub>3</sub> + ¾O<sub>2</sub>; NH<sub>3</sub> −46.2, H<sub>2</sub>O(g) −242","−46.2 − 3/2(−242)","+316.8 kJ"],
+["CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O(g); −76, −394, −242","[−394 − 484] − [−76]","−802 kJ"]]},
+{"type":"bullets","items":["Stability: very negative ΔH<sub>f</sub> (CO<sub>2</sub>, H<sub>2</sub>O, Al<sub>2</sub>O<sub>3</sub>) = stable relative to elements; large positive ΔH<sub>f</sub> = unstable, decomposes easily.","H<sub>2</sub>O<sub>2</sub>: ΔH<sub>f</sub> = −210 (stable vs H<sub>2</sub> + O<sub>2</sub>) but decomposes to H<sub>2</sub>O + ½O<sub>2</sub> (exothermic). Always say 'stable with respect to what'.","Feasibility: more negative ΔH = more likely to occur; endothermic can still occur (spontaneity also depends on entropy)."]},
+{"type":"hands_on","id":"formation-ho-methane","exam_likelihood":"very_likely","reveal_mode":"step_by_step","title":"Find ΔH<sub>f</sub> of methane using Hess’s law","task":"Use the combustion data in the notes to calculate ΔH<sub>f</sub>(CH<sub>4</sub>).","steps":["Write the route: ΔH<sub>f</sub>(CH<sub>4</sub>) = ΔH<sub>c</sub>(C) + 2ΔH<sub>c</sub>(H<sub>2</sub>) − ΔH<sub>c</sub>(CH<sub>4</sub>).","Substitute the values: −393 + 2(−286) − (−890).","Evaluate: −393 − 572 + 890."],"answer":"ΔH<sub>f</sub>(CH<sub>4</sub>) = −75 kJ/mol."}
+]},
+{"id":"born-haber","number":4,"title":"Born-Haber cycle and lattice enthalpy","tags":["born-haber","energetics"],"blocks":[
+{"type":"definition","term":"Lattice enthalpy","text":"The enthalpy change when 1 mole of a crystal is formed from its constituent ions in the gaseous phase. Cannot be measured directly: found from the Born-Haber cycle (Hess's law)."},
+{"type":"rule","title":"NaCl","lines":["ΔH<sub>f</sub> = ΔH<sub>at</sub>(Na) + 1st I.E.(Na) + ΔH<sub>at</sub>(Cl) + E.A.(Cl) + ΔH lattice","−411 = 108 + 495 + 122 − 360 + ΔH lattice → ΔH lattice = −776 kJ/mol."]},
+{"type":"figure","src":"born-haber-cycle-nacl.svg","caption":"Born-Haber cycle for NaCl. Up = endothermic, down = exothermic.","alt":"Energy-level diagram of the Born-Haber cycle for NaCl ending at lattice enthalpy −776"},
+{"type":"table","columns":["Compound","Cycle steps (all multiplied by the numbers in the formula)"],"rows":[
+["MgCl<sub>2</sub>","ΔH<sub>at</sub>(Mg) + 1st I.E. + 2nd I.E. + ΔH<sub>at</sub>(Cl<sub>2</sub>) [Cl<sub>2</sub> → 2Cl] + 2 × E.A.(Cl) + ΔH lattice"],
+["MgO","ΔH<sub>at</sub>(Mg) + 1st I.E. + 2nd I.E. + ΔH<sub>at</sub>(O) [½O<sub>2</sub> → O] + 1st E.A.(O) + 2nd E.A.(O) + ΔH lattice"],
+["Na<sub>2</sub>O","2 × ΔH<sub>at</sub>(Na) + 2 × 1st I.E.(Na) + ΔH<sub>at</sub>(O) + 1st E.A.(O) + 2nd E.A.(O) + ΔH lattice"]]},
+{"type":"tip","lines":["ΔH<sub>at</sub>(Cl) is for ½Cl<sub>2</sub> → Cl (half the bond enthalpy).","2nd electron affinity of oxygen is endothermic (adding e<sup>-</sup> to O<sup>-</sup>).","Endothermic steps = arrows up; exothermic = arrows down."]},
+{"type":"paragraph","text":"Which formula is stable? (likely question)"},
+{"type":"table","columns":["Formula","ΔH<sub>f</sub> calculated","Conclusion"],"rows":[
+["MgCl","−113 kJ/mol","exothermic but less than MgCl<sub>2</sub>; 2MgCl → MgCl<sub>2</sub> + Mg ΔH = −427"],
+["MgCl<sub>2</sub>","−653 kJ/mol","most exothermic: stable compound"],
+["MgCl<sub>3</sub>","+3904 kJ/mol","highly endothermic: unstable (3rd I.E. huge)"],
+["CaCl / CaCl<sub>2</sub> / CaCl<sub>3</sub>","≈ −228 / −823 / +656","CaCl<sub>2</sub> most exothermic (approx, values partly unclear)"]]},
+{"type":"hands_on","id":"born-haber-ho-nacl","exam_likelihood":"very_likely","reveal_mode":"step_by_step","title":"Calculate NaCl lattice enthalpy","task":"Use the Born–Haber values in the notes to find the lattice enthalpy of NaCl.","steps":["Write the cycle equation: ΔH<sub>f</sub> = ΔH<sub>at</sub>(Na) + 1st I.E.(Na) + ΔH<sub>at</sub>(Cl) + E.A.(Cl) + ΔH<sub>lattice</sub>.","Substitute: −411 = 108 + 495 + 122 − 360 + ΔH<sub>lattice</sub>.","Add the known terms: 108 + 495 + 122 − 360 = 365.","Rearrange to isolate the lattice enthalpy: −411 − 365."],"answer":"ΔH<sub>lattice</sub> = −776 kJ/mol."}
+]},
+{"id":"ideal-mixtures","number":5,"title":"Ideal mixtures and fractional distillation","tags":["ideal-mixtures","fractional-distillation"],"blocks":[
+{"type":"rule","title":"Three properties of an ideal solution","lines":["No volume change on mixing. No enthalpy change on mixing. Boiling point = weighted average of the components' boiling points."]},
+{"type":"worked_example","id":"ideal-we-bpt","title":"b.pt of 70% methylbenzene (111 °C) + 30% benzene (80 °C)","lines":["0.70 × 111 + 0.30 × 80 = 77.7 + 24 = 101.7 °C."]},
+{"type":"bullets","items":["More volatile component: higher vapour pressure, LOWER boiling point.","Vapour is richer in the more volatile component; repeated condensation and re-boiling (fractional distillation) gives it pure first; the other stays in the flask.","b.pt-composition diagram = inverted v.p.-composition diagram."]},
+{"type":"hands_on","id":"mixtures-ho-weighted-boiling-point","exam_likelihood":"very_likely","reveal_mode":"step_by_step","title":"Calculate an ideal mixture’s boiling point","task":"Find the boiling point of an ideal mixture containing 70% methylbenzene (111 °C) and 30% benzene (80 °C). Which component is more volatile?","steps":["Use the weighted average: (0.70 × 111) + (0.30 × 80).","Calculate each contribution: 77.7 + 24.","Compare the pure boiling points: the lower boiling point means greater volatility."],"answer":"The ideal mixture’s boiling point is 101.7 °C. Benzene is more volatile and distils first."}
+]},
+{"id":"azeotropes","number":6,"title":"Azeotropes in simple words","tags":["azeotropes"],"blocks":[
+{"type":"definition","term":"What is an azeotrope? (plain-English version)","text":"An azeotrope (say 'AY-zee-oh-trope') is a mixture of two liquids that boils like a single pure liquid.<br/>• It boils at ONE fixed temperature (not a range).<br/>• The vapour that comes off has the same mixture (same percentages) as the liquid in the flask.<br/>• Because of this, you cannot separate the two liquids any further by fractional distillation."},
+{"type":"definition","term":"Textbook definition (use this in an exam)","text":"An azeotropic mixture is a mixture that has a constant boiling point and constant composition. When it is heated, the liquid and the vapour have the same composition, so it cannot be separated by fractional distillation."},
+{"type":"paragraph","text":"Why can't we separate it? (3 steps)"},
+{"type":"numbered","items":["Normal distillation works because the vapour has MORE of the liquid that boils easily. We collect that vapour, cool it, and boil it again: each round gives a purer liquid.","At the azeotrope the vapour has the SAME recipe as the liquid. Boiling changes nothing.","So no matter how many times you repeat the distillation, the recipe stays the same and the liquids stay mixed."]},
+{"type":"paragraph","text":"Think of it like this: a sieve that lets both liquids through at exactly the same rate cannot separate them."},
+{"type":"paragraph","text":"Two types"},
+{"type":"table","columns":["Aspect","MINIMUM boiling azeotrope","MAXIMUM boiling azeotrope"],"rows":[
+["Boils at...","a LOWER temperature than either liquid alone","a HIGHER temperature than either liquid alone"],
+["Why (simple idea)","The two liquids 'don't mix happily': their particles escape into vapour more easily, so the mixture boils sooner","The two liquids 'like each other': their particles hold on tighter, so it needs more heat to boil"],
+["Science name","positive deviation from Raoult's law","negative deviation from Raoult's law"],
+["Memory trick","Positive → Minimum","Negative → Maximum"],
+["Examples (from your notes)","ethanol + benzene; ethanol + water; ethanol + trichloromethane; propanone + carbon disulphide","water + nitric acid; trichloromethane + propanone; methanoic acid + water"]]},
+{"type":"paragraph","text":"What do I collect, and what is left in the flask?"},
+{"type":"table","columns":["Your mixture is...","MINIMUM azeotrope","MAXIMUM azeotrope"],"rows":[
+["LEFT of the azeotrope on the graph (extra B)","Azeotrope comes out FIRST. Pure B is left in the flask.","Pure B comes out FIRST. Azeotrope is left in the flask."],
+["RIGHT of the azeotrope (extra A)","Azeotrope comes out FIRST. Pure A is left in the flask.","Pure A comes out FIRST. Azeotrope is left in the flask."]]},
+{"type":"tip","lines":["Minimum azeotrope = the easiest thing to boil, so it escapes first.","Maximum azeotrope = the hardest thing to boil, so it stays behind in the flask and the extra liquid comes out first."]},
+{"type":"paragraph","text":"Extra real-life fact (not in your notes): ethanol and water form a minimum azeotrope of about 96% ethanol, which is why simple distillation cannot give 100% pure ethanol."},
+{"type":"figure","src":"minimum-boiling-azeotrope.svg","caption":"Minimum boiling azeotrope: the lowest point on the curve is the azeotrope.","alt":"Boiling point–composition diagram with liquid and vapour lines meeting at a minimum, the azeotrope"},
+{"type":"figure","src":"maximum-boiling-azeotrope.svg","caption":"Maximum boiling azeotrope: the highest point on the curve is the azeotrope.","alt":"Boiling point–composition diagram with liquid and vapour lines meeting at a maximum, the azeotrope"},
+{"type":"qa","id":"azeo-q1","reveal_mode":"tap_to_show","question":"What is an azeotrope in one sentence?","answer":"A mixture of two liquids that boils at a constant temperature and gives a vapour with the same composition as the liquid."},
+{"type":"qa","id":"azeo-q2","reveal_mode":"tap_to_show","question":"Can fractional distillation separate an azeotrope?","answer":"No, because liquid and vapour have the same composition."},
+{"type":"qa","id":"azeo-q3","reveal_mode":"tap_to_show","question":"Positive deviation gives which type?","answer":"Minimum boiling azeotrope."},
+{"type":"qa","id":"azeo-q4","reveal_mode":"tap_to_show","question":"Ethanol + water mixture is boiled. What type is it?","answer":"Minimum boiling azeotrope (positive deviation)."},
+{"type":"qa","id":"azeo-q5","reveal_mode":"tap_to_show","question":"Max azeotrope: which part comes out first?","answer":"The pure liquid that is in excess; the azeotrope stays in the flask."},
+{"type":"hands_on","id":"azeotrope-ho-distillation","exam_likelihood":"normal","reveal_mode":"step_by_step","title":"Predict what distils from a maximum azeotrope mixture","task":"A mixture lies to the left of a maximum-boiling azeotrope on the composition graph, so it contains extra B. What comes out first and what remains in the flask?","steps":["Identify the type: this is a maximum-boiling azeotrope.","Locate the starting composition: it is left of the azeotrope and contains extra B.","Use the maximum-azeotrope distillation rule for a mixture left of the azeotrope."],"answer":"Pure B comes out first; the azeotrope is left in the flask."}
+]},
+{"id":"solvent-extraction","number":7,"title":"Solvent extraction","tags":["solvent-extraction"],"blocks":[
+{"type":"worked_example","id":"extraction-we-k4","title":"K = [X]<sub>CCl<sub>4</sub></sub> / [X]<sub>water</sub> = 4; 20 g in water; equal volumes","lines":["1st: y/(20 − y) = 4 → y = 16 g (4 g left). 2nd on the 4 g: z/(4 − z) = 4 → 5z = 16 → z = 3.2 g. Total = 19.2 g (vs 16 g in one go).","Rule: several small extractions beat one big one."]},
+{"type":"paragraph","text":"Starting mass 20 g is inferred (top of the page is cut off in the photo)."},
+{"type":"hands_on","id":"extraction-ho-two-portions","exam_likelihood":"very_likely","reveal_mode":"step_by_step","title":"Compare two small solvent extractions","task":"K = [X]<sub>CCl<sub>4</sub></sub> / [X]<sub>water</sub> = 4. Extract 20 g of X in water twice using equal volumes of CCl<sub>4</sub>. How much X is removed in total?","steps":["For the first extraction, let y be the mass transferred: y/(20 − y) = 4, so y = 16 g. There are 4 g left in water.","For the second extraction, let z be the mass transferred from the remaining 4 g: z/(4 − z) = 4.","Solve: z = 3.2 g. Add the portions removed: 16 + 3.2."],"answer":"19.2 g is extracted in total; 0.8 g remains in water."}
+]},
+{"id":"phase-diagram","number":8,"title":"Phase diagram of water","tags":["phase-diagram"],"blocks":[
+{"type":"figure","src":"water-phase-diagram.svg","caption":"Water phase diagram (schematic).","alt":"Pressure–temperature phase diagram of water with solid, liquid and gas regions, curves AT, BT, TC, triple point T and critical point C"},
+{"type":"table","columns":["Label","Meaning"],"rows":[
+["BT","melting curve of ice; slopes slightly left (more pressure → lower melting point)"],
+["AT","sublimation curve (vapour pressure of ice)"],
+["TC","vapour pressure curve of water; 373 K at 1 atm = boiling point"],
+["T (triple point)","ice, water, vapour in equilibrium: 273.16 K, ~0.006 atm"],
+["C (critical point)","647 K, 218 atm: above this, vapour cannot be condensed whatever the pressure"],
+["Regions","single stable phase; curves = two phases in equilibrium"],
+["Degrees of freedom","temperature and pressure (one-component system)"]]},
+{"type":"hands_on","id":"phase-ho-water-diagram","exam_likelihood":"very_likely","reveal_mode":"step_by_step","title":"Read key points from water’s phase diagram","task":"State the triple-point temperature and pressure, and the critical-point temperature and pressure for water.","steps":["Find the triple point T in the table and copy both values with their units.","Find the critical point C and copy both values with their units.","Keep the approximate symbol for the triple-point pressure as shown in the notes."],"answer":"Triple point: 273.16 K, ~0.006 atm. Critical point: 647 K, 218 atm."}
+]},
+{"id":"equilibrium","number":9,"title":"Chemical equilibrium (definitions to quote)","tags":["equilibrium"],"blocks":[
+{"type":"bullets","items":["Reaction goes to completion when a reactant is used up (CaCO<sub>3</sub> + 2HCl → CaCl<sub>2</sub> + CO<sub>2</sub> + H<sub>2</sub>O).","Reversible reaction: can go forward and backward, shown by ⇌ (Ag<sup>+</sup> + Fe<sup>2+</sup> ⇌ Ag + Fe<sup>3+</sup>).","Equilibrium: forward rate = reverse rate.","Characteristics: closed system; at a particular temperature; no observable change; dynamic (both reactions still happening)."]},
+{"type":"hands_on","id":"equilibrium-ho-state","exam_likelihood":"very_likely","reveal_mode":"step_by_step","title":"Describe a system at equilibrium","task":"A reversible reaction is in a closed vessel at constant temperature. The measured concentrations stop changing, although both reactions continue. Explain whether it is at equilibrium.","steps":["Check that the reaction is reversible, so forward and reverse reactions both occur.","At equilibrium, the forward rate equals the reverse rate; the reactions do not stop.","In a closed system at constant temperature, equal rates produce no observable change in concentrations."],"answer":"Yes. It is dynamic equilibrium: the forward and reverse rates are equal, with no observable change in the closed system at constant temperature."}
+]},
+{"id":"teacher-check","number":10,"title":"Before the test: check with your teacher","tags":["teacher-check"],"blocks":[
+{"type":"flag","lines":["One page of your notes gives E(C–H) = 305.6 from 1222.5 (uses 2×218 instead of 4×218); the correct route is 1662 → 415.5.","Bond enthalpy table values (photographed at an angle) and Ca lattice values: verify against your textbook.","'Spontaneous reactions are always exothermic' is a rule of thumb only.","Not included: pages I could not read (gas syringe / calorimetry workings, silver halide lattice table)."]}
+]}
+]}

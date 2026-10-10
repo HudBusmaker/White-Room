@@ -1,0 +1,113 @@
+{
+ "note": "Short reading notes, one per topic. Markdown with $LaTeX$. Shown before a drill when the student has never practised the topic.",
+ "notes": {
+  "cs-numbersys": {
+   "title": "Number systems and two's complement",
+   "body": "Computers store everything in binary (digits $0$ and $1$).\n\n- **Denary to binary:** subtract powers of two ($128, 64, 32, 16, 8, 4, 2, 1$) or divide by $2$ repeatedly and read the remainders upwards.\n- **Hexadecimal** groups bits in fours: $1111_2 = F_{16} = 15_{10}$.\n- **Two's complement** in $n$ bits: write the positive number, **invert every bit**, then **add 1**. The leftmost bit is the sign: $1$ means negative.\n\nExample: $5 = 00000101$, invert $11111010$, add 1 gives $11111011 = -5$."
+  },
+  "cs-boolean": {
+   "title": "Boolean algebra",
+   "body": "To build an expression from a truth table, write one AND term for every row where the output is $1$, then OR them together (**sum of products**).\n\n- De Morgan: $\\overline{A\\cdot B}=\\overline{A}+\\overline{B}$ and $\\overline{A+B}=\\overline{A}\\cdot\\overline{B}$.\n- XOR is $1$ when its inputs **differ**.\n- NAND and NOR are *universal*: any gate can be built from either one."
+  },
+  "cs-arch": {
+   "title": "Architecture: instructions and memory",
+   "body": "An instruction has an **opcode** (what to do) and an **operand** (what to do it to).\n\nIn an $n$-bit instruction with $k$ opcode bits the operand has $n-k$ bits. $k$ bits give $2^k$ different opcodes. $m$ operand bits can address $2^m$ locations.\n\nFetch-execute: fetch the instruction from memory, decode it, execute it, repeat."
+  },
+  "cs-memory": {
+   "title": "Memory addressing",
+   "body": "$m$ address bits select $2^m$ locations. To address $N$ locations you need $\\lceil \\log_2 N \\rceil$ bits.\n\n**Cache** is small, fast memory between the CPU and RAM. **Virtual memory** uses disk space to extend RAM by moving pages in and out."
+  },
+  "cs-os": {
+   "title": "Operating systems: scheduling",
+   "body": "A process is **ready**, **running** or **blocked**. The scheduler decides which ready process runs next.\n\n- **FCFS:** first come, first served.\n- **SJF:** shortest job first.\n- **Round robin:** each process gets a fixed time slice.\n\nFor non-preemptive scheduling, waiting time = start time $-$ arrival time. Average waiting time = total waiting time $\\div$ number of processes."
+  },
+  "cs-ds": {
+   "title": "Sorting and hashing",
+   "body": "**Insertion sort:** take each item in turn and slide it left into its place in the sorted part. After pass $k$ the first $k+1$ items are in order.\n\n**Hashing:** key $k$ goes in slot $h(k)=k \\bmod m$. If the slot is full (a **collision**), *linear probing* tries the next slot, wrapping from the last slot back to $0$."
+  },
+  "cs-swe": {
+   "title": "Software testing: test data",
+   "body": "There are three kinds of test data:\n\n- **Normal:** valid and typical.\n- **Boundary:** on or next to a limit: the lowest and highest valid values, and the first invalid values either side.\n- **Erroneous:** the wrong type or format, such as text where a number is expected.\n\nAlways state the result you expect for each test."
+  },
+  "cs-net": {
+   "title": "Networks: devices and addresses",
+   "body": "- A **hub** repeats data to every port.\n- A **switch** sends data to one port using **MAC** addresses, inside one network.\n- A **router** forwards packets between networks using **IP** addresses.\n- A **repeater** regenerates a weak signal.\n\nA MAC address belongs to the hardware; an IP address belongs to a network location."
+  },
+  "phy-mechanics": {
+   "title": "Uniform acceleration",
+   "body": "For constant acceleration use one of:\n\n- $v=u+at$\n- $s=ut+\\tfrac12at^2$\n- $v^2=u^2+2as$\n- $s=\\tfrac{u+v}{2}\\,t$\n\nList what you know from $s,u,v,a,t$, choose the equation with one unknown, and write the unit with every answer."
+  },
+  "phy-waves": {
+   "title": "Waves",
+   "body": "Wave speed $v=f\\lambda$. Period $T=\\dfrac1f$.\n\nIn the same medium the speed is constant, so doubling the frequency halves the wavelength."
+  },
+  "phy-fields": {
+   "title": "Circuits",
+   "body": "Ohm's law: $V=IR$.\n\n- **Series:** $R=R_1+R_2$; the same current flows through each.\n- **Parallel:** $\\dfrac1R=\\dfrac1{R_1}+\\dfrac1{R_2}$; each branch has the same voltage and the branch currents add."
+  },
+  "phy-thermal": {
+   "title": "Gases and temperature",
+   "body": "For a fixed mass of gas, $pV=nRT$. At constant volume $p\\propto T$; at constant pressure $V\\propto T$.\n\n**$T$ must be in kelvin:** $T=\\theta+273$. Never use degrees Celsius in these proportions."
+  },
+  "phy-modern": {
+   "title": "Radioactive decay",
+   "body": "Decay is random, but the **half-life** is fixed: the time for the number of undecayed nuclei (or the activity) to halve.\n\nAfter $n$ half-lives the fraction left is $\\left(\\tfrac12\\right)^n$."
+  },
+  "chem-physical": {
+   "title": "Moles and concentration",
+   "body": "Moles $n=\\dfrac{m}{M_r}$ (mass in g). Concentration $c=\\dfrac{n}{V}$ with $V$ in dm$^3$ ($1000\\ \\text{cm}^3=1\\ \\text{dm}^3$).\n\nCount ions too: one mole of $\\text{Na}_2\\text{CO}_3$ contains two moles of $\\text{Na}^+$."
+  },
+  "chem-inorganic": {
+   "title": "Testing for halide ions",
+   "body": "Add dilute nitric acid, then aqueous silver nitrate:\n\n- chloride: **white** precipitate\n- bromide: **cream** precipitate\n- iodide: **yellow** precipitate\n\nThe nitric acid removes ions such as carbonate that would interfere."
+  },
+  "chem-organic": {
+   "title": "Naming alkanes",
+   "body": "Find the **longest carbon chain** (meth-, eth-, prop-, but-, pent-, hex-). Number from the end that gives the branch the **lowest** number. A $-\\text{CH}_3$ branch is *methyl*.\n\nExample: a four-carbon chain with a methyl on carbon 2 is **2-methylbutane**."
+  },
+  "pure-algebra": {
+   "title": "Quadratic equations",
+   "body": "Solve $ax^2+bx+c=0$ by factorising or with $x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$.\n\nThe **discriminant** $\\Delta=b^2-4ac$: $\\Delta>0$ two real roots, $\\Delta=0$ one repeated root, $\\Delta<0$ no real roots."
+  },
+  "pure-calculus": {
+   "title": "Differentiation",
+   "body": "$\\dfrac{d}{dx}(x^n)=nx^{n-1}$.\n\nA stationary point has $\\dfrac{dy}{dx}=0$. Its nature: $\\dfrac{d^2y}{dx^2}>0$ is a **minimum**, $<0$ is a **maximum**."
+  },
+  "pure-trig": {
+   "title": "Trigonometric equations",
+   "body": "$\\sin$ and $\\cos$ repeat every $360^\\circ$. If a calculator gives $x_1$:\n\n- $\\sin x=k$: other solution $180^\\circ-x_1$\n- $\\cos x=k$: other solution $360^\\circ-x_1$\n- $\\tan x=k$: other solution $x_1+180^\\circ$"
+  },
+  "pure-explog": {
+   "title": "Logarithms",
+   "body": "$\\log_a x+\\log_a y=\\log_a(xy)$, $\\ \\log_a x-\\log_a y=\\log_a\\dfrac xy$, $\\ n\\log_a x=\\log_a x^n$.\n\nTo solve $a^x=b$ take logs: $x=\\dfrac{\\ln b}{\\ln a}$."
+  },
+  "stat-distributions": {
+   "title": "Binomial distribution",
+   "body": "$X\\sim B(n,p)$ for $n$ independent trials, two outcomes, constant $p$:\n$$P(X=r)=\\binom nr p^r(1-p)^{n-r}$$\nMean $np$, variance $np(1-p)$."
+  },
+  "stat-probability": {
+   "title": "Probability rules",
+   "body": "$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$.\n\nIf $A$ and $B$ are **independent**, $P(A\\cap B)=P(A)P(B)$. Complement: $P(A')=1-P(A)$."
+  },
+  "fp-complex": {
+   "title": "Complex numbers",
+   "body": "For $z=a+bi$: modulus $|z|=\\sqrt{a^2+b^2}$ and argument $\\arg z=\\tan^{-1}\\dfrac ba$ (check the quadrant).\n\nMultiply by expanding brackets and using $i^2=-1$."
+  },
+  "fp-matrices": {
+   "title": "2x2 matrices",
+   "body": "For $\\mathbf A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$: $\\det\\mathbf A=ad-bc$ and\n$$\\mathbf A^{-1}=\\frac1{\\det\\mathbf A}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$$\nIf $\\det\\mathbf A=0$ there is no inverse."
+  },
+  "fp-induction": {
+   "title": "Proof by induction",
+   "body": "Four parts: **basis** (true for $n=1$), **assumption** (suppose true for $n=k$), **step** (show it is then true for $n=k+1$), **conclusion** (true for all $n\\ge1$)."
+  },
+  "fp-diffeq": {
+   "title": "Simple differential equations",
+   "body": "For $\\dfrac{dy}{dx}=ky$, separate variables: $\\displaystyle\\int\\frac1y\\,dy=\\int k\\,dx$, giving $y=Ae^{kx}$. Use the initial condition to find $A$."
+  },
+  "fs-tests": {
+   "title": "Chi-squared goodness of fit",
+   "body": "$\\chi^2=\\sum\\dfrac{(O-E)^2}{E}$. Degrees of freedom $\\nu$ = number of categories $-1-$ constraints.\n\nIf $\\chi^2$ is **greater** than the critical value, reject $H_0$; otherwise do not reject $H_0$. Always state the conclusion in the context of the question."
+  }
+ }
+}

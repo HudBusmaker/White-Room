@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+data/
+backups/
+node_modules/
+service-account*.json
+*-service-account*.json
+*firebase-adminsdk*.json
+public/gemini-config.js
+.DS_Store

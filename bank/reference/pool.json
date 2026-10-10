@@ -1,0 +1,141 @@
+{
+  "note": "Reusable quest templates. The brain instantiates these with fresh numbers/topics each day. Every quest carries a 'topic' (the theory it comes from). Reading quests use type:'reading' + read_minutes (a timed read session).",
+  "cadence_note": "Two cadences only: 'weekday' and 'weekend'. The day is released whole — there is no morning/evening split and no Morning Window, so a weekday template is simply part of the one day list. read_minutes are real reading times (~2-3 min per page of technical material), not token timers.",
+  "gce_note": "GCE templates are SUBJECT-AGNOSTIC: front 'gce-*' and a '{subject}' placeholder that the server fills in. Never hardcode one subject here — that is what left Physics, Chemistry, Maths and Further Maths at zero for the System's first weeks. 'gce_slot' says how the server picks the subject: 'primary' = the most-neglected subject (read and drill share it, so the read gates the drill), 'rotate' = the next subjects in the need order, so one day touches several.",
+  "templates": [
+    {
+      "id": "gce-read",
+      "front": "gce-*",
+      "gce_slot": "primary",
+      "type": "reading",
+      "title": "Read & absorb: {subject}",
+      "detail": "Timed reading of your weakest {subject} topic before you drill it. No skipping — the timer runs.",
+      "topic": "weakest {subject} topic (auto)",
+      "read_minutes": 25,
+      "xp": 15,
+      "leisure_minutes": 8,
+      "cadence": "weekday"
+    },
+    {
+      "id": "gce-drill-recurring",
+      "front": "gce-*",
+      "gce_slot": "primary",
+      "type": "practice",
+      "title": "{subject} recurring-skill drill",
+      "detail": "One Paper-2-style structured task on the weakest/overdue {subject} skill, full working required.",
+      "topic": "weakest {subject} topic (auto)",
+      "xp": 25,
+      "leisure_minutes": 12,
+      "cadence": "weekday"
+    },
+    {
+      "id": "gce-mock-weekend",
+      "front": "gce-*",
+      "gce_slot": "rotate",
+      "type": "practice",
+      "title": "Weekend GCE mock — {subject}",
+      "detail": "A timed structured block or full MCQ set for {subject}, marked per-part.",
+      "topic": "Full-subject mock",
+      "xp": 80,
+      "leisure_minutes": 50,
+      "cadence": "weekend"
+    },
+    {
+      "id": "tb-video",
+      "front": "trading-business",
+      "type": "reading",
+      "title": "Trading Geeks — 30-minute study session",
+      "detail": "A timed 30-minute study session on Brad Goh's Trading Geeks YouTube channel, picking up where you left off.\nThis is study, not watching: take notes as you go.",
+      "topic": "Trading Geeks (Brad Goh) video study",
+      "submit": "Your notes: the concept taught, and one line on what it changes about how you'd act.",
+      "proof": "required",
+      "read_minutes": 30,
+      "xp": 20,
+      "leisure_minutes": 10,
+      "cadence": "weekday"
+    },
+    {
+      "id": "tb-read",
+      "front": "trading-business",
+      "type": "reading",
+      "title": "Read ~10 pages: one concept",
+      "detail": "Targeted read of the next ~10 pages of one book in library/trading-business/, picked up from where you stopped.\nRead FOR the concept named in the topic — not to turn pages. Timer runs.",
+      "topic": "Next concept from the trading library (auto)",
+      "submit": "The concept in your own words, and the page range you covered.",
+      "read_minutes": 25,
+      "xp": 15,
+      "leisure_minutes": 8,
+      "cadence": "weekday"
+    },
+    {
+      "id": "app-log",
+      "front": "app-building",
+      "type": "practice",
+      "title": "Log today's Written Vibes build",
+      "detail": "Record what actually shipped. Honest no-progress days are logged as such.",
+      "topic": "Written Vibes portfolio",
+      "xp": 20,
+      "leisure_minutes": 10,
+      "cadence": "weekday"
+    },
+    {
+      "id": "gce-mcq-mixed",
+      "front": "gce-*",
+      "gce_slot": "rotate",
+      "type": "practice",
+      "title": "{subject} MCQ mixed set",
+      "detail": "3-5 fresh Paper-1-style MCQs across mixed {subject} modules.",
+      "topic": "Mixed {subject} modules",
+      "xp": 15,
+      "leisure_minutes": 8,
+      "cadence": "weekday"
+    },
+    {
+      "id": "essay-read",
+      "front": "scholarship-essays",
+      "type": "reading",
+      "title": "Study a winning-essay pattern",
+      "detail": "Timed read of what your target programme rewards before you write. Timer runs.",
+      "topic": "Scholarship essay criteria (Chevening/Mastercard/DAAD)",
+      "read_minutes": 20,
+      "xp": 12,
+      "leisure_minutes": 6,
+      "cadence": "weekday"
+    },
+    {
+      "id": "essay-stage",
+      "front": "scholarship-essays",
+      "type": "practice",
+      "title": "Essay loop stage",
+      "detail": "One stage (frame / evidence / draft / cut) on one scholarship prompt.",
+      "topic": "Scholarship essay craft",
+      "xp": 25,
+      "leisure_minutes": 12,
+      "cadence": "weekday"
+    },
+    {
+      "id": "gce-structured-second",
+      "front": "gce-*",
+      "gce_slot": "rotate",
+      "type": "practice",
+      "title": "{subject} structured question",
+      "detail": "One structured question on an untested {subject} topic.\nShow every step — method marks count, not just the final answer.",
+      "topic": "weakest {subject} topic (auto)",
+      "xp": 25,
+      "leisure_minutes": 12,
+      "cadence": "weekend"
+    },
+    {
+      "id": "club-action",
+      "front": "tech-club",
+      "type": "practice",
+      "title": "Tech-club concrete action",
+      "detail": "One shippable action toward the current milestone (message, agenda, pitch).",
+      "topic": "Tech-club milestone ladder",
+      "xp": 30,
+      "leisure_minutes": 15,
+      "cadence": "weekend"
+    }
+  ],
+  "order_note": "Array order is PRIORITY. generateDay() slices the filtered templates down to the day's load, so whatever sits last is what gets dropped on a full day. Daily staples (the GCE read+drill, the 30-min Brad Goh session, the trading read, the app-log) are deliberately first; weekend-only heavy work is filtered out on weekdays anyway."
+}

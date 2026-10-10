@@ -1,0 +1,193 @@
+{
+ "notes": {
+  "f5-m-algebra": {
+   "title": "Solving equations and simplifying",
+   "body": "To solve a linear equation, do the **same operation to both sides** until $x$ stands alone.\n\n- Undo addition or subtraction first, then multiplication or division.\n- When you expand a bracket, multiply **every** term inside, and watch signs: $-3 \\times -1 = +3$.\n\nExample: $2x + 5 = 11$ gives $2x = 6$, so $x = 3$."
+  },
+  "f5-m-number": {
+   "title": "Fractions, decimals and percentages",
+   "body": "- A decimal to a fraction: write it over $10$, $100$, $1000$ and **simplify**. $0.375 = \\frac{375}{1000} = \\frac{3}{8}$.\n- **Percentage profit** $= \\frac{\\text{profit}}{\\text{cost price}} \\times 100$.\n- Profit $=$ selling price $-$ cost price.\n\nExample: cost $200$, sold $250$: profit $50$, percentage profit $= \\frac{50}{200}\\times 100 = 25\\%$."
+  },
+  "f5-m-geometry": {
+   "title": "Pythagoras' theorem",
+   "body": "In a right-angled triangle the square on the **hypotenuse** equals the sum of the squares on the other two sides: $c^2 = a^2 + b^2$.\n\n- The diagonal of a rectangle is the hypotenuse of a right-angled triangle.\n- Always take the square root at the end.\n\nExample: sides $3$ and $4$ give $c = \\sqrt{9+16} = 5$."
+  }
+ },
+ "questions": [
+  {
+   "id": "f5-m-algebra-g001",
+   "subject": "maths",
+   "level": "form-5",
+   "topic": "f5-m-algebra",
+   "skill": "f5-m-algebra-core",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 2,
+   "image": null,
+   "stem": "Solve the equation $3x - 7 = 14$.",
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "State the value of $3x$ after adding $7$ to both sides.",
+     "expected": 21,
+     "marks": 1,
+     "hint": "$14 + 7$.",
+     "mistake": "Add 7 to both sides: $14+7=21$."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Calculate $x$.",
+     "expected": 7,
+     "marks": 1,
+     "hint": "Divide both sides by $3$.",
+     "mistake": "$x = 21 \\div 3$."
+    }
+   ]
+  },
+  {
+   "id": "f5-m-algebra-g002",
+   "subject": "maths",
+   "level": "form-5",
+   "topic": "f5-m-algebra",
+   "skill": "f5-m-algebra-core",
+   "type": "mcq",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 1,
+   "image": null,
+   "stem": "Simplify $2(x+3) - 3(x-1)$.",
+   "options": [
+    {
+     "id": "A",
+     "text": "$-x+3$",
+     "correct": false,
+     "trap": "Forgot that $-3 \\times -1 = +3$ and wrote $-3$."
+    },
+    {
+     "id": "B",
+     "text": "$-x+9$",
+     "correct": true
+    },
+    {
+     "id": "C",
+     "text": "$5x+3$",
+     "correct": false,
+     "trap": "Changed the minus in front of the second bracket into a plus."
+    },
+    {
+     "id": "D",
+     "text": "$x+9$",
+     "correct": false,
+     "trap": "Wrote $2x-3x = x$ instead of $-x$."
+    }
+   ]
+  },
+  {
+   "id": "f5-m-number-g001",
+   "subject": "maths",
+   "level": "form-5",
+   "topic": "f5-m-number",
+   "skill": "f5-m-number-core",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 2,
+   "image": null,
+   "stem": "A trader in Bamenda buys a bag of rice for $12\\,000$ FCFA and sells it for $15\\,000$ FCFA.",
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Calculate the profit in FCFA.",
+     "expected": 3000,
+     "marks": 1,
+     "mistake": "Profit = selling price $-$ cost price."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Calculate the percentage profit on the cost price. Give the number only.",
+     "expected": 25,
+     "marks": 1,
+     "unit": "%",
+     "hint": "Profit $\\div$ cost price $\\times 100$.",
+     "mistake": "Divide the profit by the COST price ($12\\,000$), not the selling price."
+    }
+   ]
+  },
+  {
+   "id": "f5-m-number-g002",
+   "subject": "maths",
+   "level": "form-5",
+   "topic": "f5-m-number",
+   "skill": "f5-m-number-core",
+   "type": "mcq",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 1,
+   "image": null,
+   "stem": "Express $0.375$ as a fraction in its lowest terms.",
+   "options": [
+    {
+     "id": "A",
+     "text": "$\\frac{3}{8}$",
+     "correct": true
+    },
+    {
+     "id": "B",
+     "text": "$\\frac{3}{10}$",
+     "correct": false,
+     "trap": "Used only the first decimal digit."
+    },
+    {
+     "id": "C",
+     "text": "$\\frac{37}{100}$",
+     "correct": false,
+     "trap": "Truncated $0.375$ to $0.37$."
+    },
+    {
+     "id": "D",
+     "text": "$\\frac{5}{8}$",
+     "correct": false,
+     "trap": "Found $1-\\frac{3}{8}$, the complement, instead of the fraction itself."
+    }
+   ]
+  },
+  {
+   "id": "f5-m-geometry-g001",
+   "subject": "maths",
+   "level": "form-5",
+   "topic": "f5-m-geometry",
+   "skill": "f5-m-geometry-core",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 2,
+   "image": null,
+   "stem": "A rectangular school field is $12$ m long and $5$ m wide (a scale model). Find the length of its diagonal.",
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Calculate $12^2 + 5^2$.",
+     "expected": 169,
+     "marks": 1,
+     "mistake": "$144 + 25 = 169$."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Calculate the length of the diagonal in metres.",
+     "expected": 13,
+     "marks": 1,
+     "unit": "m",
+     "hint": "Take the square root of your answer to (a).",
+     "mistake": "The diagonal is $\\sqrt{169}$."
+    }
+   ]
+  }
+ ]
+}

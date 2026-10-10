@@ -1,0 +1,32 @@
+{
+  "id": "quadratic-basic",
+  "title": "Factorise and solve",
+  "level": "Form 5",
+  "subject": "Pure Mathematics",
+  "question": "Solve <span class=\"eq\"><i>x</i><sup>2</sup> &minus; 5<i>x</i> + 6 = 0</span> by factorising. Then check one of your answers by substituting it back into the equation.",
+  "total": 4,
+  "guide": [
+    {
+      "id": "M1",
+      "marks": 1,
+      "text": "Factorises the quadratic correctly: (x - 2)(x - 3) = 0, or an equivalent correct factorised form."
+    },
+    {
+      "id": "A1",
+      "marks": 1,
+      "text": "States x = 2 as a root."
+    },
+    {
+      "id": "A2",
+      "marks": 1,
+      "text": "States x = 3 as a root."
+    },
+    {
+      "id": "B1",
+      "marks": 1,
+      "text": "Checks at least one root by substituting into x^2 - 5x + 6 and shows the result is 0 (for example 2^2 - 5(2) + 6 = 4 - 10 + 6 = 0)."
+    }
+  ],
+  "rules": "Award M1 only if the student actually factorises. If the roots are found by another valid method (formula or completing the square) and are correct, award A1 and A2 but not M1. Do not award a mark for work that is not written down. A final answer with no working earns A1 and A2 only if both roots are correct. Wrong signs in the factors (for example (x + 2)(x + 3)) earn no M1.",
+  "slips": "Notation or wording slips where the idea and result are right: a missing '= 0' on a line, joining the roots as 'x = 2 or 3' instead of 'x = 2 or x = 3', writing the factors without brackets, using '=' between lines that are not equal, or 'x = 2, 3' with no 'or'."
+}

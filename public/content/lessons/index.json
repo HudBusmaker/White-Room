@@ -1,0 +1,48 @@
+{
+ "lessons": [
+  {
+   "id": "locus-circle",
+   "file": "locus-circle.json",
+   "title": "The locus circle",
+   "subject": "Pure Mathematics",
+   "level": "Upper Sixth",
+   "release": "2026-10-04T17:00:00+01:00",
+   "daily": "2026-10-05"
+  },
+  {
+   "id": "cube-roots",
+   "file": "cube-roots.json",
+   "title": "Roots of complex numbers",
+   "subject": "Pure Mathematics",
+   "level": "Upper Sixth",
+   "release": "2026-10-06T17:00:00+01:00"
+  },
+  {
+   "id": "congruence-quick-notes",
+   "file": "congruence-quick-notes.json",
+   "title": "Congruences & the Euclidean algorithm",
+   "subject": "Pure Mathematics",
+   "level": "Form 5",
+   "release": "2026-10-05T11:20:00+01:00",
+   "daily": "2026-10-05"
+  },
+  {
+   "id": "organic-exam-notes",
+   "file": "organic_exam_notes.json",
+   "title": "Organic Chemistry: High-Yield Exam Notes",
+   "subject": "Organic Chemistry",
+   "level": "Exam Revision",
+   "release": "2026-10-09T06:00:00+01:00",
+   "format": "section-document"
+  },
+  {
+   "id": "physical-exam-notes",
+   "file": "physical_exam_notes.json",
+   "title": "Physical Chemistry: High-Yield Exam Notes",
+   "subject": "Physical Chemistry",
+   "level": "Exam Revision",
+   "release": "2026-10-09T06:00:00+01:00",
+   "format": "section-document"
+  }
+ ]
+}

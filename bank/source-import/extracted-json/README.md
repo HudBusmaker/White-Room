@@ -1,0 +1,3 @@
+# White Room topic-classified OCR staging
+
+Contains candidate question fragments extracted from all 66 source images and grouped into JSON files by provisional chemistry topic. Clear numbered markers were used to split some pages; pages without reliable boundaries remain as page-level OCR candidates. OCR may jumble adjacent columns, damage chemical notation, omit diagrams and misread labels. These records are **not live/publishable practice questions** and have no asserted answer key. Compare each record with its referenced image, split/correct questions, verify board/level/year/paper/question number, then add a checked mark scheme before promotion to `bank/questions/`.

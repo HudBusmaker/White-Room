@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070d2b">
+<title>White Room — Think. Solve. Grow.</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a1238'/%3E%3Ctext x='16' y='24' font-size='22' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-weight='700' fill='%23fff'%3E%CF%80%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="drill.css">
+</head>
+<body>
+
+<!-- Icon sprite: plain line icons, no external requests -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-dash" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.8"/><rect x="14" y="3" width="7" height="5" rx="1.8"/><rect x="14" y="12" width="7" height="9" rx="1.8"/><rect x="3" y="16" width="7" height="5" rx="1.8"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5M9 8h7"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v1a4 4 0 0 0 4 4M16 6h4v1a4 4 0 0 1-4 4M12 13v4M8 21h8M9.5 17h5"/></symbol>
+    <symbol id="i-rank" viewBox="0 0 24 24"><path d="M5 21V11M12 21V4M19 21v-7"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.700 2 6.500 5.500M16 4.800a3.500 3.500 0 0 1 0 6.400M18 14.800c1.800.800 3 2.600 3.500 5.200"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></symbol>
+    <symbol id="i-review" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3.5"/><path d="M8 12.500l3 3 5-6"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 4 5 5.500 5 11a5 5 0 0 1-10 0c0-2 1-3.500 2-4.500 0 2 1 3 2 3 0-3-1-6 1-9.500z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.700 5.600 6.100.8-4.500 4.200 1.100 6.100L12 16.800 6.600 19.700l1.100-6.100L3.200 9.400l6.100-.8z"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 8l4.500 4L12 5l4.500 7L21 8l-2 11H5z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.500-7 10-7 10 7 10 7-3.500 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18M10.600 5.100A9.800 9.800 0 0 1 12 5c6.500 0 10 7 10 7a17 17 0 0 1-3.200 4M6.500 6.600C3.700 8.500 2 12 2 12s3.500 7 10 7c1.600 0 3-.4 4.200-1M9.900 9.900a3 3 0 0 0 4.200 4.200"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4M16 8l4 4-4 4M20 12H9"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2.500"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2.500"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4L16.500 4.500a2.100 2.100 0 0 1 3 3L8 19z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 18a8 8 0 1 1 16 0M12 18l4-6"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ SIGN IN / REGISTER ============ -->
+<section id="auth" class="auth">
+
+  <div id="authLogin" class="auth-split">
+    <div class="auth-art slot slot-login" aria-hidden="true">
+      <div class="auth-logo"><span class="pi">π</span><b>WHITE ROOM</b><small>Think. Solve. Grow.</small></div>
+    </div>
+    <div class="auth-panel">
+      <div class="auth-card">
+        <h1>Welcome Back</h1>
+        <p class="muted">Log in to continue your journey.</p>
+        <div class="seg" role="tablist" aria-label="Account type">
+          <button type="button" class="seg-btn on" data-auth="studentLogin" role="tab">Student</button>
+          <button type="button" class="seg-btn" data-auth="staffLogin" role="tab">Staff</button>
+        </div>
+
+        <form id="studentLogin" class="form" autocomplete="on">
+          <label class="field"><span>Student ID</span>
+            <span class="input"><svg class="i"><use href="#i-user"/></svg><input id="loginId" autocomplete="username" required placeholder="WR-2026-0001"></span>
+          </label>
+          <label class="field"><span>Password</span>
+            <span class="input"><svg class="i"><use href="#i-lock"/></svg><input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Enter your password"><button type="button" class="eye" data-eye="loginPassword" aria-label="Show password"><svg class="i"><use href="#i-eye"/></svg></button></span>
+          </label>
+          <div class="form-row">
+            <label class="check"><input type="checkbox" id="rememberId"><i></i><span>Remember my ID</span></label>
+            <span class="hint">Forgot password? Ask your tutor.</span>
+          </div>
+          <button class="btn primary block" type="submit">Login</button>
+          <p id="loginNote" class="form-note" role="status"></p>
+        </form>
+
+        <form id="staffLogin" class="form" hidden>
+          <label class="field"><span>Head Staff code</span>
+            <span class="input"><svg class="i"><use href="#i-key"/></svg><input id="staffCode" type="password" autocomplete="current-password" required placeholder="Enter the Head Staff code"><button type="button" class="eye" data-eye="staffCode" aria-label="Show code"><svg class="i"><use href="#i-eye"/></svg></button></span>
+          </label>
+          <button class="btn primary block" type="submit">Open staff room</button>
+          <p id="staffLoginNote" class="form-note" role="status"></p>
+        </form>
+
+        <p class="switch">Don't have an account? <a href="#" data-auth="register">Register</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="authRegister" class="auth-split reverse" hidden>
+    <div class="auth-panel">
+      <div class="auth-card wide">
+        <div class="brand"><span class="pi">π</span><span><b>WHITE ROOM</b><small>Think. Solve. Grow.</small></span></div>
+        <h1>Student Registration</h1>
+        <p class="muted">Fill in your details to join White Room.</p>
+        <form id="register" class="form">
+          <label class="field"><span>Full name</span><span class="input"><input id="regName" required autocomplete="name" placeholder="Enter your full name"></span></label>
+          <fieldset class="field"><legend>Gender</legend>
+            <div class="radios">
+              <label class="radio"><input type="radio" name="regGender" value="Male" checked><i></i>Male</label>
+              <label class="radio"><input type="radio" name="regGender" value="Female"><i></i>Female</label>
+              <label class="radio"><input type="radio" name="regGender" value="Other"><i></i>Other</label>
+              <label class="radio"><input type="radio" name="regGender" value="Prefer not to say"><i></i>Prefer not to say</label>
+            </div>
+          </fieldset>
+          <label class="field"><span>School</span><span class="input"><input id="regSchool" required placeholder="Enter your school name"></span></label>
+          <div class="form-grid">
+            <label class="field"><span>Class / Grade</span><span class="input"><input id="regClass" required placeholder="e.g. Form 5 or Upper Sixth"></span></label>
+          </div>
+          <div id="regPicker" class="sp-picker"></div>
+          <label class="field"><span>Create password</span>
+            <span class="input"><svg class="i"><use href="#i-lock"/></svg><input id="regPassword" type="password" minlength="6" required autocomplete="new-password" placeholder="At least 6 characters"><button type="button" class="eye" data-eye="regPassword" aria-label="Show password"><svg class="i"><use href="#i-eye"/></svg></button></span>
+          </label>
+          <label class="field"><span>Admission key</span><span class="input"><svg class="i"><use href="#i-key"/></svg><input id="regKey" required placeholder="WRK-XXXXXXXXXX" autocapitalize="characters"></span><small class="hint">One-time key given to you by White Room staff.</small></label>
+          <button class="btn primary block" type="submit">Register</button>
+          <p id="regNote" class="form-note" role="status"></p>
+        </form>
+        <p class="switch">Already registered? <a href="#" data-auth="studentLogin">Log in</a></p>
+      </div>
+    </div>
+    <div class="auth-art slot slot-register" aria-hidden="true">
+      <div class="auth-quote"><span class="pi">π</span><p>Your journey starts<br>with a single key.</p><q>Greatness is built<br>one step at a time.</q></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APP ============ -->
+<div id="appShell" hidden>
+  <header class="mobilebar">
+    <a class="brand sm" href="#home"><span class="pi">π</span><b>WHITE ROOM</b></a>
+    <button id="menuBtn" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="sidebar"><svg class="i"><use href="#i-menu"/></svg></button>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <a class="brand" href="#home"><span class="pi">π</span><span><b>WHITE ROOM</b><small>Think. Solve. Grow.</small></span></a>
+    <div id="staffChip" class="staffchip" hidden><span class="avatar">HS</span><div><b>Head Staff</b><small><i class="dot"></i> Online</small></div></div>
+    <nav class="tabs" id="tabs" aria-label="Main">
+      <span id="studentNavGroup">
+        <a href="#home" data-r="home"><svg class="i"><use href="#i-dash"/></svg>Dashboard</a>
+        <a href="#lessons" data-r="lessons"><svg class="i"><use href="#i-book"/></svg>Lessons</a>
+        <a href="#tasks" data-r="tasks"><svg class="i"><use href="#i-target"/></svg>Daily Quest</a>
+        <a href="#drill" data-r="drill"><svg class="i"><use href="#i-pen"/></svg>Practice</a>
+        <a href="#record" data-r="record"><svg class="i"><use href="#i-calendar"/></svg>Record</a>
+        <a href="#compete" data-r="compete"><svg class="i"><use href="#i-trophy"/></svg>Compete</a>
+        <a href="#rankings" data-r="rankings"><svg class="i"><use href="#i-rank"/></svg>Rankings</a>
+        <a href="#profile" data-r="profile"><svg class="i"><use href="#i-user"/></svg>Profile</a>
+      </span>
+      <span id="staffNavGroup" hidden>
+        <a href="#staff" data-r="staff"><svg class="i"><use href="#i-dash"/></svg>Dashboard</a>
+        <a href="#staff-review" data-r="staff-review"><svg class="i"><use href="#i-review"/></svg>Marking Review</a>
+        <a href="#staff-students" data-r="staff-students"><svg class="i"><use href="#i-users"/></svg>Students</a>
+        <a href="#staff-admissions" data-r="staff-admissions"><svg class="i"><use href="#i-key"/></svg>Admissions</a>
+        <a href="#staff-lessons" data-r="staff-lessons"><svg class="i"><use href="#i-book"/></svg>Lesson Publisher</a>
+        <a href="#staff-daily-quests" data-r="staff-daily-quests"><svg class="i"><use href="#i-target"/></svg>Daily Quest Planner</a>
+        <a href="#staff-question-bank" data-r="staff-question-bank"><svg class="i"><use href="#i-review"/></svg>Question Bank Review</a>
+        <a href="#staff-deposit" data-r="staff-deposit"><svg class="i"><use href="#i-plus"/></svg>JSON Deposit</a>
+        <a href="#staff-records" data-r="staff-records"><svg class="i"><use href="#i-calendar"/></svg>Records</a>
+        <a href="#staff-compete" data-r="staff-compete"><svg class="i"><use href="#i-trophy"/></svg>Competitions</a>
+      </span>
+    </nav>
+    <button id="logoutBtn" class="logout"><svg class="i"><use href="#i-logout"/></svg>Log out</button>
+  </aside>
+
+  <main class="main">
+
+    <!-- ===== Student dashboard ===== -->
+    <section id="home" class="view"><div class="page">
+      <header class="page-head">
+        <div><h1><span id="dashGreeting">Good morning</span>, <span id="dashName">Student</span>!</h1><p class="sub">Small steps. Big progress.</p></div>
+        <div class="userchip"><span class="avatar" id="dashAvatar">S</span><div><b id="chipName">Student</b><small id="dashId">WR-0000-0000</small></div></div>
+      </header>
+
+      <div class="dash">
+        <div class="dash-main">
+          <div class="dash-row top">
+            <article class="card rank-card">
+              <div class="hex big" id="dashHex" data-rank="E"><b id="dashRank">E</b></div>
+              <div class="rank-info">
+                <small class="eyebrow">Current Rank</small>
+                <h2>Rank <span id="dashRankLetter">E</span> <em id="dashRankTitle">Novice</em></h2>
+                <div class="bar"><i id="xpBar"></i></div>
+                <p class="bar-note"><b id="dashXp">0</b> <span id="xpNext">XP</span></p>
+                <a class="link" href="#rankings">View Rank Progress <svg class="i"><use href="#i-arrow"/></svg></a>
+              </div>
+            </article>
+            <div class="stats">
+              <article class="card stat"><svg class="i ico flame"><use href="#i-flame"/></svg><b id="statStreak">0</b><small>Day Streak</small></article>
+              <article class="card stat"><svg class="i ico star"><use href="#i-star"/></svg><b id="statXp">0</b><small>Total XP</small></article>
+              <article class="card stat"><svg class="i ico crown"><use href="#i-crown"/></svg><b id="statAchievements">0</b><small>Achievements</small></article>
+            </div>
+          </div>
+
+          <article class="card progression">
+            <div class="card-head"><h3>Your Rank Progression</h3><span class="muted" id="progNote"></span></div>
+            <div class="hexrow" id="hexRow"></div>
+          </article>
+
+          <div class="dash-row two">
+            <article class="card continue slot slot-dashboard">
+              <div class="continue-body">
+                <small class="eyebrow light">Continue Learning</small>
+                <p class="up">Next lesson</p>
+                <h3 id="contTitle">Loading…</h3>
+                <p class="light-sub" id="contSub"></p>
+                <a id="contBtn" class="btn primary" href="#lessons">Continue <svg class="i"><use href="#i-arrow"/></svg></a>
+              </div>
+            </article>
+            <article class="card todayquest">
+              <div class="card-head"><h3>Today's Quest</h3></div>
+              <div class="tq-body">
+                <span class="tile blue"><svg class="i"><use href="#i-target"/></svg></span>
+                <div><h4 id="dqTitle">No quest set today</h4><p class="muted" id="dqSub">Check back soon.</p></div>
+              </div>
+              <a id="dqBtn" class="btn primary block" href="#tasks">View quest</a>
+            </article>
+          </div>
+
+          <div>
+            <h3 class="section-title">Quick Access</h3>
+            <div class="quick">
+              <a class="card tilelink" href="#lessons"><span class="tile blue"><svg class="i"><use href="#i-book"/></svg></span>Lessons</a>
+              <a class="card tilelink" href="#tasks"><span class="tile violet"><svg class="i"><use href="#i-target"/></svg></span>Daily Quest</a>
+              <a class="card tilelink" href="#compete"><span class="tile cyan"><svg class="i"><use href="#i-trophy"/></svg></span>Compete</a>
+              <a class="card tilelink" href="#rankings"><span class="tile gold"><svg class="i"><use href="#i-rank"/></svg></span>Rankings</a>
+              <a class="card tilelink" href="#profile"><span class="tile green"><svg class="i"><use href="#i-crown"/></svg></span>Achievements</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="dash-side">
+          <article class="card">
+            <div class="card-head"><h3>Recent Activity</h3></div>
+            <ul class="activity" id="activityList"><li class="empty">Nothing yet. Finish a lesson to start your story.</li></ul>
+          </article>
+          <article class="card">
+            <div class="card-head"><h3>White Room News</h3></div>
+            <div id="posts" class="posts"><p class="muted">Loading…</p></div>
+          </article>
+        </aside>
+      </div>
+    </div></section>
+
+    <!-- ===== Lessons ===== -->
+    <section id="lessons" class="view"><div class="page">
+      <header class="page-head"><div><h1>Lessons</h1><p class="sub">Learn at your own pace. Past lessons are always available.</p></div></header>
+      <div class="split">
+        <div>
+          <div class="toolbar">
+            <label class="search"><svg class="i"><use href="#i-search"/></svg><input id="lessonSearch" type="search" placeholder="Search lessons…" aria-label="Search lessons"></label>
+            <select id="lessonSubject" aria-label="Subject"><option value="">All Subjects</option></select>
+            <select id="lessonLevel" aria-label="Level"><option value="">All Levels</option></select>
+          </div>
+          <div id="lessonList" class="lesson-list"></div>
+        </div>
+        <aside class="art-panel bare slot slot-lessons" aria-hidden="true"></aside>
+      </div>
+    </div></section>
+
+    <!-- ===== Shared Daily Quest Engine ===== -->
+    <section id="tasks" class="view"><div class="page">
+      <header class="page-head"><div><h1>Daily Quests</h1><p class="sub">One shared quest per subject, for your level. Each stays open for seven days. Choose a summary note before answering.</p></div></header>
+      <div id="dailyQuestRoot"><article class="card"><p class="muted">Loading today's quests…</p></article></div>
+    </div></section>
+
+    <!-- ===== Practice (question bank) ===== -->
+    <section id="drill" class="view"><div class="page">
+      <header class="page-head"><div><h1>Practice</h1><p class="sub">Short sets built for you. Topics you have not met come first, then your weakest.</p></div></header>
+      <div id="drillRoot"></div>
+    </div></section>
+
+    <!-- ===== Compete ===== -->
+    <section id="compete" class="view"><div class="page">
+      <header class="page-head"><div><h1>Compete</h1><p class="sub">Test your skills. Climb the leaderboard.</p></div></header>
+      <div class="split rev">
+        <div class="stack">
+          <div class="tabs-pill"><button class="on" type="button">Active Competitions</button><button type="button" disabled>Past Competitions</button></div>
+          <article class="card comp-card">
+            <span class="tile gold lg"><svg class="i"><use href="#i-trophy"/></svg></span>
+            <div><h3>No competition is open yet</h3><p class="muted">Head Staff will open the first challenge here. Questions will be served by the server and ranked by accuracy first, then time.</p></div>
+            <span class="pill">Coming soon</span>
+          </article>
+          <article class="card">
+            <div class="card-head"><h3>Leaderboard</h3><span class="muted">Current standings by XP</span></div>
+            <div class="table-wrap"><table class="table" aria-label="Leaderboard"><thead><tr><th>#</th><th>Student</th><th>Rank</th><th class="r">XP</th></tr></thead><tbody id="leaderBody"><tr><td colspan="4" class="muted">Loading…</td></tr></tbody></table></div>
+          </article>
+        </div>
+        <aside class="stack">
+          <article class="card">
+            <div class="card-head"><h3>Competition Rewards</h3></div>
+            <ol class="rewards">
+              <li><span class="hex sm" data-rank="C"><b>1</b></span><div><b>1st Place</b><small>XP and badge set by staff</small></div></li>
+              <li><span class="hex sm" data-rank="A"><b>2</b></span><div><b>2nd Place</b><small>XP and badge set by staff</small></div></li>
+              <li><span class="hex sm" data-rank="D"><b>3</b></span><div><b>3rd Place</b><small>XP and badge set by staff</small></div></li>
+            </ol>
+          </article>
+          <div class="art-panel short bare slot slot-compete" aria-hidden="true"></div>
+        </aside>
+      </div>
+    </div></section>
+
+    <!-- ===== Rankings ===== -->
+    <section id="rankings" class="view"><div class="page">
+      <header class="page-head"><div><h1>Rankings</h1><p class="sub">Position is based on earned XP, with marks as the tie-breaker.</p></div></header>
+      <div id="rankList" class="rank-list"><p class="muted">Loading…</p></div>
+      <h3 class="section-title">Rank Badges</h3>
+      <article class="card badges"><div class="hexrow" id="badgeRow"></div><p class="muted center">Rank up. Earn. Be legendary.</p></article>
+    </div></section>
+
+    <!-- ===== Profile ===== -->
+    <section id="profile" class="view"><div class="page">
+      <header class="page-head"><div><h1>Profile</h1></div></header>
+      <div class="profile-grid">
+        <div class="stack">
+        <article class="card profile-main">
+          <div class="id-row">
+            <span class="avatar xl" id="pAvatar">S</span>
+            <div><h2 id="pName">Student</h2><p class="muted" id="pId">WR-0000-0000</p><p class="xp-line"><svg class="i"><use href="#i-star"/></svg><b id="pXp">0</b> XP</p></div>
+            <div class="hex md" id="pHex" data-rank="E"><b>E</b></div>
+          </div>
+          <div class="level"><div class="bar"><i id="pBar"></i></div><p class="bar-note"><span id="pLevel">Rank E</span><span id="pNext">0 / 100 XP</span></p></div>
+          <dl class="facts" id="profileCard"></dl>
+        </article>
+        <article class="card quote-card"><p>"Discipline today,<br>freedom tomorrow."</p></article>
+        </div>
+        <div class="stack">
+        <article class="card">
+          <div class="card-head"><h3>My level and subjects</h3></div>
+          <div id="profileSubjects" class="sp-picker"></div>
+          <div class="actions row"><button id="saveSubjects" class="btn primary sm" type="button">Save subjects</button></div>
+          <p id="subjectsNote" class="form-note" role="status"></p>
+        </article>
+        <article class="card">
+          <div class="card-head"><h3>Achievements</h3></div>
+          <div id="achievementList" class="ach-grid"></div>
+        </article>
+        <article class="card">
+          <div class="card-head"><h3>Statistics</h3></div>
+          <div class="stat-grid" id="profileStats"></div>
+        </article>
+        </div>
+      </div>
+    </div></section>
+
+    <!-- ===== Marking quest (student) ===== -->
+    <section id="quest" class="view"><div class="page narrow">
+      <header class="page-head"><div><h1>Marking Quest</h1><p class="sub">Solve the question on paper, upload your working, check the transcription, then submit it for staff review.</p></div></header>
+      <div id="qPicker" class="qpicker"></div>
+      <article class="card qcard"><small class="eyebrow" id="qMeta"></small><h2 id="qTitle">Loading…</h2><div id="qText" class="qtext"></div></article>
+      <article class="card qstep"><h3><span class="n">1</span> Your working</h3>
+        <div class="qrow"><label class="btn ghost" for="qFile"><svg class="i"><use href="#i-pen"/></svg>Take or choose photo</label><input id="qFile" type="file" accept="image/*" multiple hidden></div>
+        <div id="qThumbs" class="thumbs"></div>
+        <div class="qrow"><button id="qRead" class="btn primary" disabled>Read my photo</button><button id="qType" class="btn ghost" type="button">Type it instead</button></div>
+        <p id="qNote1" class="form-note"></p></article>
+      <article class="card qstep" id="qStep2" hidden><h3><span class="n">2</span> Check what was read</h3><p class="muted">Fix any reading errors. The AI marks exactly what is in this box.</p><textarea id="qBox" rows="7" spellcheck="false"></textarea><div class="qrow"><button id="qMark" class="btn primary">Submit for marking</button></div><p id="qNote2" class="form-note"></p></article>
+      <article id="qResult" class="card qstep" hidden></article>
+    </div></section>
+
+    <!-- ===== Lesson / practice session ===== -->
+    <section id="session" class="view sess">
+      <div class="sbar"><a class="back" href="#lessons"><svg class="i flip"><use href="#i-arrow"/></svg>Back</a><b id="sTitle"></b><span id="sMarks" class="pill"></span></div>
+      <div class="sprog"><i id="sProg"></i></div>
+      <div class="spanes">
+        <div class="spane" id="sPrompt"><details class="qbox" id="sQBox" open><summary>Summary</summary><div id="sQuestion"></div></details><div id="sCur"></div></div>
+        <div class="spane work" id="sWork"><h3 id="sWorkTitle">Your working</h3><div id="sLines"><p class="muted" id="sEmpty">Each block you finish is written here, line by line.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ===== Staff: dashboard ===== -->
+    <section id="staff" class="view"><div class="page">
+      <header class="page-head"><div><h1>Head Staff Dashboard</h1><p class="sub">Manage students, marking, and platform health.</p></div></header>
+      <div class="metrics">
+        <article class="card metric"><span class="tile blue"><svg class="i"><use href="#i-users"/></svg></span><div><small>Total Students</small><b id="mTotal">0</b></div></article>
+        <article class="card metric"><span class="tile green"><svg class="i"><use href="#i-bolt"/></svg></span><div><small>Active Students</small><b id="mActive">0</b></div></article>
+        <article class="card metric"><span class="tile gold"><svg class="i"><use href="#i-key"/></svg></span><div><small>Pending Admissions</small><b id="mPending">0</b></div></article>
+        <article class="card metric alert"><span class="tile violet"><svg class="i"><use href="#i-review"/></svg></span><div><small>Awaiting Marking</small><b id="mAwaiting">0</b></div></article>
+      </div>
+      <div class="staff-grid">
+        <article class="card"><div class="card-head"><h3>Rank Distribution</h3></div>
+          <div class="donut-wrap"><div class="donut" id="rankDonut"><b id="rankTotal">0</b><small>Total</small></div>
+          <ul class="legend" id="rankLegend"></ul></div>
+        </article>
+        <article class="card"><div class="card-head"><h3>Average Performance</h3></div>
+          <div class="ring-wrap"><div class="ring" id="perfRing"><b id="mPerformance">0%</b></div><p class="muted center">Across all recorded marks</p></div>
+          <p class="center small"><span id="mReleased">0</span> final marks released</p>
+        </article>
+        <article class="card"><div class="card-head"><h3>Quick Actions</h3></div>
+          <div class="actions">
+            <button id="issueKey" class="btn ghost block"><svg class="i"><use href="#i-key"/></svg>Generate Admission Key</button>
+            <a class="btn ghost block" href="#staff-review"><svg class="i"><use href="#i-review"/></svg>Review Marking</a>
+            <a class="btn ghost block" href="#staff-students"><svg class="i"><use href="#i-users"/></svg>Manage Students</a>
+            <a class="btn ghost block" href="#staff-compete"><svg class="i"><use href="#i-trophy"/></svg>Create Competition</a>
+          </div>
+          <p id="staffNote" class="form-note" role="status"></p><div id="newKeys" class="keys"></div>
+        </article>
+        <article class="card span2"><div class="card-head"><h3>Recent Students</h3></div><div id="staffRecent" class="activity"></div></article>
+        <article class="card"><div class="card-head"><h3>Latest News</h3></div><div id="staffPosts" class="posts"></div></article>
+      </div>
+      <button id="staffRefresh" class="btn ghost sm">Refresh data</button>
+    </div></section>
+
+    <!-- ===== Staff: marking review ===== -->
+    <section id="staff-review" class="view"><div class="page">
+      <header class="page-head"><div><h1>Marking Review</h1><p class="sub">AI drafts are not final. Review the student's work and release the official result.</p></div></header>
+      <div class="tabs-pill"><button id="revTabPending" class="on" type="button">Awaiting Review (<b id="queuePending">0</b>)</button><button id="revTabReleased" type="button">Released (<b id="queueReleased">0</b>)</button></div>
+      <div class="review">
+        <div id="staffItems" class="review-list"></div>
+        <article id="reviewDetail" class="card review-detail"><p class="muted">Select a submission to review it.</p></article>
+      </div>
+      <div id="staffReleased" hidden></div>
+    </div></section>
+
+    <!-- ===== Staff: question bank review ===== -->
+    <section id="staff-question-bank" class="view"><div class="page qb-page">
+      <header class="page-head"><div><h1>Question Bank Review</h1><p class="sub">Compare OCR candidates with their original photos, correct text and topic, then record a review decision. Nothing here is automatically published to students.</p></div><button class="btn ghost" id="qbRefresh" type="button">Refresh queue</button></header>
+      <div class="qb-stats"><article class="card"><small>All candidates</small><b id="qbTotal">0</b></article><article class="card"><small>Pending review</small><b id="qbPending">0</b></article><article class="card"><small>Approved</small><b id="qbApproved">0</b></article><article class="card"><small>Rejected</small><b id="qbRejected">0</b></article></div>
+      <div class="qb-toolbar card"><label class="field"><span>Search</span><input id="qbSearch" type="search" placeholder="Question text, ID, source filename"></label><label class="field"><span>Topic</span><select id="qbTopic"><option value="all">All topics</option></select></label><label class="field"><span>Status</span><select id="qbStatus"><option value="all">All statuses</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></label><label class="field"><span>Question</span><select id="qbSelect"><option value="">Choose a candidate…</option></select></label></div>
+      <div class="qb-workspace"><article class="card qb-source"><div class="card-head"><h3>Original source photo</h3><span id="qbSourceLabel" class="pill">No question selected</span></div><div id="qbImageWrap" class="qb-image-wrap"><p class="muted">Select a question to view its source image.</p></div><p class="muted small" id="qbMeta"></p></article>
+      <form id="qbEditor" class="card qb-editor"><div class="card-head"><h3>Extracted question</h3><span id="qbRecordId" class="pill">Not selected</span></div><label class="field"><span>Question text / stem</span><textarea id="qbStem" rows="9" required></textarea></label><label class="field"><span>Topic</span><select id="qbEditTopic" required></select></label><label class="field"><span>Answer options (one per line; optional)</span><textarea id="qbOptions" rows="4" placeholder="A. …
+B. …
+C. …
+D. …"></textarea></label><label class="field"><span>Verified answer key (optional)</span><textarea id="qbAnswer" rows="2" placeholder="Only enter an answer you have checked."></textarea></label><label class="field"><span>Verified mark scheme (optional)</span><textarea id="qbMarkScheme" rows="4" placeholder="Marking points, units, accepted alternatives…"></textarea></label><label class="field"><span>Review status</span><select id="qbReviewStatus"><option value="pending">Needs review / correction</option><option value="approved">Approved after checking source</option><option value="rejected">Reject this OCR fragment</option></select></label><label class="field"><span>Review flags / notes (one per line)</span><textarea id="qbFlags" rows="3"></textarea></label><p class="qb-warning">Approval records your review decision only. It does not publish the question into the student-facing bank.</p><div class="qb-actions"><button class="btn ghost" id="qbPrev" type="button">Previous</button><button class="btn ghost" id="qbNext" type="button">Next</button><button class="btn primary" id="qbSave" type="submit">Save review</button></div><p id="qbNote" class="form-note" role="status"></p></form></div>
+      <div class="card qb-footer"><div><h3>Approved records export</h3><p class="muted small">Export the reviewed records as JSON for a later, separate live-bank import after answer/marking verification.</p></div><button class="btn ghost" id="qbExport" type="button">Download approved JSON</button></div>
+    </div></section>
+
+    <!-- ===== Staff: students ===== -->
+    <section id="staff-students" class="view"><div class="page">
+      <header class="page-head"><div><h1>Student Management</h1><p class="sub">View and manage all registered students.</p></div></header>
+      <div class="toolbar"><label class="search"><svg class="i"><use href="#i-search"/></svg><input id="studentSearch" type="search" placeholder="Search by name, ID, school…" aria-label="Search students"></label><select id="studentClass" aria-label="Class"><option value="">All Classes</option></select><select id="studentRank" aria-label="Rank"><option value="">All Ranks</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></div>
+      <article class="card flush"><div class="table-wrap"><table class="table" aria-label="Students"><thead><tr><th>Name</th><th>ID</th><th>Class</th><th>School</th><th>Rank</th><th class="r">XP</th></tr></thead><tbody id="staffStudents"></tbody></table></div></article>
+    </div></section>
+
+    <!-- ===== Staff: admissions ===== -->
+    <section id="staff-admissions" class="view"><div class="page">
+      <header class="page-head"><div><h1>Admissions</h1><p class="sub">Generate one-time keys for students you have approved.</p></div></header>
+      <div class="two-col">
+        <article class="card"><div class="card-head"><h3>Generate Admission Key</h3></div>
+          <p class="muted">Each key can create exactly one student account. The student then receives a permanent White Room ID.</p>
+          <div class="actions row"><button id="genOne" class="btn primary">Generate key</button><button id="issueFive" class="btn ghost">Generate 5 keys</button></div>
+          <p class="form-note" id="admNote" role="status"></p>
+        </article>
+        <article class="card"><div class="card-head"><h3>Keys issued this session</h3></div>
+          <div class="table-wrap"><table class="table" aria-label="New keys"><thead><tr><th>Key</th><th>Issued</th><th class="r"></th></tr></thead><tbody id="keyTable"><tr><td colspan="3" class="muted">No keys generated yet.</td></tr></tbody></table></div>
+          <p class="muted small">Copy each key now and share it privately. Keys are single-use.</p>
+        </article>
+      </div>
+    </div></section>
+
+    <!-- ===== Staff: lesson publisher ===== -->
+    <section id="staff-lessons" class="view"><div class="page narrow">
+      <header class="page-head"><div><h1>Lesson Publisher</h1><p class="sub">Prepare a lesson deployment bundle from finished White Room lesson JSON files.</p></div></header>
+      <article class="card">
+        <div class="card-head"><h3>Upload lesson ZIP</h3></div>
+        <p class="muted">Choose a ZIP containing either an <code>index.json</code> manifest and lesson JSON files, or complete section-based chemistry documents with their SVG figures. The publisher checks them, merges them with the live lesson index, and downloads a patch ZIP. It does not publish to Firebase; extract the patch into your project, validate, then deploy as usual.</p>
+        <label class="field"><span>Lesson archive (.zip, up to 15 MB)</span><input id="lessonZip" type="file" accept=".zip,application/zip"></label>
+        <label class="field"><span>Release date and time (used for ZIPs without index.json)</span><input id="lessonRelease" type="datetime-local" required></label>
+        <div class="actions row"><button id="lessonBuild" class="btn primary" type="button" disabled>Check and prepare bundle</button><button id="lessonDownload" class="btn ghost" type="button" hidden>Download deployment patch</button></div>
+        <p id="lessonPublishNote" class="form-note" role="status" aria-live="polite"></p>
+        <div id="lessonPublishPreview" class="lesson-publish-preview" hidden></div>
+      </article>
+      <article class="card">
+        <div class="card-head"><h3>Before deploying</h3></div>
+        <ol class="muted lesson-publish-steps">
+          <li>Extract the downloaded patch into the project root, allowing it to replace <code>public/content/lessons/index.json</code>.</li>
+          <li>Run <code>npm run validate</code> from the project folder.</li>
+          <li>If validation passes, deploy the project to Firebase using your existing deployment process.</li>
+        </ol>
+        <p class="muted small">The browser only creates a local download. No Gemini API call is made, no API key is used, and no live files are changed by this page. Section-based reference documents save completion on this device only and do not award XP.</p>
+      </article>
+    </div></section>
+
+    <!-- ===== Record (student) ===== -->
+    <section id="record" class="view"><div class="page">
+      <header class="page-head"><div><h1>Record</h1><p class="sub">Every task you have completed, with its score.</p></div></header>
+      <div id="recSummary" class="rec-tiles"></div>
+      <div class="rec-grid">
+        <article class="card">
+          <div class="card-head"><h3>Completed tasks</h3>
+            <span class="rec-filters"><select id="recKind" class="input" aria-label="Task type"></select><select id="recSubject" class="input" aria-label="Subject"><option value="">All subjects</option></select></span></div>
+          <div id="recordList" class="rec-list"></div>
+        </article>
+        <article class="card"><div class="card-head"><h3>By subject</h3></div><div id="recBySubject"></div></article>
+      </div>
+    </div></section>
+
+    <!-- ===== Staff: records ===== -->
+    <section id="staff-records" class="view"><div class="page">
+      <header class="page-head"><div><h1>Records</h1><p class="sub">Every completed task from every student, with scores.</p></div><button id="srCsv" class="btn ghost" type="button">Download CSV</button></header>
+      <div id="srSummary" class="rec-tiles"></div>
+      <article class="card rec-toolbar">
+        <label class="field"><span>Search student or task</span><input id="srSearch" class="input" type="search" placeholder="Name, ID or task"></label>
+        <label class="field"><span>Type</span><select id="srKind" class="input"></select></label>
+        <label class="field"><span>Subject</span><select id="srSubject" class="input"><option value="">All subjects</option></select></label>
+        <label class="field"><span>Level</span><select id="srLevel" class="input"><option value="">All levels</option></select></label>
+      </article>
+      <p id="srNote" class="form-note" role="status"></p>
+      <div class="rec-grid">
+        <article class="card"><div class="card-head"><h3>Completed tasks</h3></div><div id="srList" class="rec-list"></div></article>
+        <article class="card"><div class="card-head"><h3>By subject</h3></div><div id="srBySubject"></div></article>
+      </div>
+    </div></section>
+
+    <!-- ===== Staff: JSON Deposit ===== -->
+    <section id="staff-deposit" class="view"><div class="page narrow">
+      <header class="page-head"><div><h1>JSON Deposit</h1><p class="sub">Get questions written by Gemini, check them, then deposit them. Only questions that pass go live, straight into daily quests and Practice.</p></div></header>
+      <article class="card"><div class="card-head"><h3>What is in the bank</h3></div><div id="dpCoverage" class="dp-cov-grid"></div></article>
+      <article class="card">
+        <div class="card-head"><h3>1. Get questions from Gemini</h3></div>
+        <div class="form-grid">
+          <label class="field"><span>Level</span><select id="dpLevel" class="input"></select></label>
+          <label class="field"><span>Subject</span><select id="dpSubject" class="input"></select></label>
+          <label class="field"><span>Topic</span><select id="dpTopic" class="input"></select></label>
+          <label class="field"><span>How many</span><input id="dpCount" class="input" type="number" min="1" max="20" value="5"></label>
+        </div>
+        <label class="field"><span>Difficulty</span><select id="dpDifficulty" class="input"><option value="a mix of 1, 2 and 3">A mix</option><option value="1 (easy)">Easy</option><option value="2 (standard exam)">Standard</option><option value="3 (demanding)">Demanding</option></select></label>
+        <div class="actions row"><button id="dpGenerate" class="btn primary" type="button">Generate with Gemini</button><button id="dpBuild" class="btn ghost" type="button">Build the prompt only</button></div>
+        <p id="dpPromptNote" class="form-note" role="status"></p>
+        <div id="dpPromptWrap" hidden><textarea id="dpPrompt" rows="8" readonly class="input dp-mono"></textarea><button id="dpCopy" class="btn ghost sm" type="button">Copy prompt</button></div>
+      </article>
+      <article class="card">
+        <div class="card-head"><h3>2. Paste or upload the JSON</h3></div>
+        <textarea id="dpJson" rows="10" class="input dp-mono" placeholder='{"notes": {...}, "questions": [...]}'></textarea>
+        <div class="form-grid">
+          <label class="field"><span>Level, if a question has none</span><select id="dpDefaultLevel" class="input"></select></label>
+          <label class="field"><span>Or upload a .json file</span><input id="dpFile" type="file" accept=".json,application/json"></label>
+        </div>
+        <div class="actions row"><button id="dpCheck" class="btn primary" type="button">Check</button></div>
+        <p id="dpNote" class="form-note" role="status"></p>
+      </article>
+      <div id="dpResult" class="stack"></div>
+      <article id="dpCommitWrap" class="card" hidden>
+        <label class="check"><input id="dpConfirm" type="checkbox"><i></i>I have read the previews and the answers are right.</label>
+        <div class="actions row"><button id="dpDepositBtn" class="btn primary" type="button" disabled>Deposit</button></div>
+      </article>
+      <article class="card"><div class="card-head"><h3>Deposited batches</h3></div><div id="dpBatches"></div></article>
+    </div></section>
+
+    <!-- ===== Staff: Daily Quest Planner ===== -->
+    <section id="staff-daily-quests" class="view"><div class="page narrow">
+      <header class="page-head"><div><h1>Daily Quest Planner</h1><p class="sub">Choose exam preparation mode and topics. Each day publishes a shared quest for every subject with available questions.</p></div></header>
+      <article class="card">
+        <div class="field"><span>Quest mode</span><select id="dqMode" class="input"><option value="general">General practice — previously taught topics</option><option value="exam">Exam preparation — teacher-selected topics</option></select></div>
+        <div class="field"><span>Questions per subject quest</span><select id="dqCount" class="input"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select></div>
+        <p class="muted small">In exam mode, choose the topics to assess in each subject. Topic selections are validated against the server-side question bank.</p>
+        <div id="dqTopicConfig" class="stack"></div>
+        <div class="actions row"><button id="dqSave" class="btn primary" type="button">Save quest plan</button><button id="dqGenerate" class="btn ghost" type="button">Generate today's quests</button></div>
+        <p id="dqStaffNote" class="form-note" role="status"></p>
+      </article>
+      <article class="card"><div class="card-head"><h3>Published daily quests</h3><button id="dqRefresh" class="btn ghost sm" type="button">Refresh</button></div><div id="dqPublished" class="stack"><p class="muted">Loading…</p></div></article>
+    </div></section>
+
+    <!-- ===== Staff: competitions ===== -->
+    <section id="staff-compete" class="view"><div class="page">
+      <header class="page-head"><div><h1>Competition Management</h1><p class="sub">Competitions use the same student identities, ranks and XP.</p></div></header>
+      <article class="card comp-card">
+        <span class="tile gold lg"><svg class="i"><use href="#i-trophy"/></svg></span>
+        <div><h3>Competition engine is the next build phase</h3><p class="muted">Staff will create rounds, set dates, choose eligible students and publish results here. Questions and answers will be held on the server.</p></div>
+        <span class="pill">Not built yet</span>
+      </article>
+    </div></section>
+
+  </main>
+</div>
+
+<script src="app.js"></script><script src="mathmd.js"></script><script src="subjects.js"></script><script src="daily-quest.js"></script><script src="record.js"></script><script src="deposit.js"></script><script src="drill.js"></script><script src="lesson-engine.js"></script>
+  <script src="section-lesson.js"></script><script src="lessons.js"></script><script src="quest.js"></script><script src="vendor/jszip.min.js"></script><script src="staff.js"></script><script src="question-bank-review.js"></script>
+  <script type="module" src="lesson-publisher.js"></script>
+</body>
+</html>

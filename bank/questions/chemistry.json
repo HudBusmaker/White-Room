@@ -1,0 +1,129 @@
+{
+ "subject": "chemistry",
+ "questions": [
+  {
+   "id": "chem-physical-001",
+   "subject": "chemistry",
+   "topic": "chem-physical",
+   "skill": "c-moles",
+   "type": "structured",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 3,
+   "stem": "$5.30\\ \\mathrm{g}$ of sodium carbonate, $\\mathrm{Na_2CO_3}$ ($M_r = 106$), is dissolved in water to make $250\\ \\mathrm{cm^3}$ of solution.",
+   "image": null,
+   "steps": [
+    {
+     "id": "a",
+     "kind": "number",
+     "prompt": "Calculate the amount of Na2CO3 in moles.",
+     "expected": 0.05,
+     "marks": 1,
+     "tolerance": {
+      "abs": 0.0005
+     },
+     "unit": "mol",
+     "hint": "n = mass / Mr."
+    },
+    {
+     "id": "b",
+     "kind": "number",
+     "prompt": "Calculate the concentration in mol/dm3.",
+     "expected": 0.2,
+     "marks": 1,
+     "tolerance": {
+      "abs": 0.002
+     },
+     "unit": "mol/dm3",
+     "hint": "250 cm3 = 0.250 dm3."
+    },
+    {
+     "id": "c",
+     "kind": "number",
+     "prompt": "Calculate the moles of Na+ ions in the solution.",
+     "expected": 0.1,
+     "marks": 1,
+     "tolerance": {
+      "abs": 0.001
+     },
+     "unit": "mol",
+     "hint": "Each formula unit contains two sodium ions."
+    }
+   ]
+  },
+  {
+   "id": "chem-inorganic-001",
+   "subject": "chemistry",
+   "topic": "chem-inorganic",
+   "skill": "c-ionic-tests",
+   "type": "mcq",
+   "source": "generated",
+   "difficulty": 1,
+   "total": 1,
+   "stem": "Dilute nitric acid and then aqueous silver nitrate are added to a solution. A **cream** precipitate forms. Which ion is present?",
+   "image": null,
+   "options": [
+    {
+     "id": "A",
+     "text": "Chloride",
+     "correct": false,
+     "trap": "Chloride gives a white precipitate."
+    },
+    {
+     "id": "B",
+     "text": "Bromide",
+     "correct": true
+    },
+    {
+     "id": "C",
+     "text": "Iodide",
+     "correct": false,
+     "trap": "Iodide gives a yellow precipitate."
+    },
+    {
+     "id": "D",
+     "text": "Carbonate",
+     "correct": false,
+     "trap": "The nitric acid is added first to remove carbonate, which would fizz rather than give a cream precipitate."
+    }
+   ]
+  },
+  {
+   "id": "chem-organic-001",
+   "subject": "chemistry",
+   "topic": "chem-organic",
+   "skill": "c-organic-naming",
+   "type": "mcq",
+   "source": "generated",
+   "difficulty": 2,
+   "total": 1,
+   "stem": "What is the name of $\\mathrm{CH_3CH_2CH(CH_3)CH_3}$?",
+   "image": null,
+   "options": [
+    {
+     "id": "A",
+     "text": "Pentane",
+     "correct": false,
+     "trap": "Pentane has five carbons in a straight chain; this molecule has a branch."
+    },
+    {
+     "id": "B",
+     "text": "3-methylbutane",
+     "correct": false,
+     "trap": "Numbered from the wrong end: the branch must get the lowest number."
+    },
+    {
+     "id": "C",
+     "text": "2-methylbutane",
+     "correct": true
+    },
+    {
+     "id": "D",
+     "text": "2-ethylpropane",
+     "correct": false,
+     "trap": "The longest chain is four carbons (butane), not three."
+    }
+   ]
+  }
+ ]
+}

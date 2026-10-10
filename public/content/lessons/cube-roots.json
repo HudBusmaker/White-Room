@@ -1,0 +1,277 @@
+{
+ "id": "cube-roots",
+ "title": "Roots of complex numbers",
+ "level": "Upper Sixth",
+ "subject": "Pure Mathematics",
+ "topic": "Complex numbers",
+ "source": "Practice notes",
+ "summary": "A complex number is a point with a <span class=\"note-topic\">distance (modulus)</span> and a <span class=\"note-topic\">direction (argument)</span>. Roots are found by <span class=\"note-definition\">De Moivre’s theorem</span>: take the root of the modulus, divide the angle, and spread the roots evenly round a circle.",
+ "notes": [
+  {
+   "title": "<span class=\"note-topic\">Modulus and argument</span>",
+   "text": "A complex number <i>z = x + yi</i> is the point (<i>x</i>, <i>y</i>). Its <span class=\"note-definition\">modulus</span> <span class=\"eq note-formula\">|z| = √(x² + y²)</span> is its distance from the origin. Its <span class=\"note-definition\">argument</span> is the angle from the positive real axis (anticlockwise is positive). Example: {k1} {s1*k1|s}i has modulus {k1}√2 and argument {45*s1}°.",
+   "gen": {
+    "k1": [
+     2,
+     6
+    ],
+    "g1": [
+     0,
+     1
+    ],
+    "k": [
+     2,
+     6
+    ],
+    "g": [
+     0,
+     1
+    ]
+   },
+   "calc": {
+    "s1": "1-2*g1",
+    "s": "1-2*g"
+   },
+   "where": "(k!=k1)",
+   "hint": "Sketch the point. The distance uses Pythagoras, and the angle comes from the quadrant.",
+   "tasks": [
+    {
+     "t": "mc",
+     "m": 1,
+     "q": "For <i>z</i> = {k} {s*k|s}i, what is |<i>z</i>|?",
+     "o": [
+      "{k}√2",
+      "{2*k}",
+      "{k}",
+      "{k*k}√2"
+     ],
+     "a": 0,
+     "why": [
+      "√({k}² + {k}²) = √{2*k*k} = {k}√2.",
+      "That is {k} + {k}, not a distance. Use √(x² + y²).",
+      "That is only one coordinate.",
+      "Square root of the sum, not the sum of squares: √{2*k*k} = {k}√2."
+     ]
+    },
+    {
+     "t": "mc",
+     "m": 1,
+     "q": "What is the argument of <i>z</i> = {k} {s*k|s}i?",
+     "o": [
+      "{45*s}°",
+      "{-45*s}°",
+      "{135*s}°",
+      "{-135*s}°"
+     ],
+     "a": 0,
+     "why": [
+      "x = {k} and y = {s*k}: equal size, so the angle is ±45°, with the sign of y.",
+      "Wrong direction: y is {s*k}, which fixes the side of the real axis.",
+      "That would need x to be negative.",
+      "That would need x to be negative."
+     ]
+    }
+   ],
+   "working": [
+    "z = {k1} {s1*k1|s}i:  |z| = √({k1}² + {k1}²) = {k1}√2,  arg z = {45*s1}°",
+    "z = {k} {s*k|s}i:  |z| = {k}√2,  arg z = {45*s}°"
+   ]
+  },
+  {
+   "title": "<span class=\"note-topic\">Cube roots: the modulus</span>",
+   "text": "If <span class=\"eq note-formula\">z = r(cos θ + i sin θ)</span>, every cube root has modulus <span class=\"eq note-formula\">∛r</span> and argument <span class=\"eq note-formula\">(θ + 360°k) ÷ 3</span> for k = 0, 1, 2. So there are always <span class=\"note-topic\">three</span> different cube roots. Example: if |z| = {m1*m1*m1}, each cube root has modulus {m1}.",
+   "gen": {
+    "m1": [
+     2,
+     6
+    ],
+    "m": [
+     2,
+     6
+    ]
+   },
+   "calc": {
+    "m3": "m*m*m"
+   },
+   "where": "m!=m1",
+   "hint": "Which number multiplied by itself three times gives the modulus?",
+   "tasks": [
+    {
+     "t": "mc",
+     "m": 1,
+     "q": "|<i>z</i>| = {m3}. What is the modulus of each cube root?",
+     "o": [
+      "{m}",
+      "{3*m}",
+      "{m+3}",
+      "{m3}"
+     ],
+     "a": 0,
+     "why": [
+      "{m} × {m} × {m} = {m3}.",
+      "Cube-rooting is not multiplying by 3.",
+      "Cube-rooting is not adding 3.",
+      "{m3} is the modulus of z itself. Take its cube root."
+     ]
+    }
+   ],
+   "working": [
+    "∛{m1*m1*m1} = {m1}",
+    "∛{m3} = {m}: each cube root has modulus {m}"
+   ]
+  },
+  {
+   "title": "<span class=\"note-topic\">Cube roots: the angles</span>",
+   "text": "Put k = 0, 1, 2 into <span class=\"eq note-formula\">θₖ = (θ + 360°k) ÷ 3</span>, then bring each angle into (−180°, 180°]. Divide the <span class=\"note-topic\">whole</span> bracket by 3. Example: θ = {ph1}° gives θ₀ = {ph1/3}°, θ₁ = {(ph1+360)/3}° and θ₂ = {ph1/3-120}°.",
+   "gen": {
+    "j1": [
+     -5,
+     6
+    ],
+    "j": [
+     -5,
+     6
+    ]
+   },
+   "calc": {
+    "ph1": "30*j1",
+    "ph": "30*j"
+   },
+   "where": "(j!=0)*(j1!=0)*(j!=j1)",
+   "hint": "θ₀ = θ ÷ 3. For θ₁, add 360° first, then divide by 3.",
+   "tasks": [
+    {
+     "t": "num",
+     "m": 1,
+     "q": "A number has argument θ = {ph}°. Enter the arguments θ₀ (k = 0) and θ₁ (k = 1) of its cube roots.",
+     "f": [
+      {
+       "l": "θ₀",
+       "v": "ph/3"
+      },
+      {
+       "l": "θ₁",
+       "v": "(ph+360)/3"
+      }
+     ],
+     "fb": {
+      "{ph},{ph+360}": "Divide the whole angle by 3: θ₀ = {ph} ÷ 3 and θ₁ = ({ph} + 360) ÷ 3."
+     },
+     "ex": "{ph} ÷ 3 = {ph/3} and ({ph} + 360) ÷ 3 = {(ph+360)/3}."
+    }
+   ],
+   "working": [
+    "θ = {ph1}°:  {ph1/3}°,  {(ph1+360)/3}°,  {ph1/3-120}°",
+    "θ = {ph}°:  θ₀ = {ph/3}°,  θ₁ = {(ph+360)/3}°,  θ₂ = {ph/3-120}°  (since {ph/3+240}° − 360° = {ph/3-120}°)"
+   ]
+  },
+  {
+   "title": "<span class=\"note-topic\">Evenly spaced roots</span>",
+   "text": "The <i>n</i> roots of a number all have the same modulus and are spaced evenly round a circle, <span class=\"eq note-formula\">360° ÷ n</span> apart. Example: for n = {n1} the roots are {360/n1}° apart.",
+   "gen": {
+    "n1": [
+     3,
+     6
+    ],
+    "n": [
+     3,
+     6
+    ]
+   },
+   "where": "n!=n1",
+   "hint": "A full turn is 360°. Share it equally between the roots.",
+   "tasks": [
+    {
+     "t": "mc",
+     "m": 1,
+     "q": "How far apart (in degrees) are neighbouring roots when you take the {n}th root of a number?",
+     "o": [
+      "{360/n}°",
+      "{180/n}°",
+      "{720/n}°",
+      "{360/(n-1)}°"
+     ],
+     "a": 0,
+     "why": [
+      "360° ÷ {n} = {360/n}°.",
+      "180° is half a turn, so that halves the gap.",
+      "720° is two full turns, so that doubles the gap.",
+      "Divide by the number of roots, {n}, not by {n-1}."
+     ]
+    }
+   ],
+   "working": [
+    "n = {n1}:  360° ÷ {n1} = {360/n1}°",
+    "n = {n}:  360° ÷ {n} = {360/n}°"
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "gen": {
+    "p": [
+     1,
+     6
+    ]
+   },
+   "t": "mc",
+   "m": 1,
+   "q": "The argument of −{p} + {p}i is",
+   "o": [
+    "135°",
+    "45°",
+    "−45°",
+    "−135°"
+   ],
+   "a": 0,
+   "why": [
+    "Correct: x is negative and y is positive (second quadrant), with equal sizes.",
+    "45° would need x positive.",
+    "−45° would need y negative and x positive.",
+    "−135° would need y negative."
+   ]
+  },
+  {
+   "gen": {
+    "a": [
+     2,
+     9
+    ]
+   },
+   "t": "num",
+   "m": 1,
+   "q": "Find |<i>z</i>|² for <i>z</i> = {a} − {a}i.",
+   "f": [
+    {
+     "l": "|z|²",
+     "v": "2*a*a"
+    }
+   ],
+   "ex": "{a}² + {a}² = {2*a*a}."
+  },
+  {
+   "gen": {
+    "n": [
+     3,
+     7
+    ]
+   },
+   "t": "mc",
+   "m": 1,
+   "q": "How many distinct {n}th roots does a non-zero complex number have?",
+   "o": [
+    "{n}",
+    "{n-1}",
+    "{n+1}",
+    "{2*n}"
+   ],
+   "a": 0,
+   "why": [
+    "There are exactly {n}, evenly spaced.",
+    "One too few.",
+    "One too many.",
+    "Twice as many; the roots do not repeat."
+   ]
+  }
+ ]
+}

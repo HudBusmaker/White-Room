@@ -1,0 +1,26 @@
+{
+  "name": "revision-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "validate": "node validate.mjs",
+    "test:smoke": "node tests/smoke.mjs",
+    "test:engine": "node tests/engine.mjs",
+    "test:publisher": "node --test tests/lesson-publisher.mjs",
+    "backup": "node backup.mjs",
+    "test:v5": "node tests/v5.mjs",
+    "migrate": "node migrate.mjs",
+    "test:db": "node tests/db.mjs && node tests/auth-fs.mjs",
+    "test:all": "node tests/db.mjs && node tests/auth-fs.mjs && node tests/engine.mjs && node tests/v5.mjs && node tests/smoke.mjs"
+  },
+  "dependencies": {
+    "jszip": "^3.10.2",
+    "pdfjs-dist": "^6.4.299",
+    "@google-cloud/firestore": "^7.11.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
