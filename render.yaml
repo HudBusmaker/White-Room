@@ -15,7 +15,7 @@ services:
       - key: FIREBASE_SERVICE_ACCOUNT
         sync: false
       - key: GOOGLE_CLOUD_PROJECT
-        sync: false
+        value: white-room-std
       - key: SESSION_SECRET
         sync: false
       - key: HEAD_STAFF_CODE

@@ -12,9 +12,9 @@ Plain Node app on **Cloud Run** (serves the site and the API), data in **Firesto
 - Installed on your computer: Node 22, the **Google Cloud CLI** (`gcloud`), and the **Firebase CLI** (`npm i -g firebase-tools`).
 
 ## 1. Create the project and the database
-1. https://console.firebase.google.com → **Add project** (pick your existing Google Cloud project if you have one). Note the **project ID**.
+1. Open [Firebase Console](https://console.firebase.google.com/) and select the project with ID `white-room-std`.
 2. **Build → Firestore Database → Create database → Native mode**. Choose a region near your students (for Morocco: `eur3` or `europe-west1`). The region cannot be changed later.
-3. In this folder put your project ID in `.firebaserc` (replace `YOUR-PROJECT-ID`).
+3. In this folder put your project ID in `.firebaserc` (currently `white-room-std`).
 
 ## 2. Lock the database
 ```
@@ -26,7 +26,7 @@ This publishes `firestore.rules`: browsers may not touch the database at all. On
 ## 3. Secrets (never put these in the code or the image)
 `.env` is **not** sent to Cloud Run. Create each secret once (Secret Manager):
 ```
-gcloud config set project YOUR-PROJECT-ID
+gcloud config set project white-room-std
 gcloud services enable run.googleapis.com secretmanager.googleapis.com cloudbuild.googleapis.com artifactregistry.googleapis.com
 printf '%s' "$(openssl rand -hex 32)"   | gcloud secrets create SESSION_SECRET --data-file=-
 printf '%s' 'choose-a-long-head-code'    | gcloud secrets create HEAD_STAFF_CODE --data-file=-
@@ -35,7 +35,7 @@ printf '%s' 'your-gemini-key'            | gcloud secrets create GEMINI_API_KEY 
 ```
 Use **new** values, not the ones from earlier zips. Let Cloud Run read them:
 ```
-PROJECT_NUMBER=$(gcloud projects describe YOUR-PROJECT-ID --format='value(projectNumber)')
+PROJECT_NUMBER=$(gcloud projects describe white-room-std --format='value(projectNumber)')
 for s in SESSION_SECRET HEAD_STAFF_CODE TEACHER_PIN GEMINI_API_KEY; do
   gcloud secrets add-iam-policy-binding $s --member="serviceAccount:${PROJECT_NUMBER}-compute@developer.gserviceaccount.com" --role=roles/secretmanager.secretAccessor
 done
@@ -47,13 +47,13 @@ Skip this if you are starting fresh. This copies `data/users.json`, admission ke
 ```
 gcloud auth application-default login
 npm install
-STORAGE=firestore GOOGLE_CLOUD_PROJECT=YOUR-PROJECT-ID npm run migrate
+STORAGE=firestore GOOGLE_CLOUD_PROJECT=white-room-std npm run migrate
 ```
-(PowerShell: `$env:STORAGE="firestore"; $env:GOOGLE_CLOUD_PROJECT="YOUR-PROJECT-ID"; npm run migrate`)
+(PowerShell: `$env:STORAGE="firestore"; $env:GOOGLE_CLOUD_PROJECT="white-room-std"; npm run migrate`)
 
 ## 5. Try it on your computer against real Firestore (do this before deploying)
 ```
-STORAGE=firestore GOOGLE_CLOUD_PROJECT=YOUR-PROJECT-ID SESSION_SECRET=any-24-or-more-characters HEAD_STAFF_CODE=test npm start
+STORAGE=firestore GOOGLE_CLOUD_PROJECT=white-room-std SESSION_SECRET=any-24-or-more-characters HEAD_STAFF_CODE=test npm start
 ```
 Open http://localhost:3000. Check, in this order: staff login → make admission keys → register a student with a level and subjects → Daily Quest shows a quest → submit it → Record shows it → JSON Deposit: deposit `bank/deposit-samples/form5-maths-sample.json` → in the Firebase console you should see collections `users`, `bankQuestions`, `records`. Stop the server, start it again: the deposited questions are still there.
 (To try without touching real data, use the emulator: `firebase emulators:start --only firestore`, then add `FIRESTORE_EMULATOR_HOST=127.0.0.1:8080` to the command above.)

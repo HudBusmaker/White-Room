@@ -10,11 +10,10 @@ Firebase Spark does not require enabling Google Cloud billing. Do not enable Bla
 
 ## 1. Prepare the Firebase project
 
-1. Open [Firebase Console](https://console.firebase.google.com/) and choose **Add project**.
-2. Create the project without enabling Google Analytics if you do not need it. Record the exact **Project ID** (not the display name).
-3. Open **Build → Firestore Database → Create database**.
-4. Choose **Native mode** and a nearby supported European location such as `eur3` or `europe-west1`. The database location cannot be changed later.
-5. Keep the project on the **Spark** plan. Do not enable billing.
+1. Open [Firebase Console](https://console.firebase.google.com/) and select the project with ID `white-room-std`.
+2. Open **Build → Firestore Database → Create database**.
+3. Choose **Native mode** and a nearby supported European location such as `eur3` or `europe-west1`. The database location cannot be changed later.
+4. Keep the project on the **Spark** plan. Do not enable billing.
 
 ## 2. Lock down Firestore rules
 
@@ -25,10 +24,10 @@ npm install -g firebase-tools
 firebase login
 ```
 
-In PowerShell, change to the project folder. Open `.firebaserc` in your editor and replace `YOUR-PROJECT-ID` with the exact Firebase Project ID. Then deploy only the Firestore rules:
+In PowerShell, change to the project folder. `.firebaserc` is already set to `white-room-std`. Deploy only the Firestore rules:
 
 ```powershell
-firebase use YOUR-PROJECT-ID
+firebase use white-room-std
 firebase deploy --only firestore
 ```
 
@@ -72,7 +71,7 @@ Do not deploy unless the tests pass. Keep `data/` and any existing local databas
 | `NODE_ENV` | `production` |
 | `STORAGE` | `firestore` |
 | `FIREBASE_SERVICE_ACCOUNT` | Entire downloaded service-account JSON, pasted as one line/value. PowerShell conversion example below. |
-| `GOOGLE_CLOUD_PROJECT` | Exact Firebase Project ID |
+| `GOOGLE_CLOUD_PROJECT` | `white-room-std` |
 | `SESSION_SECRET` | At least 24 random characters; use a long unique value. |
 | `HEAD_STAFF_CODE` | A strong private code for Head Staff |
 | `TEACHER_PIN` | A private teacher PIN, if teacher access is used |
@@ -101,7 +100,7 @@ If the project already has local records or deposited content, make an external 
 
 ```powershell
 $env:STORAGE = "firestore"
-$env:GOOGLE_CLOUD_PROJECT = "YOUR-PROJECT-ID"
+$env:GOOGLE_CLOUD_PROJECT = "white-room-std"
 $env:FIREBASE_SERVICE_ACCOUNT = Get-Content "$HOME\Downloads\your-service-account.json" -Raw
 npm run migrate
 ```
