@@ -193,6 +193,46 @@
    "name": "Hypothesis & chi-squared tests (Further Stats)"
   },
   {
+   "id": "further-coordinate-geometry",
+   "subject": "further-maths",
+   "name": "Further coordinate geometry (conic sections)",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "hyperbolic-functions",
+   "subject": "further-maths",
+   "name": "Hyperbolic functions",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "further-sequences-series",
+   "subject": "further-maths",
+   "name": "Further sequences and series (monotony, boundedness, convergence)",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "polar-coordinates",
+   "subject": "further-maths",
+   "name": "Polar coordinates",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "limits-continuity-differentiability",
+   "subject": "further-maths",
+   "name": "Limits, continuity and differentiability of real-valued functions",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
    "id": "ict-systems",
    "subject": "ict",
    "name": "Information systems and data processing",

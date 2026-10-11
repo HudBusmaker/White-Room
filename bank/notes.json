@@ -108,6 +108,26 @@
   "fs-tests": {
    "title": "Chi-squared goodness of fit",
    "body": "$\\chi^2=\\sum\\dfrac{(O-E)^2}{E}$. Degrees of freedom $\\nu$ = number of categories $-1-$ constraints.\n\nIf $\\chi^2$ is **greater** than the critical value, reject $H_0$; otherwise do not reject $H_0$. Always state the conclusion in the context of the question."
+  },
+  "further-coordinate-geometry": {
+   "title": "Further coordinate geometry: conics",
+   "body": "For an ellipse use $\\dfrac{x^2}{a^2}+\\dfrac{y^2}{b^2}=1$; for a hyperbola use $\\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}=1$. Their focal distances satisfy $c^2=|a^2-b^2|$.\n\nDifferentiate the conic equation implicitly to find a tangent gradient. A normal has the negative reciprocal gradient. Parametric points such as $(a\\cos\\theta,b\\sin\\theta)$ can simplify tangent and normal equations."
+  },
+  "hyperbolic-functions": {
+   "title": "Hyperbolic functions",
+   "body": "$\\sinh x=\\dfrac{e^x-e^{-x}}2$ and $\\cosh x=\\dfrac{e^x+e^{-x}}2$. Therefore $\\cosh^2x-\\sinh^2x=1$.\n\nUseful derivatives are $\\dfrac{d}{dx}\\sinh x=\\cosh x$ and $\\dfrac{d}{dx}\\cosh x=\\sinh x$. Use exponential definitions to derive identities and solve equations; check the domain when using inverse hyperbolic functions."
+  },
+  "further-sequences-series": {
+   "title": "Further sequences and series",
+   "body": "To prove a sequence converges, a common method is to show it is monotone and bounded. For a series, the ratio test can establish convergence when the limiting ratio is less than $1$ and divergence when it is greater than $1$; a ratio of $1$ is inconclusive.\n\nFor a power series, find the radius of convergence first, then test each endpoint separately. State the convergence argument, not only the result."
+  },
+  "polar-coordinates": {
+   "title": "Polar coordinates",
+   "body": "Convert between coordinate systems using $x=r\\cos\\theta$, $y=r\\sin\\theta$, and $r^2=x^2+y^2$. A polar curve may be converted by substituting these relationships and simplifying.\n\nFor a curve $r=f(\\theta)$, the area over an interval is $\\dfrac12\\int r^2\\,d\\theta$, provided the interval traces the intended region once."
+  },
+  "limits-continuity-differentiability": {
+   "title": "Limits, continuity and differentiability",
+   "body": "A function is continuous at $a$ when $\\lim_{x\\to a}f(x)=f(a)$. Differentiability implies continuity, but continuity alone does not imply differentiability.\n\nUse the squeeze theorem when a function is bounded by two functions with the same limit. The intermediate and mean value theorems require continuity (and, for the mean value theorem, differentiability in the interval's interior). Apply L'Hôpital's rule only to a suitable indeterminate quotient."
   }
  }
 }
