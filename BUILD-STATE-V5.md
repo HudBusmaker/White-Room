@@ -53,3 +53,11 @@ Edited: `auth.js`, `server.js`, `engine/bank.js`, `engine/daily-quests.js`, `eng
 
 ## Next (phase 3, your weekly exam workflow)
 You give the topics and notes for the week's exam and a few past papers; I generate strategic question forms (the teacher chooses the topics), plus summary notes, through Generate and Deposit. Needs: the topics list per subject, the notes text, the past papers (photos or text).
+
+# Phase 2b (11 October 2026): photo marking in daily quests, quest ranking
+- **Photo answers.** Every structured daily-quest question has "Send a photo of your working" (1 to 3 photos, shrunk in the browser). The server asks the AI (same prompt and parser as Practice photos, `engine/photo.js`), stores the result in `dqPhotos`, and the mark counts **when the student submits the quest**. A photo replaces typed answers for that question; one photo per question; none after submitting. The correction shows in the result with "photo marked". A bad AI reply never locks the question (it can be retried).
+- **Marks are instant, not held for release** (your choice). Head Staff > Daily Quest Planner > "Photo-marked answers": read each correction and **Set mark**. This updates the quest score, the ranking and the Record; XP stays as paid.
+- **Ranking.** Under each completed quest, a "See ranking" dropdown lists everyone who took it: position, full name, score. Ties go to whoever finished first. Only a student who has taken the quest can open it, and only in their own level and subject.
+- Photo marking uses the **server's** `GEMINI_API_KEY` (or the Anthropic key). The browser key for Generate does not apply here, because marking needs the private answer scheme.
+- Tests: `tests/dq-photo.mjs` (34, both backends); smoke is now 121. Added to `npm run test:all`.
+- Limits: the AI call was stubbed in tests; the first real photo is the live test. Staff adjustments do not change XP. Ranking shows up to the top 50 plus your own place.

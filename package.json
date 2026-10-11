@@ -13,7 +13,7 @@
     "test:v5": "node tests/v5.mjs",
     "migrate": "node migrate.mjs",
     "test:db": "node tests/db.mjs && node tests/auth-fs.mjs",
-    "test:all": "node tests/db.mjs && node tests/auth-fs.mjs && node tests/engine.mjs && node tests/v5.mjs && node tests/smoke.mjs"
+    "test:all": "node tests/db.mjs && node tests/auth-fs.mjs && node tests/engine.mjs && node tests/v5.mjs && node tests/dq-photo.mjs && node tests/smoke.mjs"
   },
   "dependencies": {
     "jszip": "^3.10.2",

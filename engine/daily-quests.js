@@ -3,6 +3,7 @@
 // at that level gets the same questions. Questions come from the validated private bank (bank/questions/),
 // so deposited questions go live without a restart.
 import { markQuestion } from './mark.js';
+import { buildCorrectionPrompt, parseCorrection } from './photo.js';
 import { LEVELS, DEFAULT_LEVEL, normaliseLevel, subjectLabel, levelLabel } from './subjects.js';
 
 const dayKey = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -14,7 +15,7 @@ const slot = (day, subject, level) => `${day}:${subject}:${level}`;
 // dq-2026-10-10-computer-science-a-level-v1  ->  { day, subject, level }
 const parseQuestId = (id) => { const m = /^dq-(\d{4}-\d{2}-\d{2})-(.+)-(a-level|form-5)-[^-]+$/.exec(String(id)); return m ? { day: m[1], subject: m[2], level: m[3] } : null; };
 
-export function createDailyQuests({ bank, db, awardStudent, getUser, records }) {
+export function createDailyQuests({ bank, db, awardStudent, getUser, records, askText = null }) {
   const topicById = () => new Map(bank.topics.map((t) => [t.id, t]));
   const qById = (id) => bank.questions.find((x) => x.id === id);
   const combos = () => LEVELS.flatMap((l) => l.subjects.map((s) => ({ level: l.id, subject: s })));
@@ -25,7 +26,7 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records }) 
   function publicQ(q) {
     const base = { id: q.id, subject: q.subject, topic: q.topic, topicName: topicById().get(q.topic)?.name || q.topic, type: q.type, difficulty: q.difficulty, total: q.total || 1, stem: q.stem, image: q.image || null };
     if (q.type === 'mcq') return { ...base, options: q.options.map((o) => ({ id: o.id, text: o.text })) };
-    return { ...base, steps: q.steps.map((s) => ({ id: s.id, kind: s.kind, prompt: s.prompt, marks: s.marks, unit: s.unit || null, hint: s.hint || null, options: s.kind === 'choice' ? s.options : undefined })) };
+    return { ...base, photoOk: true, steps: q.steps.map((s) => ({ id: s.id, kind: s.kind, prompt: s.prompt, marks: s.marks, unit: s.unit || null, hint: s.hint || null, options: s.kind === 'choice' ? s.options : undefined })) };
   }
 
   // Builds (but does not save) the quest for one day, level and subject. Same inputs always give the same quest.
@@ -57,7 +58,7 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records }) 
     return q;
   }
 
-  function publicQuest(q, attempt) {
+  function publicQuest(q, attempt, photoSent = []) {
     const names = topicById();
     const notes = q.topicIds.map((id) => ({ topic: id, ...(bank.notes[id] || {}) })).filter((n) => n.title || n.body);
     return {
@@ -65,6 +66,7 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records }) 
       topicNames: q.topicIds.map((id) => names.get(id)?.name || id),
       notes: notes.map((n) => ({ topic: n.topic, title: n.title, body: n.body })),
       questions: q.items.map((id) => { const x = qById(id); return x ? publicQ(x) : null; }).filter(Boolean),
+      photoSent,
       attempted: Boolean(attempt),
       result: attempt ? { score: attempt.score, max: attempt.max, xp: attempt.xp, summaryChoice: attempt.summaryChoice, submittedAt: attempt.submittedAt, feedback: attempt.feedback } : null,
     };
@@ -87,8 +89,11 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records }) 
     }
     quests.sort((a, b) => b.day.localeCompare(a.day) || a.subject.localeCompare(b.subject));
     const attempts = await db.getMany('dqAttempts', quests.map((q) => `${user.id}__${q.id}`));
+    const photoKeys = quests.flatMap((q) => q.items.filter((id) => qById(id)?.type === 'structured').map((id) => ({ q: q.id, id })));
+    const photoDocs = await db.getMany('dqPhotos', photoKeys.map((k) => `${user.id}__${k.q}__${k.id}`));
+    const sent = new Map(); photoKeys.forEach((k, i) => { if (photoDocs[i]) (sent.get(k.q) || sent.set(k.q, []).get(k.q)).push(k.id); });
     const have = new Set(quests.map((q) => q.subject));
-    return { ok: true, mode: settings.mode, level, levelLabel: levelLabel(level), subjects: subjects.map((id) => ({ id, label: subjectLabel(id), hasQuest: have.has(id) })), quests: quests.map((q, i) => publicQuest(q, attempts[i])) };
+    return { ok: true, mode: settings.mode, level, levelLabel: levelLabel(level), subjects: subjects.map((id) => ({ id, label: subjectLabel(id), hasQuest: have.has(id) })), quests: quests.map((q, i) => publicQuest(q, attempts[i], sent.get(q.id) || [])) };
   }
 
   const settingsView = () => LEVELS.flatMap((l) => l.subjects.map((s) => ({
@@ -112,23 +117,39 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records }) 
     return { ok: true, settings: next };
   }
 
-  async function submit(studentId, questId, answers, summaryChoice) {
+  // The quest must exist and belong to the student's own level and subjects.
+  async function eligible(studentId, questId) {
     const where = parseQuestId(questId);
     const q = where ? await db.get('dqQuests', slot(where.day, where.subject, where.level)) : null;
     if (!q || q.id !== questId) return { problem: 'Daily quest not found or expired.' };
-    if (Date.parse(q.expiresAt) <= Date.now()) return { problem: 'This daily quest has expired.' };
     const user = await getUser(studentId);
     const { level, subjects } = studentChoice(user || {});
     if (!user || level !== q.level || !subjects.includes(q.subject)) return { problem: 'This quest is not in your level and subjects. Update them on your Profile.' };
+    return { q, user };
+  }
+
+  async function submit(studentId, questId, answers, summaryChoice) {
+    const ctx = await eligible(studentId, questId);
+    if (ctx.problem) return ctx;
+    const { q, user } = ctx;
+    if (Date.parse(q.expiresAt) <= Date.now()) return { problem: 'This daily quest has expired.' };
     const attemptId = `${studentId}__${questId}`;
     const prior = await db.get('dqAttempts', attemptId);
     if (prior) return { problem: 'You have already submitted this daily quest.', result: prior };
     if (!answers || typeof answers !== 'object' || Array.isArray(answers)) return { problem: 'Answers are required.' };
+    const photos = await db.getMany('dqPhotos', q.items.map((id) => `${studentId}__${questId}__${id}`));
     let score = 0, max = 0, attempted = 0; const feedback = [];
-    for (const id of q.items) {
+    for (const [pos, id] of q.items.entries()) {
       const question = qById(id); if (!question) continue;
       const ans = answers[id] || {};
       max += question.total || 1;
+      const ph = photos[pos] && photos[pos].status === 'done' ? photos[pos] : null;
+      if (ph) {   // a photographed answer replaces the typed one for that question
+        attempted++;
+        const got = Math.max(0, Math.min(question.total || 1, Number(ph.got) || 0)); score += got;
+        feedback.push({ questionId: id, score: got, max: question.total || 1, correct: got === (question.total || 1), photo: true, correctionMd: String(ph.md || '').slice(0, 12000), flags: ph.flags || [] });
+        continue;
+      }
       if (!Object.values(ans).some((v) => String(v ?? '').trim())) { feedback.push({ questionId: id, score: 0, max: question.total || 1, blank: true, correct: false }); continue; }
       attempted++;
       const r = markQuestion(question, ans); score += r.awarded;
@@ -147,6 +168,72 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records }) 
       catch (e) { console.warn('[daily-quest] record failed:', e.message); }
     }
     return { ok: true, result };
+  }
+
+  // ---- a photo of handwritten working: marked by the AI at once, counted when the quest is submitted ----
+  async function markPhoto(studentId, questId, qid, images) {
+    if (!askText) return { problem: 'Photo marking is not available right now.' };
+    const ctx = await eligible(studentId, questId);
+    if (ctx.problem) return ctx;
+    const { q } = ctx;
+    if (Date.parse(q.expiresAt) <= Date.now()) return { problem: 'This daily quest has expired.' };
+    if (!q.items.includes(qid)) return { problem: 'That question is not in this quest.' };
+    const question = qById(qid);
+    if (!question || question.type !== 'structured') return { problem: 'Photos are for structured questions only.' };
+    if (await db.get('dqAttempts', `${studentId}__${questId}`)) return { problem: 'You have already submitted this daily quest.' };
+    const pid = `${studentId}__${questId}__${qid}`;
+    const old = await db.get('dqPhotos', pid);
+    if (old && old.status === 'pending' && Date.now() - Date.parse(old.at) > 3 * 60 * 1000) await db.del('dqPhotos', pid);   // a crashed attempt does not lock the question
+    if (!(await db.create('dqPhotos', pid, { studentId, questId, questionId: qid, status: 'pending', at: new Date().toISOString() }))) return { problem: 'A photo for this question has already been sent.' };
+    const giveUp = async (problem) => { await db.del('dqPhotos', pid).catch(() => {}); return { problem }; };
+    try {
+      const out = await askText(buildCorrectionPrompt(question), images);
+      if (out.problem) return giveUp(out.problem);
+      const parsed = parseCorrection(out.text, question.total);
+      if (!parsed.ok) return giveUp(parsed.problem + ' Please try again with a clearer photo.');
+      await db.set('dqPhotos', pid, { studentId, questId, questionId: qid, status: 'done', got: parsed.got, max: parsed.max, md: parsed.md, flags: parsed.flags || [], model: out.model || '', at: new Date().toISOString() });
+      return { ok: true };
+    } catch (e) { return giveUp('Could not mark the photo: ' + e.message); }
+  }
+
+  // ---- the ranking of everyone who took one quest (shown only to a student who has taken it too) ----
+  async function ranking(studentId, questId) {
+    const ctx = await eligible(studentId, questId);
+    if (ctx.problem) return ctx;
+    if (!(await db.get('dqAttempts', `${studentId}__${questId}`))) return { problem: 'Submit this quest to see the ranking.' };
+    const rows = (await db.list('dqAttempts', { where: { questId }, limit: 1000 }))
+      .sort((a, b) => b.score - a.score || String(a.submittedAt).localeCompare(String(b.submittedAt)));
+    const users = await db.getMany('users', rows.map((r) => r.studentId));
+    const all = rows.map((r, i) => ({ rank: i + 1, name: users[i]?.name || 'Student', score: r.score, max: r.max, at: r.submittedAt, me: r.studentId === studentId }));
+    return { ok: true, total: all.length, top: all.slice(0, 50), me: all.find((x) => x.me) || null };
+  }
+
+  // ---- Head Staff can see the photo marks and change a mark the AI got wrong ----
+  async function staffPhotos() {
+    const rows = (await db.list('dqPhotos', { orderBy: 'at', desc: true, limit: 100 })).filter((r) => r.status === 'done');
+    const users = await db.getMany('users', rows.map((r) => r.studentId));
+    const attempts = await db.getMany('dqAttempts', rows.map((r) => `${r.studentId}__${r.questId}`));
+    return { ok: true, photos: rows.map((r, i) => {
+      const fb = attempts[i]?.feedback?.find((f) => f.questionId === r.questionId);
+      const w = parseQuestId(r.questId);
+      return { studentId: r.studentId, studentName: users[i]?.name || '', questId: r.questId, questionId: r.questionId, subject: w?.subject || '', day: w?.day || '', got: fb ? fb.score : r.got, max: r.max, aiGot: r.got, submitted: Boolean(attempts[i]), adjusted: Boolean(fb?.adjustedBy), correctionMd: r.md, flags: r.flags || [] };
+    }) };
+  }
+  async function adjustPhoto({ studentId, questId, questionId, score, by }) {
+    const n = Math.round(Number(score));
+    if (!Number.isFinite(n) || n < 0) return { problem: 'Enter a whole number of marks.' };
+    const attemptId = `${studentId}__${questId}`;
+    const out = await db.update('dqAttempts', attemptId, (cur) => {
+      if (!cur) return { result: { problem: 'That student has not submitted this quest yet.' } };
+      const fb = (cur.feedback || []).find((f) => f.questionId === questionId && f.photo);
+      if (!fb) return { result: { problem: 'No photo-marked answer found for that question.' } };
+      if (n > fb.max) return { result: { problem: `The most this question can score is ${fb.max}.` } };
+      fb.score = n; fb.correct = n === fb.max; fb.adjustedBy = by || 'staff'; fb.adjustedAt = new Date().toISOString();
+      cur.score = cur.feedback.reduce((t, f) => t + (Number(f.score) || 0), 0);
+      return { doc: cur, result: { ok: true, score: cur.score, max: cur.max } };
+    });
+    if (out.ok && records) await records.setScore(`dq:${studentId}:${questId}`, out.score).catch((e) => console.warn('[daily-quest] record update failed:', e.message));
+    return out;
   }
 
   async function staffList() {
@@ -169,5 +256,5 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records }) 
     return { ok: true, created };
   }
 
-  return { listForStudent, settings, updateSettings, submit, staffList, generateToday };
+  return { listForStudent, settings, updateSettings, submit, markPhoto, ranking, staffPhotos, adjustPhoto, staffList, generateToday };
 }

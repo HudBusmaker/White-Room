@@ -179,8 +179,18 @@ async function main() {
   const key = JSON.parse(sample).questions; const answers = {};
   for (const qq of fq.questions) { const src0 = [...key].find((k) => qq.stem === k.stem) || bankQuestion(qq.id); answers[qq.id] = qq.type === 'mcq' ? { choice: src0.options.find((o) => o.correct).id } : Object.fromEntries(src0.steps.map((st) => [st.id, String(st.expected)])); }
   function bankQuestion(id) { const q = JSON.parse(readFileSync(path.join(tmp, 'data', 'db', 'bankQuestions.json'), 'utf8'))[id]; if (q) return q; throw new Error('no ' + id); }
+  const sq = fq.questions.find((x) => x.type === 'structured');
+  const ph = await call('POST', '/api/daily-quests/photo', { questId: fq.id, questionId: sq.id, images: ['data:image/jpeg;base64,AAAA'] }, TF);
+  ok('a quest photo with no AI key is refused cleanly (no crash) and can be retried', ph.s === 400 && /key|AI|mark/i.test(ph.j.problem || ''), ph.j.problem);
+  ok('a quest photo with a non-image is refused', (await call('POST', '/api/daily-quests/photo', { questId: fq.id, questionId: sq.id, images: ['hello'] }, TF)).s === 400);
+  ok('quest photos need a student login', (await call('POST', '/api/daily-quests/photo', { questId: fq.id, questionId: sq.id, images: ['data:image/jpeg;base64,AAAA'] })).s === 401);
+  ok('the ranking is closed until the student submits', (await call('GET', '/api/daily-quests/ranking?questId=' + encodeURIComponent(fq.id), null, TF)).s === 400);
   const fSub = await call('POST', '/api/daily-quests/submit', { questId: fq.id, answers, summaryChoice: 'read' }, TF);
   ok('correct answers earn full marks on the deposited quest', fSub.s === 200 && fSub.j.result.score === fSub.j.result.max && fSub.j.result.max > 0, JSON.stringify(fSub.j.result && [fSub.j.result.score, fSub.j.result.max]));
+  const qrank = await call('GET', '/api/daily-quests/ranking?questId=' + encodeURIComponent(fq.id), null, TF);
+  ok('after submitting, the student sees the ranking with their own name', qrank.s === 200 && qrank.j.total === 1 && qrank.j.top[0].me === true && qrank.j.top[0].name.length > 1);
+  ok('the ranking needs a login', (await call('GET', '/api/daily-quests/ranking?questId=' + encodeURIComponent(fq.id))).s === 401);
+  ok('Head Staff can list photo-marked answers; students cannot', (await call('GET', '/api/staff/daily-quests/photos', null, H)).s === 200 && (await call('GET', '/api/staff/daily-quests/photos', null, T1)).s === 401);
   const a1sub = await call('POST', '/api/daily-quests/submit', { questId: fq.id, answers, summaryChoice: 'read' }, T1);
   ok('an A Level student cannot submit a Form 5 quest', a1sub.s === 400);
   const rec = await call('GET', '/api/records', null, TF);

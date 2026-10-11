@@ -58,5 +58,9 @@ export function createRecords(db) {
     const head = ["Date", "Student ID", "Student", "Level", "Subject", "Type", "Task", "Score", "Out of", "Percent", "XP"];
     return [head.join(","), ...rows.map((r) => [r.at.slice(0, 16).replace("T", " "), r.studentId, r.studentName, r.levelLabel, r.subjectLabel, r.kindLabel, r.title, r.score, r.max, r.pct ?? "", r.xp].map(cell).join(","))].join("\n") + "\n";
   }
-  return { add, addMany, forStudent, all, csv };
+  // change the score of an existing line (a staff adjustment); the XP column is left as it was
+  async function setScore(key, score) {
+    await db.update("records", crypto.createHash("sha1").update(key).digest("hex"), (cur) => (cur ? { doc: { ...cur, score: num(score) } } : {}));
+  }
+  return { add, addMany, forStudent, all, csv, setScore };
 }
