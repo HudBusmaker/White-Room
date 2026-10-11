@@ -23,6 +23,160 @@
    "description": "Name branched alkanes."
   },
   {
+   "id": "bond-enthalpy-calculation",
+   "subject": "chemistry",
+   "topic": "energetics",
+   "name": "Bond enthalpy calculations",
+   "description": "Calculate reaction enthalpy from bonds broken and formed."
+  },
+  {
+   "id": "mean-bond-enthalpy",
+   "subject": "chemistry",
+   "topic": "energetics",
+   "name": "Mean bond enthalpy",
+   "description": "Use atomisation data and simultaneous equations to find mean bond enthalpies."
+  },
+  {
+   "id": "delocalisation-energy",
+   "subject": "chemistry",
+   "topic": "energetics",
+   "name": "Delocalisation energy",
+   "description": "Compare measured and predicted enthalpy changes to determine delocalisation energy."
+  },
+  {
+   "id": "hess-law-formation",
+   "subject": "chemistry",
+   "topic": "energetics",
+   "name": "Hess's law using formation enthalpies",
+   "description": "Calculate a reaction enthalpy from standard enthalpies of formation."
+  },
+  {
+   "id": "hess-law-combustion",
+   "subject": "chemistry",
+   "topic": "energetics",
+   "name": "Hess's law using combustion enthalpies",
+   "description": "Calculate a reaction enthalpy from standard enthalpies of combustion."
+  },
+  {
+   "id": "born-haber",
+   "subject": "chemistry",
+   "topic": "born-haber-lattice-enthalpy",
+   "name": "Born-Haber cycle",
+   "description": "Use a Born-Haber cycle to calculate lattice enthalpy."
+  },
+  {
+   "id": "ideal-mixture-bp",
+   "subject": "chemistry",
+   "topic": "mixtures-solvent-extraction",
+   "name": "Boiling points of ideal mixtures",
+   "description": "Apply ideal-mixture behaviour to boiling point and vapour pressure."
+  },
+  {
+   "id": "solvent-extraction",
+   "subject": "chemistry",
+   "topic": "mixtures-solvent-extraction",
+   "name": "Solvent extraction",
+   "description": "Use a partition coefficient to calculate extraction between immiscible solvents."
+  },
+  {
+   "id": "phase-diagram",
+   "subject": "chemistry",
+   "topic": "phase-diagrams",
+   "name": "Phase diagrams",
+   "description": "Interpret phase regions, boundaries and triple points on phase diagrams."
+  },
+  {
+   "id": "phase-rule",
+   "subject": "chemistry",
+   "topic": "phase-diagrams",
+   "name": "Phase rule",
+   "description": "Apply the phase rule to determine degrees of freedom."
+  },
+  {
+   "id": "ozonolysis",
+   "subject": "chemistry",
+   "topic": "alkenes-alkynes",
+   "name": "Ozonolysis of alkenes and alkynes",
+   "description": "Use ozonolysis products to identify unsaturated compounds."
+  },
+  {
+   "id": "yield-calculation",
+   "subject": "chemistry",
+   "topic": "alkenes-alkynes",
+   "name": "Percentage yield",
+   "description": "Calculate theoretical and percentage yield for organic reactions."
+  },
+  {
+   "id": "markovnikov-addition",
+   "subject": "chemistry",
+   "topic": "alkenes-alkynes",
+   "name": "Markovnikov addition",
+   "description": "Predict the major product of electrophilic addition to an unsymmetrical alkene."
+  },
+  {
+   "id": "unsaturation-test",
+   "subject": "chemistry",
+   "topic": "alkenes-alkynes",
+   "name": "Test for unsaturation",
+   "description": "Use bromine water observations to identify carbon-carbon unsaturation."
+  },
+  {
+   "id": "gas-volumes",
+   "subject": "chemistry",
+   "topic": "alkenes-alkynes",
+   "name": "Gas-volume calculations",
+   "description": "Use reacting gas volumes and stoichiometry in organic reactions."
+  },
+  {
+   "id": "elimination-conditions",
+   "subject": "chemistry",
+   "topic": "alkenes-alkynes",
+   "name": "Elimination conditions",
+   "description": "Identify conditions and products for elimination reactions."
+  },
+  {
+   "id": "arene-yield-calculation",
+   "subject": "chemistry",
+   "topic": "benzene-methylbenzene",
+   "name": "Arene yield calculations",
+   "description": "Calculate theoretical and percentage yield for reactions of arenes."
+  },
+  {
+   "id": "benzene-ozonolysis",
+   "subject": "chemistry",
+   "topic": "benzene-methylbenzene",
+   "name": "Benzene ozonolysis",
+   "description": "Use benzene ozonolysis products to infer its structure."
+  },
+  {
+   "id": "benzene-structure",
+   "subject": "chemistry",
+   "topic": "benzene-methylbenzene",
+   "name": "Benzene structure",
+   "description": "Explain benzene bonding and evidence for delocalisation."
+  },
+  {
+   "id": "chlorination-conditions",
+   "subject": "chemistry",
+   "topic": "benzene-methylbenzene",
+   "name": "Aromatic chlorination conditions",
+   "description": "State the conditions and catalyst for chlorination of benzene."
+  },
+  {
+   "id": "side-chain-oxidation",
+   "subject": "chemistry",
+   "topic": "benzene-methylbenzene",
+   "name": "Methylbenzene side-chain oxidation",
+   "description": "Predict products and conditions for oxidation of a methylbenzene side chain."
+  },
+  {
+   "id": "hydrogenation",
+   "subject": "chemistry",
+   "topic": "benzene-methylbenzene",
+   "name": "Benzene hydrogenation",
+   "description": "Describe conditions and products for hydrogenation of benzene."
+  },
+  {
    "id": "cs-twos-complement",
    "subject": "computer-science",
    "topic": "cs-numbersys",

@@ -65,6 +65,30 @@
    "title": "Naming alkanes",
    "body": "Find the **longest carbon chain** (meth-, eth-, prop-, but-, pent-, hex-). Number from the end that gives the branch the **lowest** number. A $-\\text{CH}_3$ branch is *methyl*.\n\nExample: a four-carbon chain with a methyl on carbon 2 is **2-methylbutane**."
   },
+  "energetics": {
+   "title": "Energetics",
+   "body": "For a bond-enthalpy estimate, $\\Delta H=\\sum E(\\text{bonds broken})-\\sum E(\\text{bonds formed})$. Mean bond enthalpies are average gas-phase values.\n\nHess's law allows a reaction enthalpy to be calculated from alternative routes. For formation data, $\\Delta H^\\circ_\\mathrm{reaction}=\\sum \\Delta H^\\circ_f(\\text{products})-\\sum \\Delta H^\\circ_f(\\text{reactants})$."
+  },
+  "born-haber-lattice-enthalpy": {
+   "title": "Born-Haber cycles and lattice enthalpy",
+   "body": "A Born-Haber cycle applies Hess's law to ionic-solid formation. Include atomisation, bond dissociation, ionisation, electron-affinity and lattice enthalpy steps with their correct signs.\n\nWrite the complete cycle equation before substituting values; lattice enthalpy sign conventions must match the definition in the question."
+  },
+  "mixtures-solvent-extraction": {
+   "title": "Mixtures and solvent extraction",
+   "body": "For a solute distributed between immiscible solvents, the partition coefficient is the ratio of its equilibrium concentrations in the two solvents, at a stated temperature.\n\nFor repeated extraction, calculate the amount remaining after each portion separately. For ideal mixtures, relate partial vapour pressures to liquid mole fractions and pure-component vapour pressures."
+  },
+  "phase-diagrams": {
+   "title": "Phase diagrams and phase rule",
+   "body": "A phase diagram shows which phase or phases are stable at each temperature and pressure. Lines separate phase regions; the triple point is where three phases coexist.\n\nThe phase rule is $F=C-P+2$, where $F$ is degrees of freedom, $C$ components and $P$ phases. Apply any fixed conditions stated in the question."
+  },
+  "alkenes-alkynes": {
+   "title": "Alkenes and alkynes",
+   "body": "Alkenes and alkynes undergo addition reactions at carbon-carbon multiple bonds. Bromine water is decolourised by unsaturation.\n\nFor an unsymmetrical alkene, Markovnikov addition predicts the major product from the orientation of addition. Elimination conditions commonly favour formation of an alkene from a haloalkane or alcohol. Use balanced equations and stoichiometric ratios for yield and gas-volume calculations."
+  },
+  "benzene-methylbenzene": {
+   "title": "Benzene and methylbenzene",
+   "body": "Benzene is stabilised by delocalised pi electrons and typically undergoes substitution rather than addition. Halogenation requires a suitable catalyst; state reagents and conditions.\n\nMethylbenzene can be oxidised at its side chain under strong conditions. Hydrogenation adds hydrogen to the ring under suitable temperature, pressure and catalyst conditions. Use the reaction equation for yield calculations."
+  },
   "pure-algebra": {
    "title": "Quadratic equations",
    "body": "Solve $ax^2+bx+c=0$ by factorising or with $x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$.\n\nThe **discriminant** $\\Delta=b^2-4ac$: $\\Delta>0$ two real roots, $\\Delta=0$ one repeated root, $\\Delta<0$ no real roots."

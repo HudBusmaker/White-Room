@@ -134,6 +134,54 @@
    "name": "Organic chemistry"
   },
   {
+   "id": "energetics",
+   "subject": "chemistry",
+   "name": "Energetics",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "born-haber-lattice-enthalpy",
+   "subject": "chemistry",
+   "name": "Born-Haber cycles and lattice enthalpy",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "mixtures-solvent-extraction",
+   "subject": "chemistry",
+   "name": "Mixtures and solvent extraction",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "phase-diagrams",
+   "subject": "chemistry",
+   "name": "Phase diagrams and phase rule",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "alkenes-alkynes",
+   "subject": "chemistry",
+   "name": "Alkenes and alkynes",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "benzene-methylbenzene",
+   "subject": "chemistry",
+   "name": "Benzene and methylbenzene",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
    "id": "pure-algebra",
    "subject": "maths",
    "name": "Algebra & functions (Pure)",
