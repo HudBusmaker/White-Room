@@ -22,6 +22,7 @@
   }
   function photoBox(quest, q, box) {
     const d = node('details', 'dq-photobox'); d.append(node('summary', '', 'Prefer to write it on paper? Send a photo of your working'));
+    d.open = window.matchMedia('(max-width: 640px)').matches;
     const lock = () => { box.querySelectorAll('[data-step]').forEach((i) => { i.disabled = true; }); box.classList.add('has-photo'); };
     if ((quest.photoSent || []).includes(q.id)) { d.append(node('p', 'dq-ok', 'Photo received and marked. Your mark and correction appear when you submit the quest. It replaces your typed answers for this question.')); lock(); return d; }
     d.append(node('p', 'muted', 'Photograph your full working (1 to 3 photos). An AI marks it at once and the mark counts when you submit the quest. It replaces any typed answers for this question, and you can send only one photo per question.'));
