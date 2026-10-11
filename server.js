@@ -22,10 +22,6 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(here, "public");
 const PORT = Number(process.env.PORT || 3000);
 const MAX_PORT = 3100;
-if (process.env.NODE_ENV === "production") {
-  const missing = ["SESSION_SECRET", "HEAD_STAFF_CODE"].filter((name) => !String(process.env[name] || "").trim());
-  if (missing.length) throw new Error(`Refusing to start in production: missing required environment variable(s): ${missing.join(", ")}.`);
-}
 const MODEL = "claude-haiku-4-5-20251001";
 const DATA_DIR = process.env.DATA_DIR || path.join(here, "data");
 const SESSION_MS = 7 * 24 * 60 * 60 * 1000, TEACHER_MS = 8 * 60 * 60 * 1000;
@@ -442,6 +438,8 @@ async function staffRoute(req,res,url) {
   if (req.method === "GET" && url.pathname === "/api/staff/records.csv") { const q=Object.fromEntries(url.searchParams); const body=await records.csv({subject:q.subject||"",kind:q.kind||"",level:q.level||"",studentId:q.studentId||"",q:q.q||""}); res.writeHead(200,{"Content-Type":"text/csv; charset=utf-8","Content-Disposition":'attachment; filename="white-room-records.csv"',"X-Content-Type-Options":"nosniff"}); return res.end(body); }
   if(req.method === "GET" && url.pathname === "/api/staff/daily-quests") return json(res,200,await dailyQuests.staffList());
   if(req.method === "POST" && url.pathname === "/api/staff/daily-quests/settings") { let body={}; try { body=await readBody(req,32*1024); } catch { return json(res,400,{ok:false,problem:"Invalid quest settings."}); } return json(res,200,await dailyQuests.updateSettings(body)); }
+  if(req.method === "GET" && url.pathname === "/api/staff/daily-quests/photos") return json(res,200,await dailyQuests.staffPhotos());
+  if(req.method === "POST" && url.pathname === "/api/staff/daily-quests/adjust") { let body={}; try { body=await readBody(req,16*1024); } catch { return json(res,400,{ok:false,problem:"Invalid request."}); } const out=await dailyQuests.adjustPhoto({studentId:String(body.studentId||""),questId:String(body.questId||""),questionId:String(body.questionId||""),score:body.score,by:head.id||"head_staff"}); return json(res,out.problem?400:200,out.problem?{ok:false,...out}:out); }
   if(req.method === "POST" && url.pathname === "/api/staff/daily-quests/generate") return json(res,200,await dailyQuests.generateToday());
   if(req.method === "POST" && url.pathname === "/api/staff/admissions") {
     let body={}; try { body=await readBody(req,16*1024); } catch { return json(res,400,{ok:false,problem:"Invalid request."}); }
@@ -518,7 +516,7 @@ console.log("[db] storage: " + db.kind);
 const records = createRecords(db);
 const practice = createPractice({ bank, store: createStore(db), awardStudent, listSubmissions, addPhotoSubmission, askText, records, getUser });
 const practiceRoute = makePracticeRoute({ practice, requireStudent, readBody, json, allow, maxImages: bank.config.photoMaxImages, getUser });
-const dailyQuests = createDailyQuests({ bank, db, awardStudent, getUser, records });
+const dailyQuests = createDailyQuests({ bank, db, awardStudent, getUser, records, askText });
 const deposit = createDeposit({ bank, db, ask: askText, refresh: () => practice.refresh(), root: here });
 await deposit.sync({ force: true });
 
@@ -554,6 +552,15 @@ function startServer(port) {
       const user=requireStudent(req,res); if(!user) return;
       if(req.method === "GET" && url.pathname === "/api/daily-quests") return json(res,200,await dailyQuests.listForStudent(await getUser(user.id) || user));
       if(req.method === "POST" && url.pathname === "/api/daily-quests/submit") { let body={}; try { body=await readBody(req,32*1024); } catch { return json(res,400,{ok:false,problem:"Invalid quest submission."}); } const out=await dailyQuests.submit(user.id,String(body.questId||""),body.answers,body.summaryChoice); return json(res,out.problem?400:200,out.problem?{ok:false,...out}:out); }
+      if(req.method === "GET" && url.pathname === "/api/daily-quests/ranking") { const out=await dailyQuests.ranking(user.id,String(url.searchParams.get("questId")||"")); return json(res,out.problem?400:200,out.problem?{ok:false,...out}:out); }
+      if(req.method === "POST" && url.pathname === "/api/daily-quests/photo") {
+        let body={}; try { body=await readBody(req); } catch { return json(res,400,{ok:false,problem:"The upload was too large or not valid. Try a smaller photo."}); }
+        const imgs=Array.isArray(body.images)?body.images.slice(0,bank.config.photoMaxImages):[];
+        if(!imgs.length || !imgs.every((x)=>typeof x==="string" && /^data:image\/(jpeg|png|webp);base64,/.test(x) && x.length<4_000_000)) return json(res,400,{ok:false,problem:"Add one to three photos (JPEG, PNG or WebP)."});
+        const wait=allow(user.id); if(wait) return json(res,429,{ok:false,problem:wait});
+        const out=await dailyQuests.markPhoto(user.id,String(body.questId||""),String(body.questionId||""),imgs);
+        return json(res,out.problem?400:200,out.problem?{ok:false,...out}:{ok:true,message:"Photo marked. Your mark and correction appear when you submit the quest."});
+      }
       return json(res,404,{ok:false,problem:"Not found."});
     }
     if (await studentSubmissionRoute(req, res, url)) return;

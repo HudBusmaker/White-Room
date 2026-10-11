@@ -11,7 +11,54 @@
   const ensureMath = async () => { try { if (window.WRMath) await window.WRMath.ensure(); } catch { /* the text still shows, just unformatted */ } };
   const when = (iso) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 
-  function questionForm(q, idx) {
+  /* ----- photo of handwritten working ----- */
+  function shrink(file) {
+    return new Promise((ok, no) => {
+      const url = URL.createObjectURL(file), img = new Image();
+      img.onload = () => { const k = Math.min(1, 1200 / Math.max(img.width, img.height)); const c = document.createElement('canvas'); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k); c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url); ok(c.toDataURL('image/jpeg', 0.8)); };
+      img.onerror = () => { URL.revokeObjectURL(url); no(new Error('That file is not a readable image.')); };
+      img.src = url;
+    });
+  }
+  function photoBox(quest, q, box) {
+    const d = node('details', 'dq-photobox'); d.append(node('summary', '', 'Prefer to write it on paper? Send a photo of your working'));
+    const lock = () => { box.querySelectorAll('[data-step]').forEach((i) => { i.disabled = true; }); box.classList.add('has-photo'); };
+    if ((quest.photoSent || []).includes(q.id)) { d.append(node('p', 'dq-ok', 'Photo received and marked. Your mark and correction appear when you submit the quest. It replaces your typed answers for this question.')); lock(); return d; }
+    d.append(node('p', 'muted', 'Photograph your full working (1 to 3 photos). An AI marks it at once and the mark counts when you submit the quest. It replaces any typed answers for this question, and you can send only one photo per question.'));
+    const file = node('input'); file.type = 'file'; file.accept = 'image/*'; file.multiple = true;
+    const msg = node('p', 'form-note', ''); const btn = node('button', 'btn ghost sm', 'Send photo for marking'); btn.type = 'button';
+    btn.addEventListener('click', async () => {
+      const files = [...file.files].slice(0, 3);
+      if (!files.length) { msg.textContent = 'Choose a photo first.'; return; }
+      btn.disabled = true; msg.textContent = 'Marking your photo… this can take up to a minute.';
+      try {
+        const images = await Promise.all(files.map(shrink));
+        const out = await api('/api/daily-quests/photo', { method: 'POST', body: JSON.stringify({ questId: quest.id, questionId: q.id, images }) });
+        if (!out.ok) { msg.textContent = out.problem || 'Could not mark the photo.'; btn.disabled = false; return; }
+        msg.textContent = out.message; file.remove(); btn.remove(); lock(); (quest.photoSent ||= []).push(q.id);
+      } catch (e) { msg.textContent = e.message || 'Could not read the photo.'; btn.disabled = false; }
+    });
+    d.append(file, btn, msg); return d;
+  }
+
+  /* ----- ranking of everyone who took the quest ----- */
+  function rankBox(quest) {
+    const d = node('details', 'dq-rank'); d.append(node('summary', '', 'See ranking'));
+    const body = node('div', 'dq-rank-body'); d.append(body); let loaded = false;
+    d.addEventListener('toggle', async () => {
+      if (!d.open || loaded) return; body.replaceChildren(node('p', 'muted', 'Loading…'));
+      const r = await api('/api/daily-quests/ranking?questId=' + encodeURIComponent(quest.id));
+      if (!r.ok) { body.replaceChildren(node('p', 'muted', r.problem || 'Could not load the ranking.')); return; }
+      loaded = true; body.replaceChildren(node('p', 'muted small', `${r.total} student${r.total === 1 ? '' : 's'} took this quest. Ties are ordered by who finished first.`));
+      const list = node('ol', 'dq-rank-list');
+      r.top.forEach((x) => { const li = node('li', x.me ? 'me' : ''); li.append(node('span', 'dq-rank-pos', String(x.rank)), node('span', 'dq-rank-name', x.name + (x.me ? ' (you)' : '')), node('b', '', `${x.score}/${x.max}`)); list.append(li); });
+      body.append(list);
+      if (r.me && r.me.rank > r.top.length) body.append(node('p', 'muted small', `You are number ${r.me.rank}.`));
+    });
+    return d;
+  }
+
+  function questionForm(q, idx, quest) {
     const box = node('article', 'card dq-question');
     box.append(node('small', 'eyebrow', `QUESTION ${idx + 1} · ${q.topicName || q.topic} · ${q.total} mark${q.total === 1 ? '' : 's'}`));
     box.append(math(node('p', 'dq-stem'), q.stem));
@@ -32,6 +79,7 @@
         box.append(lab);
       });
       box.getAnswer = () => { const a = {}; box.querySelectorAll('[data-step]').forEach((i) => { a[i.dataset.step] = i.value; }); return a; };
+      if (quest) box.append(photoBox(quest, q, box));
     }
     return box;
   }
@@ -48,8 +96,13 @@
       list.append(row);
       (f.steps || []).filter((s) => s.note && s.status !== 'blank').forEach((s) => { const n = node('p', 'muted small dq-fb-note'); math(n, `Step ${s.id}: ${s.note}`); list.append(n); });
       if (f.blank) list.append(node('p', 'muted small dq-fb-note', 'Not answered.'));
+      if (f.photo) {
+        row.append(node('span', 'pill', f.adjustedBy ? 'photo · adjusted by staff' : 'photo marked'));
+        const det = node('details', 'dq-fb-photo'); det.append(node('summary', '', 'See the correction')); det.append(mdBox(node('div', 'dq-note-body'), f.correctionMd || ''));
+        (f.flags || []).forEach((fl) => det.append(node('p', 'muted small', 'Note: ' + fl))); list.append(det);
+      }
     });
-    box.append(list); container.append(box);
+    box.append(list, rankBox(quest)); container.append(box);
   }
 
   function questCard(q, root) {
@@ -72,7 +125,7 @@
     skipRadio.addEventListener('change', () => { notes.hidden = true; });
     card.append(choiceWrap, notes);
 
-    const forms = node('div', 'dq-questions'); const qForms = (q.questions || []).map(questionForm); qForms.forEach((f) => forms.append(f)); card.append(forms);
+    const forms = node('div', 'dq-questions'); const qForms = (q.questions || []).map((x, i) => questionForm(x, i, q)); qForms.forEach((f) => forms.append(f)); card.append(forms);
     const submit = node('button', 'btn primary', 'Submit quest'); submit.type = 'button'; const status = node('p', 'form-note', '');
     submit.addEventListener('click', async () => {
       const choice = card.querySelector(`input[name="${q.id}-summary"]:checked`)?.value || 'skip';
@@ -82,6 +135,7 @@
       if (!out.ok) { status.textContent = out.problem || 'Could not submit.'; submit.disabled = false; return; }
       forms.remove(); choiceWrap.remove(); notes.remove(); submit.remove(); status.remove();
       renderResult(card, q, out.result);
+      await ensureMath();
       head.querySelector('.pill').textContent = 'Completed';
       if (window.refreshAccount) window.refreshAccount();
     });
@@ -139,7 +193,7 @@
       });
       details.append(list); root.append(details);
     });
-    drawPublished(j.quests || []);
+    drawPublished(j.quests || []); drawPhotos();
   }
   function drawPublished(quests) {
     const box = $('#dqPublished'); if (!box) return; box.replaceChildren();
@@ -147,6 +201,24 @@
     quests.slice(0, 40).forEach((q) => {
       const row = node('div', 'dq-published');
       row.append(node('div', '', `${q.subjectLabel} (${q.levelLabel}) · ${q.day}`), node('small', 'muted', `${q.mode === 'exam' ? 'Exam' : 'General'} · ${q.questions} questions · expires ${when(q.expiresAt)}`), node('p', 'muted', q.topicNames.join(', ')));
+      box.append(row);
+    });
+  }
+  async function drawPhotos() {
+    const box = $('#dqPhotos'); if (!box) return; const j = await api('/api/staff/daily-quests/photos'); box.replaceChildren();
+    if (!j.ok) { box.append(node('p', 'muted', j.problem || 'Could not load.')); return; }
+    if (!j.photos.length) { box.append(node('p', 'muted', 'No photo-marked answers yet.')); return; }
+    await ensureMath();
+    j.photos.forEach((p) => {
+      const row = node('details', 'dq-published'); row.append(node('summary', '', `${p.studentName || p.studentId} · ${p.subject} · ${p.day} · ${p.got}/${p.max}${p.adjusted ? ' (adjusted, AI gave ' + p.aiGot + ')' : ''}${p.submitted ? '' : ' · not submitted yet'}`));
+      row.append(mdBox(node('div', 'dq-note-body'), p.correctionMd || ''));
+      (p.flags || []).forEach((fl) => row.append(node('p', 'muted small', 'Note: ' + fl)));
+      if (p.submitted) {
+        const inp = node('input', 'input'); inp.type = 'number'; inp.min = '0'; inp.max = String(p.max); inp.value = String(p.got); inp.style.maxWidth = '90px';
+        const btn = node('button', 'btn ghost sm', 'Set mark'); btn.type = 'button'; const note = node('span', 'form-note', '');
+        btn.addEventListener('click', async () => { const o = await api('/api/staff/daily-quests/adjust', { method: 'POST', body: JSON.stringify({ studentId: p.studentId, questId: p.questId, questionId: p.questionId, score: inp.value }) }); note.textContent = o.ok ? ' Saved.' : ' ' + (o.problem || 'Could not save.'); if (o.ok) drawPhotos(); });
+        const line = node('div', 'row'); line.append(node('span', 'muted', 'Mark out of ' + p.max + ': '), inp, btn, note); row.append(line);
+      }
       box.append(row);
     });
   }
@@ -162,6 +234,6 @@
     $('#dqStaffNote').textContent = out.ok ? `Today's shared quests are ready. Newly created: ${out.created?.length || 0}.` : (out.problem || 'Could not generate quests.');
     await refreshPublished();
   }
-  $('#dqSave')?.addEventListener('click', saveSettings); $('#dqGenerate')?.addEventListener('click', generate); $('#dqRefresh')?.addEventListener('click', refreshPublished);
+  $('#dqSave')?.addEventListener('click', saveSettings); $('#dqGenerate')?.addEventListener('click', generate); $('#dqRefresh')?.addEventListener('click', () => { refreshPublished(); drawPhotos(); });
   window.openDailyPlanner = loadStaff;
 })();
