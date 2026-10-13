@@ -29,6 +29,18 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records, as
     return { ...base, photoOk: true, steps: q.steps.map((s) => ({ id: s.id, kind: s.kind, prompt: s.prompt, marks: s.marks, unit: s.unit || null, hint: s.hint || null, options: s.kind === 'choice' ? s.options : undefined })) };
   }
 
+  // The model solution. Only ever attached to a result AFTER the student has submitted, so it cannot leak answers early.
+  // Uses the answer key already stored with each question: expected value, plus `solution` (or the older `mistake`
+  // line) as the working, and an optional question-level `explanation` / `solution` for the whole question.
+  function solutionOf(q) {
+    if (q.type === 'mcq') {
+      const right = q.options.find((o) => o.correct);
+      return { type: 'mcq', correctId: right?.id, correctText: right?.text, explanation: q.explanation || q.solution || '', options: q.options.map((o) => ({ id: o.id, text: o.text, correct: Boolean(o.correct), why: o.correct ? undefined : o.trap })) };
+    }
+    return { type: 'structured', worked: q.solution || q.explanation || '', steps: q.steps.map((s) => ({ id: s.id, prompt: s.prompt, marks: s.marks, answer: String(s.expected) + (s.unit ? ' ' + s.unit : ''), working: s.solution || s.mistake || '' })) };
+  }
+  const withSolutions = (feedback) => (feedback || []).map((f) => { const q = qById(f.questionId); return q ? { ...f, solution: solutionOf(q) } : f; });
+
   // Builds (but does not save) the quest for one day, level and subject. Same inputs always give the same quest.
   function buildQuest(settings, subject, level, day) {
     const qs = bank.questions.filter((q) => q.subject === subject && qLevel(q) === level);
@@ -68,7 +80,7 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records, as
       questions: q.items.map((id) => { const x = qById(id); return x ? publicQ(x) : null; }).filter(Boolean),
       photoSent,
       attempted: Boolean(attempt),
-      result: attempt ? { score: attempt.score, max: attempt.max, xp: attempt.xp, summaryChoice: attempt.summaryChoice, submittedAt: attempt.submittedAt, feedback: attempt.feedback } : null,
+      result: attempt ? { score: attempt.score, max: attempt.max, xp: attempt.xp, summaryChoice: attempt.summaryChoice, submittedAt: attempt.submittedAt, feedback: withSolutions(attempt.feedback) } : null,
     };
   }
 
@@ -135,7 +147,7 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records, as
     if (Date.parse(q.expiresAt) <= Date.now()) return { problem: 'This daily quest has expired.' };
     const attemptId = `${studentId}__${questId}`;
     const prior = await db.get('dqAttempts', attemptId);
-    if (prior) return { problem: 'You have already submitted this daily quest.', result: prior };
+    if (prior) return { problem: 'You have already submitted this daily quest.', result: { ...prior, feedback: withSolutions(prior.feedback) } };
     if (!answers || typeof answers !== 'object' || Array.isArray(answers)) return { problem: 'Answers are required.' };
     const photos = await db.getMany('dqPhotos', q.items.map((id) => `${studentId}__${questId}__${id}`));
     let score = 0, max = 0, attempted = 0; const feedback = [];
@@ -153,21 +165,21 @@ export function createDailyQuests({ bank, db, awardStudent, getUser, records, as
       if (!Object.values(ans).some((v) => String(v ?? '').trim())) { feedback.push({ questionId: id, score: 0, max: question.total || 1, blank: true, correct: false }); continue; }
       attempted++;
       const r = markQuestion(question, ans); score += r.awarded;
-      feedback.push({ questionId: id, score: r.awarded, max: r.total, correct: r.status === 'correct', steps: (r.steps || []).map((s) => ({ id: s.id, awarded: s.awarded, max: s.max, status: s.status, note: s.status === 'correct' ? undefined : s.note })) });
+      feedback.push({ questionId: id, score: r.awarded, max: r.total, correct: r.status === 'correct', chosen: r.chosen, steps: (r.steps || []).map((s) => ({ id: s.id, given: String(ans[s.id] ?? '').slice(0, 80), awarded: s.awarded, max: s.max, status: s.status, note: s.status === 'correct' ? undefined : s.note })) });
     }
     if (!attempted) return { problem: 'Answer at least one question before submitting.' };
     const choice = summaryChoice === 'read' ? 'read' : 'skip';
     const xp = Math.max(0, Math.round(score * 2) + (choice === 'skip' ? 5 : 0));
     const result = { studentId, questId, score, max, xp, summaryChoice: choice, submittedAt: new Date().toISOString(), feedback };
     // create() succeeds for the first submission only, so a double-click or a second device cannot be paid twice
-    if (!(await db.create('dqAttempts', attemptId, result))) return { problem: 'You have already submitted this daily quest.', result: await db.get('dqAttempts', attemptId) };
+    if (!(await db.create('dqAttempts', attemptId, result))) return { problem: 'You have already submitted this daily quest.', result: await (async () => { const a = await db.get('dqAttempts', attemptId); return a && { ...a, feedback: withSolutions(a.feedback) }; })() };
     try { await awardStudent(studentId, { xp, achievement: { id: `daily-${q.day}-${q.subject}-${q.level}`, title: 'Daily Quest Complete', description: `Completed the ${q.subjectLabel} (${q.levelLabel}) daily quest.` } }); }
     catch (e) { console.warn('[daily-quest] XP award failed:', e.message); }
     if (records) {
       try { await records.add({ key: `dq:${studentId}:${questId}`, studentId, studentName: user.name, kind: 'daily-quest', title: `${q.subjectLabel} daily quest · ${q.day}`, subject: q.subject, level: q.level, score, max, xp, at: result.submittedAt }); }
       catch (e) { console.warn('[daily-quest] record failed:', e.message); }
     }
-    return { ok: true, result };
+    return { ok: true, result: { ...result, feedback: withSolutions(result.feedback) } };
   }
 
   // ---- a photo of handwritten working: marked by the AI at once, counted when the quest is submitted ----

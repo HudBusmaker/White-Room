@@ -85,6 +85,31 @@
     return box;
   }
 
+  /* ----- the model solution, shown once the quest is submitted. Open by default when the question was missed. ----- */
+  function solutionBox(f, q, idx) {
+    const sol = f.solution, det = node('details', 'dq-solution'); det.open = !f.correct;
+    det.append(node('summary', '', f.correct ? `Question ${idx + 1}: see the model solution` : `Question ${idx + 1}: the correct solution`));
+    if (sol.type === 'mcq') {
+      if (f.chosen) det.append(math(node('p', 'dq-sol-you ' + (f.correct ? 'ok' : 'bad'), ''), `You chose ${f.chosen}${f.correct ? ', which is correct.' : '.'}`)); else det.append(node('p', 'dq-sol-you bad', 'You did not choose an answer.'));
+      const right = node('p', 'dq-sol-answer'); right.append(node('b', '', `Correct answer: ${sol.correctId}. `)); right.append(math(node('span'), sol.correctText || '')); det.append(right);
+      if (sol.explanation) det.append(math(node('p', 'dq-sol-working'), sol.explanation));
+      sol.options.filter((o) => !o.correct && o.why && (o.id === f.chosen || !f.correct)).forEach((o) => { const w = node('p', 'muted small dq-sol-trap'); w.append(node('b', '', `Why ${o.id} is wrong: `)); w.append(math(node('span'), o.why)); det.append(w); });
+      return det;
+    }
+    if (f.photo) det.append(node('p', 'muted small', 'You sent a photo for this question, so your own correction is above. This is the full answer key.'));
+    if (sol.worked) det.append(math(node('p', 'dq-sol-working'), sol.worked));
+    (sol.steps || []).forEach((st) => {
+      const mine = (f.steps || []).find((x) => x.id === st.id);
+      const row = node('div', 'dq-sol-step ' + (mine ? (mine.status === 'correct' ? 'ok' : mine.status === 'blank' ? 'blank' : 'bad') : ''));
+      const head = node('p', 'dq-sol-prompt'); head.append(node('b', '', `(${st.id}) `)); head.append(math(node('span'), st.prompt)); head.append(node('small', 'muted', ` [${st.marks} mark${st.marks === 1 ? '' : 's'}]`)); row.append(head);
+      const ans = node('p', 'dq-sol-answer'); ans.append(node('b', '', 'Answer: ')); ans.append(math(node('span'), st.answer)); row.append(ans);
+      if (mine && !f.photo) row.append(node('p', 'muted small', mine.given ? `You wrote: ${mine.given}` : 'You left this blank.'));
+      if (st.working) row.append(math(node('p', 'dq-sol-working'), st.working));
+      det.append(row);
+    });
+    return det;
+  }
+
   function renderResult(container, quest, r) {
     const box = node('article', 'card dq-result');
     box.append(node('h3', '', `Quest complete · ${r.score}/${r.max}`));
@@ -97,6 +122,7 @@
       list.append(row);
       (f.steps || []).filter((s) => s.note && s.status !== 'blank').forEach((s) => { const n = node('p', 'muted small dq-fb-note'); math(n, `Step ${s.id}: ${s.note}`); list.append(n); });
       if (f.blank) list.append(node('p', 'muted small dq-fb-note', 'Not answered.'));
+      if (f.solution) list.append(solutionBox(f, quest.questions[idx], idx));
       if (f.photo) {
         row.append(node('span', 'pill', f.adjustedBy ? 'photo · adjusted by staff' : 'photo marked'));
         const det = node('details', 'dq-fb-photo'); det.append(node('summary', '', 'See the correction')); det.append(mdBox(node('div', 'dq-note-body'), f.correctionMd || ''));

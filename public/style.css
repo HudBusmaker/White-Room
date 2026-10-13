@@ -759,3 +759,12 @@ button.ln { cursor: pointer; } .ln.error { border-color: var(--red); background:
 .dq-rank-list li{display:grid;grid-template-columns:2.2em 1fr auto;gap:8px;align-items:center;padding:6px 8px;border-radius:8px}
 .dq-rank-list li.me{background:#e8f1ff;font-weight:700}
 .dq-rank-pos{font-variant-numeric:tabular-nums;color:#5b6b86}
+
+/* daily quest: model solutions */
+.dq-solution{margin:.5rem 0 1rem;padding:.6rem .9rem;border:1px solid var(--line,#d9d9d9);border-radius:12px;background:var(--card-2,rgba(127,127,127,.06))}
+.dq-solution>summary{cursor:pointer;font-weight:600}
+.dq-sol-step{margin:.7rem 0;padding:.5rem .7rem;border-left:4px solid #9a9a9a;border-radius:6px}
+.dq-sol-step.ok{border-color:#2e9e5b}.dq-sol-step.bad{border-color:#d1493f}.dq-sol-step.blank{border-color:#c49a1a}
+.dq-sol-prompt,.dq-sol-answer,.dq-sol-working{margin:.25rem 0}
+.dq-sol-answer{font-weight:600}.dq-sol-working{font-weight:400}
+.dq-sol-you.ok{color:#2e9e5b}.dq-sol-you.bad{color:#d1493f}
