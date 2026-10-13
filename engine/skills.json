@@ -177,6 +177,167 @@
    "description": "Describe conditions and products for hydrogenation of benzene."
   },
   {
+   "id": "particle-counting",
+   "subject": "chemistry",
+   "topic": "atomic-structure",
+   "name": "Subatomic particle counting",
+   "description": "Determine proton, neutron and electron counts from atomic and mass numbers and ionic charge."
+  },
+  {
+   "id": "discovery-experiments",
+   "subject": "chemistry",
+   "topic": "atomic-structure",
+   "name": "Subatomic particle discovery experiments",
+   "description": "Relate the experiments of Dalton, Thomson, Goldstein, Millikan, Rutherford, Moseley, Bohr and Chadwick to their conclusions."
+  },
+  {
+   "id": "nuclear-equations",
+   "subject": "chemistry",
+   "topic": "radioactivity",
+   "name": "Nuclear equations",
+   "description": "Complete nuclear equations by conserving nucleon number and proton number."
+  },
+  {
+   "id": "half-life",
+   "subject": "chemistry",
+   "topic": "radioactivity",
+   "name": "Half-life calculations",
+   "description": "Calculate remaining nuclei, activity or elapsed time using half-life."
+  },
+  {
+   "id": "relative-atomic-mass",
+   "subject": "chemistry",
+   "topic": "mass-spectrometry",
+   "name": "Relative atomic mass",
+   "description": "Calculate relative atomic mass from isotope masses and abundances."
+  },
+  {
+   "id": "mass-spectrum-peaks",
+   "subject": "chemistry",
+   "topic": "mass-spectrometry",
+   "name": "Mass-spectrum peaks",
+   "description": "Interpret mass-to-charge peaks and relative isotope abundances."
+  },
+  {
+   "id": "electron-configuration",
+   "subject": "chemistry",
+   "topic": "electronic-structure",
+   "name": "Electron configuration",
+   "description": "Write electron configurations, including ions and transition elements."
+  },
+  {
+   "id": "successive-ionisation-energies",
+   "subject": "chemistry",
+   "topic": "ionisation-energy",
+   "name": "Successive ionisation energies",
+   "description": "Use successive ionisation energies and their large jumps to infer electron shells."
+  },
+  {
+   "id": "ionisation-trends",
+   "subject": "chemistry",
+   "topic": "ionisation-energy",
+   "name": "Ionisation energy trends",
+   "description": "Explain periodic ionisation-energy trends using nuclear charge, shielding and distance."
+  },
+  {
+   "id": "photon-energy",
+   "subject": "chemistry",
+   "topic": "atomic-spectra",
+   "name": "Photon energy",
+   "description": "Calculate photon energy from frequency, wavelength or a molar energy change."
+  },
+  {
+   "id": "de-broglie-wavelength",
+   "subject": "chemistry",
+   "topic": "atomic-spectra",
+   "name": "de Broglie wavelength",
+   "description": "Calculate the wavelength associated with a moving particle."
+  },
+  {
+   "id": "energy-levels",
+   "subject": "chemistry",
+   "topic": "atomic-spectra",
+   "name": "Atomic energy levels",
+   "description": "Relate electron transitions to absorption or emission of photons."
+  },
+  {
+   "id": "vsepr-shapes",
+   "subject": "chemistry",
+   "topic": "bonding-structure",
+   "name": "VSEPR molecular shapes",
+   "description": "Predict molecular shapes and bond angles from electron-pair repulsion."
+  },
+  {
+   "id": "bond-types",
+   "subject": "chemistry",
+   "topic": "bonding-structure",
+   "name": "Bond types",
+   "description": "Identify and explain ionic, covalent and metallic bonding."
+  },
+  {
+   "id": "hybridisation",
+   "subject": "chemistry",
+   "topic": "bonding-structure",
+   "name": "Hybridisation",
+   "description": "Relate sp, sp2 and sp3 hybridisation to bonding and molecular geometry."
+  },
+  {
+   "id": "intermolecular-forces",
+   "subject": "chemistry",
+   "topic": "bonding-structure",
+   "name": "Intermolecular forces",
+   "description": "Compare London forces, permanent dipole attractions and hydrogen bonding."
+  },
+  {
+   "id": "delocalised-electrons",
+   "subject": "chemistry",
+   "topic": "electron-delocalisation",
+   "name": "Delocalised electrons",
+   "description": "Explain structures and properties using electrons spread over several atoms."
+  },
+  {
+   "id": "halogen-properties",
+   "subject": "chemistry",
+   "topic": "halogens",
+   "name": "Halogen properties",
+   "description": "Describe halogen appearance, physical trends and laboratory preparations."
+  },
+  {
+   "id": "oxidation-states",
+   "subject": "chemistry",
+   "topic": "halogens",
+   "name": "Halogen oxidation states",
+   "description": "Assign and interpret oxidation states in halogen compounds."
+  },
+  {
+   "id": "electrode-potentials",
+   "subject": "chemistry",
+   "topic": "halogens",
+   "name": "Halogen electrode potentials",
+   "description": "Use standard electrode potentials to compare halogen oxidising strengths."
+  },
+  {
+   "id": "halogen-redox-calculations",
+   "subject": "chemistry",
+   "topic": "halogens",
+   "name": "Halogen redox calculations",
+   "description": "Balance and calculate halogen redox reactions using half-equations."
+  },
+  {
+   "id": "disproportionation",
+   "subject": "chemistry",
+   "topic": "halogens",
+   "name": "Halogen disproportionation",
+   "description": "Write and balance halogen disproportionation reactions in water and alkali."
+  },
+  {
+   "id": "displacement-reactions",
+   "subject": "chemistry",
+   "topic": "halogens",
+   "name": "Halogen displacement reactions",
+   "description": "Predict displacement reactions from relative halogen oxidising strengths."
+  },
+  {
    "id": "cs-twos-complement",
    "subject": "computer-science",
    "topic": "cs-numbersys",
@@ -728,6 +889,237 @@
    "topic": "pure-calculus",
    "name": "Differentiate and apply",
    "description": "Stationary points and their nature."
+  },
+  {
+   "id": "algebraic-limits",
+   "subject": "maths",
+   "topic": "limits-continuity",
+   "name": "Algebraic limits",
+   "description": "Evaluate limits by factorising, simplifying and substitution."
+  },
+  {
+   "id": "limits-to-infinity",
+   "subject": "maths",
+   "topic": "limits-continuity",
+   "name": "Limits at infinity",
+   "description": "Evaluate limits at positive and negative infinity and identify end behaviour."
+  },
+  {
+   "id": "trig-exp-limits",
+   "subject": "maths",
+   "topic": "limits-continuity",
+   "name": "Trigonometric and exponential limits",
+   "description": "Apply standard trigonometric and exponential limits, including series expansions."
+  },
+  {
+   "id": "continuity-check",
+   "subject": "maths",
+   "topic": "limits-continuity",
+   "name": "Continuity",
+   "description": "Test continuity at a point and determine a parameter that makes a function continuous."
+  },
+  {
+   "id": "ivt-bisection",
+   "subject": "maths",
+   "topic": "limits-continuity",
+   "name": "Intermediate Value Theorem and bisection",
+   "description": "Use the Intermediate Value Theorem and bisection to locate a root."
+  },
+  {
+   "id": "asymptote-finding",
+   "subject": "maths",
+   "topic": "limits-continuity",
+   "name": "Finding asymptotes",
+   "description": "Find vertical, horizontal or oblique asymptotes using limits."
+  },
+  {
+   "id": "lhopital-limits",
+   "subject": "maths",
+   "topic": "limits-continuity",
+   "name": "L'Hôpital's rule",
+   "description": "Evaluate suitable indeterminate limits using L'Hôpital's rule or expansions."
+  },
+  {
+   "id": "derivative-rules",
+   "subject": "maths",
+   "topic": "differentiation",
+   "name": "Derivative rules",
+   "description": "Differentiate polynomial and elementary functions."
+  },
+  {
+   "id": "product-quotient-rule",
+   "subject": "maths",
+   "topic": "differentiation",
+   "name": "Product and quotient rules",
+   "description": "Differentiate products and quotients of functions."
+  },
+  {
+   "id": "chain-rule",
+   "subject": "maths",
+   "topic": "differentiation",
+   "name": "Chain rule",
+   "description": "Differentiate composite functions using the chain rule."
+  },
+  {
+   "id": "tangent-normal",
+   "subject": "maths",
+   "topic": "differentiation",
+   "name": "Tangents and normals",
+   "description": "Find tangent and normal gradients and equations at a point."
+  },
+  {
+   "id": "stationary-points",
+   "subject": "maths",
+   "topic": "differentiation",
+   "name": "Stationary points",
+   "description": "Find stationary points and classify their nature."
+  },
+  {
+   "id": "implicit-differentiation-calculus",
+   "subject": "maths",
+   "topic": "differentiation",
+   "name": "Implicit differentiation",
+   "description": "Differentiate relations involving x and y to find gradients."
+  },
+  {
+   "id": "parametric-differentiation",
+   "subject": "maths",
+   "topic": "differentiation",
+   "name": "Parametric differentiation",
+   "description": "Find dy/dx and higher derivatives from parametric equations."
+  },
+  {
+   "id": "related-rates",
+   "subject": "maths",
+   "topic": "differentiation",
+   "name": "Related rates",
+   "description": "Relate rates of change using differentiation with respect to time."
+  },
+  {
+   "id": "optimisation",
+   "subject": "maths",
+   "topic": "differentiation",
+   "name": "Optimisation",
+   "description": "Form and optimise a quantity subject to stated constraints."
+  },
+  {
+   "id": "separable-equations",
+   "subject": "maths",
+   "topic": "differential-equations",
+   "name": "Separable differential equations",
+   "description": "Solve first-order separable differential equations with initial conditions."
+  },
+  {
+   "id": "linear-first-order",
+   "subject": "maths",
+   "topic": "differential-equations",
+   "name": "Linear first-order differential equations",
+   "description": "Solve first-order linear differential equations using an integrating factor."
+  },
+  {
+   "id": "second-order-homogeneous",
+   "subject": "maths",
+   "topic": "differential-equations",
+   "name": "Second-order homogeneous equations",
+   "description": "Solve constant-coefficient homogeneous second-order equations and apply conditions."
+  },
+  {
+   "id": "second-order-particular",
+   "subject": "maths",
+   "topic": "differential-equations",
+   "name": "Second-order non-homogeneous equations",
+   "description": "Find a particular solution and apply initial conditions."
+  },
+  {
+   "id": "exponential-modelling",
+   "subject": "maths",
+   "topic": "differential-equations",
+   "name": "Exponential modelling",
+   "description": "Model growth or decay by a differential equation and use measured conditions."
+  },
+  {
+   "id": "curve-features",
+   "subject": "maths",
+   "topic": "curve-sketching",
+   "name": "Curve features",
+   "description": "Calculate intercepts, stationary points and points of inflection to describe a curve."
+  },
+  {
+   "id": "rational-curves",
+   "subject": "maths",
+   "topic": "curve-sketching",
+   "name": "Rational curves",
+   "description": "Analyse rational functions, their intercepts, turning points and asymptotes."
+  },
+  {
+   "id": "asymptotes-sketching",
+   "subject": "maths",
+   "topic": "curve-sketching",
+   "name": "Asymptotes in curve analysis",
+   "description": "Determine vertical, horizontal and oblique asymptotes as curve features."
+  },
+  {
+   "id": "basic-integration",
+   "subject": "maths",
+   "topic": "integration",
+   "name": "Basic integration",
+   "description": "Integrate standard functions and evaluate definite integrals."
+  },
+  {
+   "id": "integration-by-substitution",
+   "subject": "maths",
+   "topic": "integration",
+   "name": "Integration by substitution",
+   "description": "Choose a substitution and change the limits where needed."
+  },
+  {
+   "id": "integration-by-parts",
+   "subject": "maths",
+   "topic": "integration",
+   "name": "Integration by parts",
+   "description": "Apply integration by parts to products of functions."
+  },
+  {
+   "id": "partial-fractions-integration",
+   "subject": "maths",
+   "topic": "integration",
+   "name": "Integration using partial fractions",
+   "description": "Decompose rational functions into partial fractions before integrating."
+  },
+  {
+   "id": "area-under-curve",
+   "subject": "maths",
+   "topic": "integration",
+   "name": "Area under a curve",
+   "description": "Use definite integrals to calculate signed or geometric area."
+  },
+  {
+   "id": "area-between-curves",
+   "subject": "maths",
+   "topic": "integration",
+   "name": "Area between curves",
+   "description": "Find intersections and integrate the difference between curves."
+  },
+  {
+   "id": "volume-of-revolution",
+   "subject": "maths",
+   "topic": "integration",
+   "name": "Volumes of revolution",
+   "description": "Calculate volumes generated by rotating a curve about an axis."
+  },
+  {
+   "id": "trapezium-rule",
+   "subject": "maths",
+   "topic": "integration",
+   "name": "Trapezium rule",
+   "description": "Estimate a definite integral using equally spaced ordinates."
+  },
+  {
+   "id": "mean-value-integral",
+   "subject": "maths",
+   "topic": "integration",
+   "name": "Mean value and trigonometric integrals",
+   "description": "Use integrals to find mean values and evaluate trigonometric integrals."
   },
   {
    "id": "m-trig-eq",

@@ -1,0 +1,1426 @@
+{
+  "questions": [
+    {
+      "id": "ch-atomic-structure-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "atomic-structure",
+      "skill": "particle-counting",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "An atom of iron has mass number 56 and atomic number 26. Consider the ion ⁵⁶Fe²⁺.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of protons.",
+          "expected": 26,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of neutrons.",
+          "expected": 30,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Number of electrons.",
+          "expected": 24,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-atomic-structure-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "atomic-structure",
+      "skill": "particle-counting",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "The ion X³⁻ has 18 electrons and mass number 31.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Atomic number of X.",
+          "expected": 15,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of neutrons in X.",
+          "expected": 16,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-atomic-structure-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "atomic-structure",
+      "skill": "discovery-experiments",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Millikan measured the charge on oil drops. Three drops carried charges of 3.2 × 10⁻¹⁹ C, 4.8 × 10⁻¹⁹ C and 8.0 × 10⁻¹⁹ C. The charge on one electron is 1.6 × 10⁻¹⁹ C.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of electron charges on the first drop.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of electron charges on the second drop.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Number of electron charges on the third drop.",
+          "expected": 5,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-atomic-structure-004",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "atomic-structure",
+      "skill": "discovery-experiments",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "In the gold-foil experiment about 1 in 8000 α particles is reflected back. Atom diameter is about 10⁻¹⁰ m and nucleus diameter about 10⁻¹⁵ m.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of α particles reflected when 40 000 are fired.",
+          "expected": 5,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Ratio of atom diameter to nucleus diameter.",
+          "expected": 100000,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-atomic-structure-005",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "atomic-structure",
+      "skill": "discovery-experiments",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "Electron charge 1.60 × 10⁻¹⁹ C, electron mass 9.11 × 10⁻³¹ kg, proton mass 1.67 × 10⁻²⁷ kg.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Charge-to-mass ratio of the electron (×10¹¹ C kg⁻¹), 2 d.p.",
+          "expected": 1.756312,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass of a proton ÷ mass of an electron, nearest whole number.",
+          "expected": 1833.150384,
+          "tolerance": {
+            "abs": 2
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-radioactivity-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "radioactivity",
+      "skill": "nuclear-equations",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "²³⁸U (Z = 92) undergoes α decay to form thorium.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Mass number of the thorium nuclide.",
+          "expected": 234,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Atomic number of the thorium nuclide.",
+          "expected": 90,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Number of neutrons in the thorium nuclide.",
+          "expected": 144,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-radioactivity-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "radioactivity",
+      "skill": "nuclear-equations",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "¹⁴C (Z = 6) undergoes β⁻ decay to a nitrogen nuclide.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Atomic number of the product.",
+          "expected": 7,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass number of the product.",
+          "expected": 14,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Number of neutrons in the product.",
+          "expected": 7,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-radioactivity-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "radioactivity",
+      "skill": "half-life",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "A radioactive sample of mass 80 g has a half-life of 5.0 days.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of half-lives in 15 days.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass remaining after 15 days (g).",
+          "expected": 10,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Time for the mass to fall to 2.5 g (days).",
+          "expected": 25,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-radioactivity-004",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "radioactivity",
+      "skill": "half-life",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "Carbon-14 has a half-life of 5730 years. A wooden object has 25% of the ¹⁴C activity of living wood.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of half-lives that have passed.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Age of the object (years).",
+          "expected": 11460,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Age if it had 12.5% of the original activity (years).",
+          "expected": 17190,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-mass-spectrometry-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "mass-spectrometry",
+      "skill": "relative-atomic-mass",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 1,
+      "image": null,
+      "stem": "Copper has two isotopes: ⁶³Cu (69.2%) and ⁶⁵Cu (30.8%).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Ar of copper, to 2 decimal places.",
+          "expected": 63.616,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-mass-spectrometry-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "mass-spectrometry",
+      "skill": "relative-atomic-mass",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 1,
+      "image": null,
+      "stem": "Magnesium: ²⁴Mg 78.6%, ²⁵Mg 10.1%, ²⁶Mg 11.3%.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Ar of magnesium, to 2 decimal places.",
+          "expected": 24.327,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-mass-spectrometry-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "mass-spectrometry",
+      "skill": "relative-atomic-mass",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "Boron has isotopes ¹⁰B and ¹¹B and Ar = 10.8.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Percentage of ¹¹B.",
+          "expected": 80,
+          "tolerance": {
+            "abs": 0.1
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Percentage of ¹⁰B.",
+          "expected": 20,
+          "tolerance": {
+            "abs": 0.1
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-mass-spectrometry-004",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "mass-spectrometry",
+      "skill": "mass-spectrum-peaks",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 4,
+      "image": null,
+      "stem": "Chlorine is 75% ³⁵Cl and 25% ³⁷Cl.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Ar of chlorine.",
+          "expected": 35.5,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of molecular-ion peaks for Cl₂.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "m/z of the heaviest molecular ion peak.",
+          "expected": 74,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "If the m/z 70 peak has height 9, the height of the m/z 72 peak is:",
+          "expected": 6,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-electronic-structure-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "electronic-structure",
+      "skill": "electron-configuration",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Electron configurations of d-block elements.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of electrons in the 3d subshell of chromium.",
+          "expected": 5,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of electrons in the 3d subshell of copper.",
+          "expected": 10,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Number of electrons in the 3d subshell of Fe²⁺.",
+          "expected": 6,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-electronic-structure-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "electronic-structure",
+      "skill": "electron-configuration",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "Shells and subshells.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of orbitals in the n = 3 shell.",
+          "expected": 9,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Maximum number of electrons in the n = 3 shell.",
+          "expected": 18,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Maximum number of electrons in the n = 4 shell.",
+          "expected": 32,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-electronic-structure-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "electronic-structure",
+      "skill": "electron-configuration",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Unpaired electrons.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Unpaired electrons in a nitrogen atom.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Unpaired electrons in an oxygen atom.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Unpaired electrons in Mn²⁺ ([Ar] 3d⁵).",
+          "expected": 5,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-ionisation-energy-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "ionisation-energy",
+      "skill": "successive-ionisation-energies",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "The first four ionisation energies of element X (kJ mol⁻¹) are 738, 1451, 7733, 10543.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of electrons in the outer shell of X.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Energy needed to form X²⁺(g) from X(g) (kJ mol⁻¹).",
+          "expected": 2189,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-ionisation-energy-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "ionisation-energy",
+      "skill": "ionisation-trends",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "Across period 2, first ionisation energies generally increase, with two dips.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of dips between lithium and neon.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of paired electrons in the 2p subshell of oxygen.",
+          "expected": 2,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-atomic-spectra-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "atomic-spectra",
+      "skill": "photon-energy",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "Sodium's first ionisation energy is 496 kJ mol⁻¹. Use h = 6.63 × 10⁻³⁴ J s, c = 3.00 × 10⁸ m s⁻¹, L = 6.02 × 10²³ mol⁻¹.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Energy per atom (×10⁻¹⁹ J), 2 d.p.",
+          "expected": 8.239203,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Wavelength of a photon with this energy (nm), 1 d.p.",
+          "expected": 241.406855,
+          "tolerance": {
+            "abs": 1
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-atomic-spectra-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "atomic-spectra",
+      "skill": "photon-energy",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "Hydrogen's Lyman series converges at ν = 3.29 × 10¹⁵ Hz. Use h = 6.63 × 10⁻³⁴ J s, L = 6.02 × 10²³ mol⁻¹.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Ionisation energy per atom (×10⁻¹⁸ J), 2 d.p.",
+          "expected": 2.18127,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Ionisation energy (kJ mol⁻¹), nearest whole number.",
+          "expected": 1313.12454,
+          "tolerance": {
+            "abs": 5
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-atomic-spectra-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "atomic-spectra",
+      "skill": "photon-energy",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "A sodium photon has energy 3.37 × 10⁻¹⁹ J. Use h = 6.63 × 10⁻³⁴ J s and c = 3.00 × 10⁸ m s⁻¹.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Frequency (×10¹⁴ Hz), 2 d.p.",
+          "expected": 5.082956,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Wavelength (nm), nearest whole number.",
+          "expected": 590.207715,
+          "tolerance": {
+            "abs": 1
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-atomic-spectra-004",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "atomic-spectra",
+      "skill": "de-broglie-wavelength",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "An electron (m = 9.11 × 10⁻³¹ kg) moves at 2.00 × 10⁶ m s⁻¹. λ = h/mv with h = 6.63 × 10⁻³⁴ J s.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Wavelength (×10⁻¹⁰ m), 2 d.p.",
+          "expected": 3.638858,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Wavelength if the speed doubles (×10⁻¹⁰ m), 2 d.p.",
+          "expected": 1.819429,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-atomic-spectra-005",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "atomic-spectra",
+      "skill": "energy-levels",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Hydrogen energy levels: n = 1: −13.6 eV, n = 2: −3.40 eV, n = 3: −1.51 eV.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Energy released for n = 3 → n = 2 (eV), 2 d.p.",
+          "expected": 1.89,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Energy released for n = 2 → n = 1 (eV).",
+          "expected": 10.2,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Ionisation energy from the ground state (eV).",
+          "expected": 13.6,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-bonding-structure-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "bonding-structure",
+      "skill": "vsepr-shapes",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "Bond angles in simple molecules.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Bond angle in BF₃ (degrees).",
+          "expected": 120,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Bond angle in CH₄ (degrees), 1 d.p.",
+          "expected": 109.5,
+          "tolerance": {
+            "abs": 0.1
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Bond angle in SF₆ (degrees).",
+          "expected": 90,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-bonding-structure-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "bonding-structure",
+      "skill": "vsepr-shapes",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Lone pairs and bonding pairs on the central atom.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Lone pairs on O in H₂O.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Lone pairs on N in NH₃.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Bonding pairs around P in PCl₅.",
+          "expected": 5,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-bonding-structure-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "bonding-structure",
+      "skill": "bond-types",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Counting bonds.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of σ bonds in C₂H₄.",
+          "expected": 5,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of π bonds in C₂H₂.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Number of dative bonds in NH₄⁺.",
+          "expected": 1,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-bonding-structure-004",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "bonding-structure",
+      "skill": "intermolecular-forces",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 2,
+      "image": null,
+      "stem": "Hydrogen bonding in water.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Maximum number of hydrogen bonds one water molecule can form.",
+          "expected": 4,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of lone pairs on the oxygen of one water molecule.",
+          "expected": 2,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-bonding-structure-005",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "bonding-structure",
+      "skill": "hybridisation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Hybridisation of carbon atoms.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of sp² carbon atoms in benzene.",
+          "expected": 6,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of sp² carbon atoms in buta-1,3-diene.",
+          "expected": 4,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Number of sp³ carbon atoms in propene.",
+          "expected": 1,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-bonding-structure-006",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "bonding-structure",
+      "skill": "bond-types",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "Dative bonding.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of dative bonds in H₃O⁺.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of dative bonds in Al₂Cl₆.",
+          "expected": 2,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-electron-delocalisation-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "electron-delocalisation",
+      "skill": "delocalised-electrons",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "Graphite has one delocalised electron per carbon atom.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Delocalised electrons per carbon atom.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Moles of delocalised electrons in 24.0 g of graphite (Ar C = 12.0).",
+          "expected": 2,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-electron-delocalisation-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "electron-delocalisation",
+      "skill": "delocalised-electrons",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "The ethanoate ion CH₃COO⁻ has delocalised electrons over O–C–O.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "C–O bond order in ethanoate.",
+          "expected": 1.5,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of electrons delocalised over the O–C–O unit.",
+          "expected": 4,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-electron-delocalisation-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "electron-delocalisation",
+      "skill": "delocalised-electrons",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Aromatic ring systems.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of delocalised π electrons in benzene.",
+          "expected": 6,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of delocalised π electrons in naphthalene.",
+          "expected": 10,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Number of delocalised π electrons in anthracene.",
+          "expected": 14,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-halogens-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "halogens",
+      "skill": "halogen-properties",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 4,
+      "image": null,
+      "stem": "Group 7 elements.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of outer-shell electrons.",
+          "expected": 7,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of electrons in the np subshell.",
+          "expected": 5,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Number of halogens that are liquid at room temperature.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "Number of halogens (F to I) that are gases at room temperature.",
+          "expected": 2,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-halogens-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "halogens",
+      "skill": "oxidation-states",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Oxidation states of chlorine.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Oxidation state of Cl in HClO.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Oxidation state of Cl in ClO₃⁻.",
+          "expected": 5,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Oxidation state of Cl in ClO₄⁻.",
+          "expected": 7,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-halogens-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "halogens",
+      "skill": "electrode-potentials",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "E° values: F₂/F⁻ +2.87 V, Cl₂/Cl⁻ +1.36 V, Br₂/Br⁻ +1.09 V, I₂/I⁻ +0.54 V.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "E°cell for Cl₂ oxidising Br⁻ (V).",
+          "expected": 0.27,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "E°cell for Br₂ oxidising I⁻ (V).",
+          "expected": 0.55,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "E°cell for F₂ oxidising I⁻ (V).",
+          "expected": 2.33,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-halogens-004",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "halogens",
+      "skill": "halogen-redox-calculations",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "2MnO₄⁻ + 16H⁺ + 10Cl⁻ → 2Mn²⁺ + 8H₂O + 5Cl₂. 0.020 mol of KMnO₄ is used with excess HCl. Molar gas volume is 24 dm³ at rtp.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of Cl₂ formed.",
+          "expected": 0.05,
+          "tolerance": {
+            "abs": 0.0005
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Volume of Cl₂ at rtp (dm³).",
+          "expected": 1.2,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Moles of Cl⁻ oxidised.",
+          "expected": 0.1,
+          "tolerance": {
+            "abs": 0.0005
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-halogens-005",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "halogens",
+      "skill": "disproportionation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "Cl₂ + 2OH⁻ → Cl⁻ + ClO⁻ + H₂O (cold dilute) and 3Cl₂ + 6OH⁻ → 5Cl⁻ + ClO₃⁻ + 3H₂O (hot concentrated). 0.60 mol of Cl₂ is used each time.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of ClO⁻ formed (cold).",
+          "expected": 0.6,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Moles of ClO₃⁻ formed (hot).",
+          "expected": 0.2,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Moles of OH⁻ used (hot).",
+          "expected": 1.2,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-halogens-006",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "halogens",
+      "skill": "halogen-properties",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "ΔHf of sodium halides (kJ mol⁻¹): NaF −573, NaCl −411, NaBr −361, NaI −288.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Difference between ΔHf of NaF and NaI (kJ mol⁻¹, positive).",
+          "expected": 285,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Heat released forming 0.50 mol of NaCl (kJ).",
+          "expected": 205.5,
+          "tolerance": {
+            "abs": 0.1
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-halogens-007",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "halogens",
+      "skill": "displacement-reactions",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "Excess Cl₂ is passed into a solution containing 0.30 mol of KBr: Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂. Mr of Br₂ = 160.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of Br₂ formed.",
+          "expected": 0.15,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass of Br₂ formed (g).",
+          "expected": 24,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-halogens-008",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "halogens",
+      "skill": "halogen-redox-calculations",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "5.6 g of iron (Ar = 56.0) burns in excess Cl₂ to form FeCl₃ (Mr = 162.5). Molar gas volume 24 dm³.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of iron.",
+          "expected": 0.1,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass of FeCl₃ formed (g), 2 d.p.",
+          "expected": 16.25,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Volume of Cl₂ needed at rtp (dm³).",
+          "expected": 3.6,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    }
+  ]
+}

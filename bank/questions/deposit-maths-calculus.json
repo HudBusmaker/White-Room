@@ -1,0 +1,1550 @@
+{
+  "questions": [
+    {
+      "id": "m-limits-continuity-001",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "limits-continuity",
+      "skill": "algebraic-limits",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "Evaluate limits by factorising.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "lim as x → 2 of (x² − 4)/(x − 2).",
+          "expected": 4,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "lim as x → 3 of (x² − 9)/(x − 3).",
+          "expected": 6,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "lim as x → 1 of (x³ − 1)/(x − 1).",
+          "expected": 3,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-limits-continuity-002",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "limits-continuity",
+      "skill": "limits-to-infinity",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "Limits as x → ∞.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "lim (3x² + 2x)/(x² − 1).",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "lim (2x + 1)/(x² + 1).",
+          "expected": 0,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "lim (5x³ − x)/(2x³ + 4).",
+          "expected": 2.5,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-limits-continuity-003",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "limits-continuity",
+      "skill": "trig-exp-limits",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Standard limits as x → 0.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "lim sin 5x / x.",
+          "expected": 5,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "lim (e^{3x} − 1)/x.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "lim (1 − cos x)/x², as a decimal.",
+          "expected": 0.5,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-limits-continuity-004",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "limits-continuity",
+      "skill": "continuity-check",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "f(x) = (x² − 1)/(x − 1) for x ≠ 1, and f(1) = k.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "lim as x → 1 of f(x).",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "The value of k that makes f continuous at x = 1.",
+          "expected": 2,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-limits-continuity-005",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "limits-continuity",
+      "skill": "continuity-check",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "g(x) = 2x + 1 for x < 2 and g(x) = ax − 3 for x ≥ 2 is continuous at x = 2.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "lim as x → 2⁻ of g(x).",
+          "expected": 5,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "The value of a.",
+          "expected": 4,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-limits-continuity-006",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "limits-continuity",
+      "skill": "ivt-bisection",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 4,
+      "image": null,
+      "stem": "f(x) = x³ + x − 3 is continuous. Use the Intermediate Value Theorem and bisection to locate a root.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "f(1).",
+          "expected": -1,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "f(2).",
+          "expected": 7,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "f(1.5).",
+          "expected": 1.875,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "f(1.25), to 3 decimal places.",
+          "expected": 0.203125,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-limits-continuity-007",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "limits-continuity",
+      "skill": "asymptote-finding",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 4,
+      "image": null,
+      "stem": "The curve y = (2x + 1)/(x − 3).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Equation of the vertical asymptote: x = ?",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Equation of the horizontal asymptote: y = ?",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "The y-intercept, to 3 decimal places.",
+          "expected": -0.333333,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "The x-intercept.",
+          "expected": -0.5,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-limits-continuity-008",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "limits-continuity",
+      "skill": "lhopital-limits",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "Evaluate limits using L'Hôpital's rule or expansions.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "lim as x → 0 of (eˣ − 1 − x)/x².",
+          "expected": 0.5,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "lim as x → 0 of (sin x − x)/x³, to 3 decimal places.",
+          "expected": -0.166667,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "lim as x → 1 of ln x/(x − 1).",
+          "expected": 1,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differentiation-001",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differentiation",
+      "skill": "derivative-rules",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "f(x) = x³ − 4x² + 2x.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "f′(2).",
+          "expected": -2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "f′(0).",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "f″(2).",
+          "expected": 4,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differentiation-002",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differentiation",
+      "skill": "product-quotient-rule",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Differentiate using the product and quotient rules.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "For y = x² eˣ, find dy/dx at x = 1, to 3 decimal places.",
+          "expected": 8.154845,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "For y = ln x / x, find dy/dx at x = e.",
+          "expected": 0,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "For y = ln x / x, find dy/dx at x = 1.",
+          "expected": 1,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differentiation-003",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differentiation",
+      "skill": "chain-rule",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Use the chain rule.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "For y = (3x + 1)⁵, dy/dx at x = 0.",
+          "expected": 15,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "For y = sin(2x²), dy/dx at x = 0.",
+          "expected": 0,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "For y = sin(2x²), dy/dx at x = 1, to 3 decimal places.",
+          "expected": -1.664587,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differentiation-004",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differentiation",
+      "skill": "tangent-normal",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 4,
+      "image": null,
+      "stem": "The curve y = x² + 3x at the point where x = 1.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "y-coordinate at x = 1.",
+          "expected": 4,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Gradient of the tangent.",
+          "expected": 5,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "y-intercept of the tangent.",
+          "expected": -1,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "y-intercept of the normal.",
+          "expected": 4.2,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differentiation-005",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differentiation",
+      "skill": "stationary-points",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 4,
+      "image": null,
+      "stem": "y = x³ − 3x² − 9x + 5 has two stationary points.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "x-coordinate of the stationary point with the larger x.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "y-value at x = 3.",
+          "expected": -22,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "y-value at x = −1.",
+          "expected": 10,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "d²y/dx² at x = −1.",
+          "expected": -12,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differentiation-006",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differentiation",
+      "skill": "implicit-differentiation-calculus",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "Use implicit differentiation.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "For x² + y² = 25, dy/dx at (3, 4).",
+          "expected": -0.75,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "For x² + xy + y² = 7, dy/dx at (1, 2).",
+          "expected": -0.8,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differentiation-007",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differentiation",
+      "skill": "parametric-differentiation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "x = t², y = t³.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "dy/dx at t = 2.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "d²y/dx² at t = 2, as a decimal.",
+          "expected": 0.375,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differentiation-008",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differentiation",
+      "skill": "related-rates",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "A sphere's radius r = 3 cm increases at 0.5 cm s⁻¹. V = (4/3)πr³ and A = 4πr².",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "dV/dr at r = 3 (cm³ per cm), 2 d.p.",
+          "expected": 113.097336,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "dV/dt (cm³ s⁻¹), 2 d.p.",
+          "expected": 56.548668,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "dA/dt (cm² s⁻¹), 2 d.p.",
+          "expected": 37.699112,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differentiation-009",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differentiation",
+      "skill": "optimisation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "A square sheet of side 12 cm has squares of side x cm cut from each corner to make an open box, with V = x(12 − 2x)².",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "The value of x that maximises V.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "The maximum volume (cm³).",
+          "expected": 128,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "d²V/dx² at that x.",
+          "expected": -48,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differential-equations-001",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differential-equations",
+      "skill": "separable-equations",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "dy/dx = 2xy with y = 3 when x = 0, so y = 3e^{x²}.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "y when x = 0.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "y when x = 1, to 3 decimal places.",
+          "expected": 8.154845,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differential-equations-002",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differential-equations",
+      "skill": "separable-equations",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "dy/dx = 3y with y(0) = 2.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "y(1), to 3 decimal places.",
+          "expected": 40.171074,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "The x value at which y = 4, to 3 decimal places.",
+          "expected": 0.231049,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differential-equations-003",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differential-equations",
+      "skill": "linear-first-order",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 4,
+      "image": null,
+      "stem": "dy/dx + 2y = 4 with y(0) = 1.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "The integrating factor is e^{kx}. Find k.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "The constant particular solution y = c. Find c.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "The constant C in y = 2 + Ce^{−2x}.",
+          "expected": -1,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "y(1), to 3 decimal places.",
+          "expected": 1.864665,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differential-equations-004",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differential-equations",
+      "skill": "second-order-homogeneous",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 4,
+      "image": null,
+      "stem": "y″ − 5y′ + 6y = 0, with y(0) = 1 and y′(0) = 0.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "The smaller root of the auxiliary equation.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "The larger root.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "The coefficient A of e^{2x}.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "The coefficient B of e^{3x}.",
+          "expected": -2,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differential-equations-005",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differential-equations",
+      "skill": "second-order-homogeneous",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "y″ − 6y′ + 9y = 0, y = (A + Bx)e^{3x}, with y(0) = 1 and y′(0) = 0.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "A.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "B.",
+          "expected": -3,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "y(1), to 3 decimal places.",
+          "expected": -40.171074,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differential-equations-006",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differential-equations",
+      "skill": "second-order-particular",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 4,
+      "image": null,
+      "stem": "y″ + 4y = 8 with y(0) = 0 and y′(0) = 0. The solution has the form y = A cos 2x + B sin 2x + c.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "The particular integral c.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "A.",
+          "expected": -2,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "B.",
+          "expected": 0,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "y(π/3).",
+          "expected": 3,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differential-equations-007",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differential-equations",
+      "skill": "exponential-modelling",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "A cup of tea cools: dT/dt = −k(T − 20). T = 80 °C at t = 0 and 50 °C at t = 5 minutes.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "k, to 3 decimal places.",
+          "expected": 0.138629,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "T at t = 10 minutes (°C).",
+          "expected": 35,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Time to cool to 25 °C (minutes), 1 d.p.",
+          "expected": 17.924813,
+          "tolerance": {
+            "abs": 0.05
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-differential-equations-008",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "differential-equations",
+      "skill": "exponential-modelling",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "A population satisfies dP/dt = 0.03P with P(0) = 1000.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "P(10), to the nearest whole number.",
+          "expected": 1349.858808,
+          "tolerance": {
+            "abs": 1
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Doubling time (years), to 1 d.p.",
+          "expected": 23.104906,
+          "tolerance": {
+            "abs": 0.05
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-curve-sketching-001",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "curve-sketching",
+      "skill": "curve-features",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 4,
+      "image": null,
+      "stem": "For the curve y = x³ − 3x, calculate the following features.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Value of y at x = 1.",
+          "expected": -2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Value of y at x = −1.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "The positive x-intercept, to 3 decimal places.",
+          "expected": 1.732051,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "x-coordinate of the point of inflection.",
+          "expected": 0,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-curve-sketching-002",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "curve-sketching",
+      "skill": "rational-curves",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "y = x/(x² + 1).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "y when x = 1.",
+          "expected": 0.5,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "dy/dx at x = 0.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "The horizontal asymptote y = ?",
+          "expected": 0,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-curve-sketching-003",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "curve-sketching",
+      "skill": "asymptotes-sketching",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 4,
+      "image": null,
+      "stem": "y = (x + 1)/(x − 2).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Vertical asymptote: x = ?",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Horizontal asymptote: y = ?",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "The x-intercept.",
+          "expected": -1,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "The y-intercept.",
+          "expected": -0.5,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-curve-sketching-004",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "curve-sketching",
+      "skill": "curve-features",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "y = e^{−x²}.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Maximum value of y.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Positive x-coordinate of the inflection points, to 3 decimal places.",
+          "expected": 0.707107,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "y at that inflection point, to 3 decimal places.",
+          "expected": 0.606531,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-curve-sketching-005",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "curve-sketching",
+      "skill": "rational-curves",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 4,
+      "image": null,
+      "stem": "y = x²/(x − 1) has an oblique asymptote y = x + 1.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Vertical asymptote: x = ?",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "y-intercept of the oblique asymptote.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "x-coordinate of the local minimum.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "y-value of the local minimum.",
+          "expected": 4,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-integration-001",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "integration",
+      "skill": "basic-integration",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "Evaluate definite integrals.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "∫ from 0 to 2 of (3x² + 2x) dx.",
+          "expected": 12,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "∫ from 1 to 4 of √x dx, to 3 decimal places.",
+          "expected": 4.666667,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "∫ from 0 to π/2 of cos x dx.",
+          "expected": 1,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-integration-002",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "integration",
+      "skill": "integration-by-substitution",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Use a substitution.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "∫ from 0 to 1 of 2x e^{x²} dx, to 3 decimal places.",
+          "expected": 1.718282,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "∫ from 0 to 1 of x/(x² + 1) dx, to 3 decimal places.",
+          "expected": 0.346574,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "∫ from 0 to π/2 of sin x cos²x dx, to 3 decimal places.",
+          "expected": 0.333333,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-integration-003",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "integration",
+      "skill": "integration-by-parts",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Integrate by parts.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "∫ from 0 to 1 of x eˣ dx.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "∫ from 1 to e of ln x dx.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "∫ from 0 to π of x sin x dx, to 3 decimal places.",
+          "expected": 3.141593,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-integration-004",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "integration",
+      "skill": "partial-fractions-integration",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "1/((x − 1)(x + 1)) = A/(x − 1) + B/(x + 1).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "A.",
+          "expected": 0.5,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "B.",
+          "expected": -0.5,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "∫ from 2 to 3 of 1/((x − 1)(x + 1)) dx, to 3 decimal places.",
+          "expected": 0.202733,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-integration-005",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "integration",
+      "skill": "area-under-curve",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 4,
+      "image": null,
+      "stem": "The curve y = x² − 4x + 3.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "The smaller x-intercept.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "The larger x-intercept.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "The value of ∫ from 1 to 3 of y dx, to 3 decimal places.",
+          "expected": -1.333333,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "The area between the curve and the x-axis from x = 1 to 3, to 3 decimal places.",
+          "expected": 1.333333,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-integration-006",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "integration",
+      "skill": "area-between-curves",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "The curves y = x² and y = 2x enclose a region.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "The positive x-coordinate where they intersect.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "The area enclosed, to 3 decimal places.",
+          "expected": 1.333333,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-integration-007",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "integration",
+      "skill": "volume-of-revolution",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "Volumes of revolution about the x-axis.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Volume when y = √x, 0 ≤ x ≤ 4 is rotated (give the value of the volume ÷ π).",
+          "expected": 8,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Volume when y = x², 0 ≤ x ≤ 1 is rotated (give the value of the volume ÷ π), to 3 decimal places.",
+          "expected": 0.2,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-integration-008",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "integration",
+      "skill": "trapezium-rule",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "Estimate ∫ from 0 to 1 of 1/(1 + x²) dx using the trapezium rule with 4 strips.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Strip width h.",
+          "expected": 0.25,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "y at x = 0.25, to 4 decimal places.",
+          "expected": 0.941176,
+          "tolerance": {
+            "abs": 0.0001
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "The trapezium rule estimate, to 4 decimal places.",
+          "expected": 0.782794,
+          "tolerance": {
+            "abs": 0.0005
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "m-integration-009",
+      "subject": "maths",
+      "level": "a-level",
+      "topic": "integration",
+      "skill": "mean-value-integral",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "Mean value and integrals of trig functions.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Mean value of sin x on [0, π], to 3 decimal places.",
+          "expected": 0.63662,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "∫ from 0 to π of sin²x dx, to 3 decimal places.",
+          "expected": 1.570796,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        }
+      ]
+    }
+  ]
+}

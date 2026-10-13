@@ -1,0 +1,1303 @@
+{
+  "questions": [
+    {
+      "id": "ch-energetics-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "energetics",
+      "skill": "bond-enthalpy-calculation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "Use bond enthalpies (kJ mol⁻¹): C=C 611, C–C 347, C–H 414, H–H 436. Calculate ΔH for C₂H₄ + H₂ → C₂H₆.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Total energy needed to break the bonds that break (kJ mol⁻¹).",
+          "expected": 1047,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Total energy released forming the new bonds (kJ mol⁻¹).",
+          "expected": 1175,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "ΔH of the reaction (kJ mol⁻¹).",
+          "expected": -128,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-energetics-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "energetics",
+      "skill": "bond-enthalpy-calculation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 4,
+      "image": null,
+      "stem": "Use bond enthalpies (kJ mol⁻¹): N≡N 945, H–H 436, N–H 391. Consider N₂ + 3H₂ → 2NH₃.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Energy needed to break all bonds in the reactants (kJ).",
+          "expected": 2253,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Energy released forming the bonds in 2 mol NH₃ (kJ).",
+          "expected": 2346,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "ΔH for the reaction as written (kJ mol⁻¹).",
+          "expected": -93,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "ΔH per mole of NH₃ formed (kJ mol⁻¹).",
+          "expected": -46.5,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-energetics-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "energetics",
+      "skill": "bond-enthalpy-calculation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Use bond enthalpies (kJ mol⁻¹): C=C 611, C–C 347, C–H 414, H–Cl 431, C–Cl 339. Calculate ΔH for C₂H₄ + HCl → C₂H₅Cl.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Energy needed to break bonds (kJ mol⁻¹).",
+          "expected": 1042,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Energy released forming bonds (kJ mol⁻¹).",
+          "expected": 1100,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "ΔH (kJ mol⁻¹).",
+          "expected": -58,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-energetics-004",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "energetics",
+      "skill": "bond-enthalpy-calculation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Use bond enthalpies (kJ mol⁻¹): C≡C 837, C–C 347, Cl–Cl 244, C–Cl 326. Calculate ΔH for HC≡CH + 2Cl₂ → CHCl₂CHCl₂ (only count bonds that change).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Energy needed to break bonds (kJ mol⁻¹).",
+          "expected": 1325,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Energy released forming bonds (kJ mol⁻¹).",
+          "expected": 1651,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "ΔH (kJ mol⁻¹).",
+          "expected": -326,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-energetics-005",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "energetics",
+      "skill": "mean-bond-enthalpy",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "The enthalpy changes of atomisation of ethane (C₂H₆) and propane (C₃H₈) are 2823 and 3996 kJ mol⁻¹. Let x = mean C–C and y = mean C–H. Then x + 6y = 2823 and 2x + 8y = 3996.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Find y, the mean C–H enthalpy (kJ mol⁻¹).",
+          "expected": 412.5,
+          "tolerance": {
+            "abs": 0.1
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Find x, the mean C–C enthalpy (kJ mol⁻¹).",
+          "expected": 348,
+          "tolerance": {
+            "abs": 0.1
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-energetics-006",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "energetics",
+      "skill": "delocalisation-energy",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "The enthalpy of hydrogenation of cyclohexene is −120 kJ mol⁻¹. For benzene + 3H₂ → cyclohexane it is −208 kJ mol⁻¹.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Expected ΔH for a hypothetical molecule with three isolated C=C bonds (kJ mol⁻¹).",
+          "expected": -360,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Delocalisation energy, i.e. how much more stable benzene is (kJ mol⁻¹, positive).",
+          "expected": 152,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-energetics-007",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "energetics",
+      "skill": "delocalisation-energy",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "Using bond enthalpies, cyclohexene + H₂ → cyclohexane has ΔH = −128 kJ mol⁻¹. Benzene's measured ΔH of hydrogenation to cyclohexane is −208 kJ mol⁻¹.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Calculated ΔH for hydrogenating three C=C bonds (kJ mol⁻¹).",
+          "expected": -384,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Delocalisation energy (kJ mol⁻¹, positive).",
+          "expected": 176,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-energetics-008",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "energetics",
+      "skill": "hess-law-formation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "ΔHf values (kJ mol⁻¹): B₂H₆(g) +32, B₂O₃(s) −1225, H₂O(l) −286. For B₂H₆ + 3O₂ → B₂O₃ + 3H₂O(l):",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Σ ΔHf(products) (kJ mol⁻¹).",
+          "expected": -2083,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "ΔH of reaction (kJ mol⁻¹).",
+          "expected": -2115,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-energetics-009",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "energetics",
+      "skill": "hess-law-formation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "ΔHf values (kJ mol⁻¹): CH₄ −76, CO₂ −394, H₂O(g) −242. For CH₄ + 2O₂ → CO₂ + 2H₂O(g):",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Σ ΔHf(products) (kJ mol⁻¹).",
+          "expected": -878,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "ΔH of reaction (kJ mol⁻¹).",
+          "expected": -802,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Enthalpy change when 8.0 g of CH₄ (Mr = 16.0) burns (kJ).",
+          "expected": -401,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-energetics-010",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "energetics",
+      "skill": "hess-law-combustion",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "ΔHc values (kJ mol⁻¹): C(s) −393, H₂(g) −286, CH₄(g) −890. Find ΔHf of CH₄ using ΔHf = ΔHc(C) + 2ΔHc(H₂) − ΔHc(CH₄).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Value of ΔHc(C) + 2ΔHc(H₂) (kJ mol⁻¹).",
+          "expected": -965,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "ΔHf of CH₄ (kJ mol⁻¹).",
+          "expected": -75,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-born-haber-lattice-enthalpy-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "born-haber-lattice-enthalpy",
+      "skill": "born-haber",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "NaCl: ΔHf = −411, ΔHat(Na) = +108, 1st ionisation energy of Na = +495, ΔHat(Cl) = +122, electron affinity of Cl = −360 (all kJ mol⁻¹).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Sum of all Born-Haber steps except the lattice enthalpy (kJ mol⁻¹).",
+          "expected": 365,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Lattice enthalpy of NaCl (kJ mol⁻¹).",
+          "expected": -776,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-born-haber-lattice-enthalpy-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "born-haber-lattice-enthalpy",
+      "skill": "born-haber",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "MgCl₂ data (kJ mol⁻¹): ΔHat(Mg) +148, 1st I.E. +738, 2nd I.E. +1451, ΔHat(Cl) +122, electron affinity of Cl −349, lattice enthalpy −2526.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Energy to convert Mg(s) into Mg²⁺(g) (kJ mol⁻¹).",
+          "expected": 2337,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Energy change to convert ½Cl₂ per Cl, ×2, into 2Cl⁻(g), i.e. 2(ΔHat + E.A.) (kJ mol⁻¹).",
+          "expected": -454,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "ΔHf of MgCl₂ (kJ mol⁻¹).",
+          "expected": -643,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-born-haber-lattice-enthalpy-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "born-haber-lattice-enthalpy",
+      "skill": "born-haber",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "Hypothetical MgCl: ΔHat(Mg) +148, 1st I.E. +738, ΔHat(Cl) +122, E.A.(Cl) −349, lattice enthalpy −753 (kJ mol⁻¹). ΔHf of MgCl₂ is −643 kJ mol⁻¹.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "ΔHf of MgCl (kJ mol⁻¹).",
+          "expected": -94,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "ΔH for 2MgCl → MgCl₂ + Mg (kJ mol⁻¹).",
+          "expected": -455,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-born-haber-lattice-enthalpy-004",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "born-haber-lattice-enthalpy",
+      "skill": "born-haber",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "MgO data (kJ mol⁻¹): ΔHat(Mg) +148, 1st I.E. +738, 2nd I.E. +1451, ΔHat(O) +249, 1st E.A.(O) −141, 2nd E.A.(O) +798, ΔHf(MgO) −602.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Sum of all steps except lattice enthalpy (kJ mol⁻¹).",
+          "expected": 3243,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Lattice enthalpy of MgO (kJ mol⁻¹).",
+          "expected": -3845,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-mixtures-solvent-extraction-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "mixtures-solvent-extraction",
+      "skill": "ideal-mixture-bp",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 2,
+      "image": null,
+      "stem": "Liquid A boils at 100 °C and liquid B at 70 °C. They form an ideal solution.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Boiling point of a mixture that is 40% A and 60% B (°C).",
+          "expected": 82,
+          "tolerance": {
+            "abs": 0.1
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Boiling point of a mixture that is 25% A and 75% B (°C).",
+          "expected": 77.5,
+          "tolerance": {
+            "abs": 0.1
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-mixtures-solvent-extraction-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "mixtures-solvent-extraction",
+      "skill": "solvent-extraction",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Solute X has K = [X]CCl₄ / [X]water = 4. 20 g of X is in water. It is shaken with an equal volume of CCl₄, then the water layer is shaken with a second equal volume.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Mass of X in the CCl₄ after the first extraction (g).",
+          "expected": 16,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass extracted in the second extraction (g).",
+          "expected": 3.2,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Total mass extracted in both (g).",
+          "expected": 19.2,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-mixtures-solvent-extraction-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "mixtures-solvent-extraction",
+      "skill": "solvent-extraction",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "K = [X]CCl₄ / [X]water = 4. 20 g of X is dissolved in 100 cm³ of water. Compare extraction with 50 cm³ portions of CCl₄ (concentration ratio uses volumes).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Mass extracted by one 100 cm³ portion (g).",
+          "expected": 16,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass of X left in water after the first 50 cm³ extraction (g).",
+          "expected": 6.666667,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Total mass extracted after two 50 cm³ extractions (g).",
+          "expected": 17.777778,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-phase-diagrams-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "phase-diagrams",
+      "skill": "phase-diagram",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "The phase diagram of water has a triple point at 273.16 K and a critical point at 647 K, 218 atm. Boiling point at 1 atm is 373 K.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Critical temperature in °C (use 273 for conversion).",
+          "expected": 374,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Boiling point at 1 atm in °C.",
+          "expected": 100,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Critical pressure of water (atm).",
+          "expected": 218,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-phase-diagrams-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "phase-diagrams",
+      "skill": "phase-rule",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "For a one-component system, degrees of freedom F = C − P + 2, where C is the number of components and P is the number of phases present.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "F at the triple point of water.",
+          "expected": 0,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "F on the liquid-vapour curve.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "F inside the liquid region.",
+          "expected": 2,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-alkenes-alkynes-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "alkenes-alkynes",
+      "skill": "ozonolysis",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "But-2-ene is treated with ozone, then water. 2-Methylpent-2-ene, CH₃C(CH₃)=CHCH₂CH₃, is also treated this way.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of molecules of ethanal formed from one molecule of but-2-ene.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Number of carbon atoms in the ketone formed from 2-methylpent-2-ene.",
+          "expected": 3,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Mr of the aldehyde formed from 2-methylpent-2-ene (C = 12, H = 1, O = 16).",
+          "expected": 58,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-alkenes-alkynes-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "alkenes-alkynes",
+      "skill": "yield-calculation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "Propene reacts with HBr (no peroxide) to give 2-bromopropane (Mr = 123.0). Ar: C = 12.0, H = 1.0. 10.0 g of propene is used.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of propene (Mr 42.0), 3 d.p.",
+          "expected": 0.238095,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Theoretical mass of 2-bromopropane (g), 2 d.p.",
+          "expected": 29.285714,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Actual mass if yield is 60% (g), 2 d.p.",
+          "expected": 17.571429,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-alkenes-alkynes-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "alkenes-alkynes",
+      "skill": "yield-calculation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 3,
+      "image": null,
+      "stem": "5.6 g of ethene (Mr = 28.0) is hydrated with steam to ethanol (Mr = 46.0). Molar gas volume is 24 dm³ at rtp.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of ethene.",
+          "expected": 0.2,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass of ethanol formed at 100% yield (g).",
+          "expected": 9.2,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Volume of the ethene at rtp (dm³).",
+          "expected": 4.8,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-alkenes-alkynes-004",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "alkenes-alkynes",
+      "skill": "yield-calculation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "3.2 g of calcium dicarbide (Mr = 64.0) reacts with water: CaC₂ + 2H₂O → Ca(OH)₂ + C₂H₂. The ethyne is then trimerised at 400 °C: 3C₂H₂ → C₆H₆ (Mr = 78.0).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of ethyne formed.",
+          "expected": 0.05,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Volume of ethyne at rtp (dm³).",
+          "expected": 1.2,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Mass of benzene formed (g), 2 d.p.",
+          "expected": 1.3,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-alkenes-alkynes-005",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "alkenes-alkynes",
+      "skill": "markovnikov-addition",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "Ethyne reacts with excess HBr, giving CH₃CHBr₂ (Markovnikov addition, twice).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of HBr consumed per mole of ethyne.",
+          "expected": 2,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mr of CH₃CHBr₂ (C = 12, H = 1, Br = 80).",
+          "expected": 188,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-alkenes-alkynes-006",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "alkenes-alkynes",
+      "skill": "unsaturation-test",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "0.840 g of an alkene CₙH₂ₙ reacts with exactly 0.0200 mol of Br₂ (one mole of Br₂ per mole of alkene).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of alkene.",
+          "expected": 0.02,
+          "tolerance": {
+            "abs": 0.0001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mr of the alkene.",
+          "expected": 42,
+          "tolerance": {
+            "abs": 0.1
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Value of n.",
+          "expected": 3,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-alkenes-alkynes-007",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "alkenes-alkynes",
+      "skill": "gas-volumes",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "10 cm³ of ethyne is burned in excess oxygen: 2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O(l). Volumes measured at the same temperature and pressure.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Volume of oxygen used (cm³).",
+          "expected": 25,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Volume of carbon dioxide formed (cm³).",
+          "expected": 20,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-alkenes-alkynes-008",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "alkenes-alkynes",
+      "skill": "elimination-conditions",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "4.6 g of ethanol (Mr = 46.0) is heated with conc. H₂SO₄. At 170 °C ethene forms; at 140 °C ethoxyethane (Mr = 74.0) forms.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of ethene formed at 170 °C (100% yield).",
+          "expected": 0.1,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Moles of ethoxyethane formed at 140 °C (100% yield).",
+          "expected": 0.05,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Mass of ethoxyethane formed (g).",
+          "expected": 3.7,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-benzene-methylbenzene-001",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "benzene-methylbenzene",
+      "skill": "arene-yield-calculation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 3,
+      "image": null,
+      "stem": "7.8 g of benzene (Mr = 78.0) is nitrated to nitrobenzene (C₆H₅NO₂, Mr = 123.0) using conc. HNO₃ / conc. H₂SO₄.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of benzene.",
+          "expected": 0.1,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Theoretical mass of nitrobenzene (g).",
+          "expected": 12.3,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Actual mass if yield is 70% (g), 2 d.p.",
+          "expected": 8.61,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-benzene-methylbenzene-002",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "benzene-methylbenzene",
+      "skill": "arene-yield-calculation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "9.2 g of methylbenzene (Mr = 92.0) is fully nitrated to 2,4,6-trinitromethylbenzene (TNT, C₇H₅N₃O₆). Ar: C 12, H 1, N 14, O 16.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of methylbenzene.",
+          "expected": 0.1,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mr of TNT.",
+          "expected": 227,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Mass of TNT at 100% yield (g).",
+          "expected": 22.7,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-benzene-methylbenzene-003",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "benzene-methylbenzene",
+      "skill": "arene-yield-calculation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "Benzene (15.6 g, Mr 78.0) reacts with CH₃COCl / AlCl₃ to give phenylethanone C₆H₅COCH₃ (Mr = 120.0).",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of benzene.",
+          "expected": 0.2,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Theoretical mass of phenylethanone (g).",
+          "expected": 24,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Actual mass if yield is 80% (g).",
+          "expected": 19.2,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-benzene-methylbenzene-004",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "benzene-methylbenzene",
+      "skill": "benzene-structure",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 1,
+      "total": 4,
+      "image": null,
+      "stem": "Benzene is a planar ring with delocalised electrons.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Number of delocalised π electrons.",
+          "expected": 6,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Total number of σ bonds in a benzene molecule (C–C and C–H).",
+          "expected": 12,
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Number of different structures for C₆H₅Cl.",
+          "expected": 1,
+          "marks": 1
+        },
+        {
+          "id": "d",
+          "kind": "number",
+          "prompt": "Number of isomers of C₆H₄Cl₂.",
+          "expected": 3,
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-benzene-methylbenzene-005",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "benzene-methylbenzene",
+      "skill": "chlorination-conditions",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "Benzene (3.9 g, Mr 78.0) is exposed to Cl₂ with UV light and addition occurs: C₆H₆ + 3Cl₂ → C₆H₆Cl₆. Ar: Cl = 35.5, C = 12, H = 1.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Mr of C₆H₆Cl₆.",
+          "expected": 291,
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass of C₆H₆Cl₆ formed at 100% yield (g), 2 d.p.",
+          "expected": 14.55,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-benzene-methylbenzene-006",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "benzene-methylbenzene",
+      "skill": "side-chain-oxidation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 3,
+      "image": null,
+      "stem": "9.2 g of methylbenzene (Mr 92.0) is converted to benzoic acid (C₆H₅COOH, Mr = 122.0) by side-chain halogenation, hydrolysis and oxidation.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of methylbenzene.",
+          "expected": 0.1,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass of benzoic acid at 100% yield (g).",
+          "expected": 12.2,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "c",
+          "kind": "number",
+          "prompt": "Mass of benzoic acid at 50% yield (g).",
+          "expected": 6.1,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-benzene-methylbenzene-007",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "benzene-methylbenzene",
+      "skill": "hydrogenation",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 2,
+      "total": 2,
+      "image": null,
+      "stem": "Hydrogenation over Ni at 150 °C. Molar gas volume is 24 dm³ at rtp.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Volume of H₂ needed to hydrogenate 7.8 g of benzene (Mr 78.0) to cyclohexane (dm³).",
+          "expected": 7.2,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Volume of H₂ needed to fully hydrogenate 2.6 g of ethyne (Mr 26.0) to ethane (dm³).",
+          "expected": 4.8,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "ch-benzene-methylbenzene-008",
+      "subject": "chemistry",
+      "level": "a-level",
+      "topic": "benzene-methylbenzene",
+      "skill": "benzene-ozonolysis",
+      "type": "structured",
+      "source": "generated",
+      "difficulty": 3,
+      "total": 2,
+      "image": null,
+      "stem": "Benzene reacts with ozone to give ethanedial, OHC–CHO (Mr = 58.0). 7.8 g of benzene (Mr 78.0) is used, 100% yield.",
+      "steps": [
+        {
+          "id": "a",
+          "kind": "number",
+          "prompt": "Moles of ethanedial formed.",
+          "expected": 0.3,
+          "tolerance": {
+            "abs": 0.001
+          },
+          "marks": 1
+        },
+        {
+          "id": "b",
+          "kind": "number",
+          "prompt": "Mass of ethanedial formed (g).",
+          "expected": 17.4,
+          "tolerance": {
+            "abs": 0.01
+          },
+          "marks": 1
+        }
+      ]
+    }
+  ]
+}

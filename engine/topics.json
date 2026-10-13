@@ -182,6 +182,78 @@
    ]
   },
   {
+   "id": "atomic-structure",
+   "subject": "chemistry",
+   "name": "Atomic structure",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "radioactivity",
+   "subject": "chemistry",
+   "name": "Radioactivity",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "mass-spectrometry",
+   "subject": "chemistry",
+   "name": "Mass spectrometry",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "electronic-structure",
+   "subject": "chemistry",
+   "name": "Electronic structure",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "ionisation-energy",
+   "subject": "chemistry",
+   "name": "Ionisation energy",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "atomic-spectra",
+   "subject": "chemistry",
+   "name": "Atomic spectra",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "bonding-structure",
+   "subject": "chemistry",
+   "name": "Bonding and structure",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "electron-delocalisation",
+   "subject": "chemistry",
+   "name": "Electron delocalisation",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "halogens",
+   "subject": "chemistry",
+   "name": "Halogens",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
    "id": "pure-algebra",
    "subject": "maths",
    "name": "Algebra & functions (Pure)",
@@ -192,6 +264,46 @@
    "subject": "maths",
    "name": "Differentiation & integration (Pure)",
    "shared_pure": true
+  },
+  {
+   "id": "limits-continuity",
+   "subject": "maths",
+   "name": "Limits and continuity",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "differentiation",
+   "subject": "maths",
+   "name": "Differentiation",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "differential-equations",
+   "subject": "maths",
+   "name": "Differential equations",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "curve-sketching",
+   "subject": "maths",
+   "name": "Curve sketching",
+   "levels": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "integration",
+   "subject": "maths",
+   "name": "Integration",
+   "levels": [
+    "a-level"
+   ]
   },
   {
    "id": "pure-trig",
